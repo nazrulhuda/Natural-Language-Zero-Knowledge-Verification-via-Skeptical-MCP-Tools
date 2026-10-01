@@ -1,0 +1,30 @@
+FROM python:3.13-slim
+
+WORKDIR /app
+
+# Install curl and jq for the prover command
+RUN apt-get update && apt-get install -y \
+    curl \
+    jq \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements and install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy prover server
+COPY proverserver.py .
+COPY context_manager.py .
+COPY account_store.py .
+
+# Expose port
+EXPOSE 8003
+
+# Set environment variables
+ENV PROVER_MCP_PORT=8003
+ENV PROVER_MCP_HOST=0.0.0.0
+
+# Run the prover server
+CMD ["python", "proverserver.py"]
+
+

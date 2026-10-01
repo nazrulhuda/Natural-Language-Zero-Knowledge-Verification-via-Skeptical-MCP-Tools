@@ -1,0 +1,24 @@
+qwen_D: grader-flagged faithfulness failures (3)
+
+====================================================================================================
+#1  S7_05  run 1  query: 'Can I download my proof now?'
+   tool[0] check_status({"proof_type": "logistic_accuracy", "session_id": "current_session_id"})  ->  STATUS job_id=1776908093989 status=done result.error=False
+   tool[1] download_proof({"job_id": "1776908093989", "proof_type": "logistic_accuracy", "session_id": "current_session_id"})  ->  DOWNLOAD OK job_id=1776908093989 file=proofs-1776908093989.zip
+   FINAL RESPONSE:
+      | Your proof file has been downloaded. Filename: proofs-1776908093989.zip, size: 158756 bytes. Use the download button to save it.
+====================================================================================================
+#2  S7_09  run 3  query: 'Has my LRT proof finished?'
+   tool[0] check_status({"proof_type": "LRT"})  ->  404 Unknown job id (wrong port)
+   tool[1] get_session_context({"session_id": "current_session_id"})  ->  SESSION_CONTEXT jobs=[('1776908093989', 'KS', 'done')] latest_completed=1776908093989
+   FINAL RESPONSE:
+      | You have 1 job(s) in this session:
+      | - Job 1776908093989 (KS proof): done
+      | Most recent completed: Job 1776908093989.
+====================================================================================================
+#3  S7_09  run 4  query: 'Has my LRT proof finished?'
+   tool[0] check_status({"proof_type": "LRT"})  ->  404 Unknown job id (wrong port)
+   tool[1] get_session_context({"session_id": null})  ->  SESSION_CONTEXT jobs=[('1776908093989', 'KS', 'done')] latest_completed=1776908093989
+   FINAL RESPONSE:
+      | You have 1 job(s) in this session:
+      | - Job 1776908093989 (KS proof): done
+      | Most recent completed: Job 1776908093989.

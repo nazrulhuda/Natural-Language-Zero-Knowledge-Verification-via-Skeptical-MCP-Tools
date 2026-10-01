@@ -1,0 +1,53 @@
+Samples: non-thinking models, single-call 404 then stop
+
+====================================================================================================
+#1  llama:S1_10  run 1  source None  query: 'Check my status'
+   tool[0] check_status({})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems like the job ID I provided is invalid. Let me try again.
+      | 
+      | Can you please provide the job ID or the session ID so I can check the status of your proof job?
+====================================================================================================
+#2  llama:S1_11  run 1  source None  query: "What's the status of my proof?"
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | I apologize for the mistake. It seems that the job ID is not valid. Can you please provide the job ID or the proof ID that you want to check the status for? I'll make sure to call the correct function with the correct arguments.
+      | 
+      | If you're unsure about the job ID, you can also try checking the session context to see if there are any active jobs.
+====================================================================================================
+#3  llama:S1_12  run 1  source None  query: 'How is my job doing?'
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | I apologize for the mistake. It seems that the job ID is not valid. Can you please provide the actual job ID or clarify which job you are referring to? I'll be happy to assist you with checking the status of your job.
+      | 
+      | If you're unsure about the job ID, you can also try asking me to check the status of your latest job or a specific job type (e.g., logistic accuracy, KS, or LRT).
+====================================================================================================
+#4  mistral:S1_10  run 1  source None  query: 'Check my status'
+   tool[0] check_status({})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It looks like there is no job associated with your current session. Please submit a proof job first.
+====================================================================================================
+#5  mistral:S1_11  run 1  source None  query: "What's the status of my proof?"
+   tool[0] check_status({})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It looks like there is no job associated with this chat session. Please submit a proof request first.
+====================================================================================================
+#6  mistral:S1_12  run 1  source None  query: 'How is my job doing?'
+   tool[0] check_status({})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It looks like there is no job associated with this session. Please submit a job first.
+====================================================================================================
+#7  qwen72b:S1_10  run 1  source None  query: 'Check my status'
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems that the job ID could not be found. Could you please provide the specific job ID or the type of proof (logistic_accuracy, KS, or LRT) you want to check? If you're unsure, I can try checking the most recent job for you.
+====================================================================================================
+#8  qwen72b:S1_11  run 1  source None  query: "What's the status of my proof?"
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems that the job ID could not be found. Could you please provide the specific job ID or check if the proof type is correct? If you're unsure, let me know, and I can help you find the right job ID.
+====================================================================================================
+#9  qwen72b:S1_12  run 1  source None  query: 'How is my job doing?'
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems there was an issue with the job ID. Could you please provide the specific job ID or confirm if you want to check the status of the most recent job?

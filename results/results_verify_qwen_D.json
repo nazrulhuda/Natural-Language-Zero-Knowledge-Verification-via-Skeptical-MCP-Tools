@@ -1,0 +1,1089 @@
+[
+  {
+    "query_id": "S1_24",
+    "config": "D",
+    "run": 1,
+    "session_id": "test_D_S1_24_run1_1778716163185",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:50:41.205236+00:00",
+    "duration_seconds": 78.02,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_D_S1_24_run1_1778716163185"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-13T23:49:28.750316+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "D",
+    "run": 1,
+    "session_id": "test_D_S1_25_run1_1778716246206",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:52:06.156563+00:00",
+    "duration_seconds": 79.94,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "proof_type": "auto",
+          "session_id": "test_D_S1_25_run1_1778716246206"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-13T23:50:51.419288+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_11",
+    "config": "D",
+    "run": 1,
+    "session_id": "test_D_S2_11_run1_1778716331157",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:52:20.766668+00:00",
+    "duration_seconds": 9.61,
+    "response_text": "{\"error\": \"job_id is required and no completed job found in session state\"}\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_D_S2_11_run1_1778716331157"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:52:16.446216+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "D",
+    "run": 1,
+    "session_id": "test_D_S6_SC6_run1_1778716345768",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:52:30.565606+00:00",
+    "duration_seconds": 4.8,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "Your proof has been submitted. Job ID: 1778716348432. You can check the status by asking 'check my status'.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_D_S6_SC6_run1_1778716345768"
+        },
+        "response": "{\n  \"job_id\": \"1778716348432\",\n  \"status_url\": \"/jobs/1778716348432\"\n}",
+        "timestamp": "2026-05-13T23:52:28.356060+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "D",
+    "run": 1,
+    "session_id": "test_D_S6_SC6_run1_1778716345768",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:52:42.645980+00:00",
+    "duration_seconds": 7.08,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "Job 1778716348432: Status is done.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run1_1778716345768"
+        },
+        "response": "{\n  \"active_smts\": [\n    \"s1\"\n  ],\n  \"error\": null,\n  \"job_id\": \"1778716348432\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": {\n    \"active_smts\": [\n      \"s1\"\n    ],\n    \"error\": false\n  },\n  \"snapshots\": {\n    \"proof_end\": null,\n    \"proof_start\": {\n      \"message\": \"System metrics snapshot created.\",\n      \"status\": \"success\"\n    }\n  },\n  \"started_at\": 1778716348.4325829,\n  \"status\": \"done\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-13T23:52:39.674388+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "D",
+    "run": 1,
+    "session_id": "test_D_S6_SC6_run1_1778716345768",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:52:55.006724+00:00",
+    "duration_seconds": 7.36,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "Your proof file has been downloaded. Filename: proofs-1778716348432.zip, size: 378964 bytes. Use the download button to save it.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "download_proof",
+        "arguments": {
+          "session_id": "current_session_id"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run1_1778716345768"
+        },
+        "response": "{\"success\": true, \"job_id\": \"1778716348432\", \"filename\": \"proofs-1778716348432.zip\", \"file_size\": 378964, \"proof_type\": \"KS\"}",
+        "timestamp": "2026-05-13T23:52:51.705744+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "D",
+    "run": 1,
+    "session_id": "test_D_S6_SC6_run1_1778716345768",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:54:16.330721+00:00",
+    "duration_seconds": 76.32,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "proof_type": "auto",
+          "session_id": null
+        },
+        "arguments_after_correction": {
+          "proof_type": "auto",
+          "session_id": "test_D_S6_SC6_run1_1778716345768"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-13T23:53:03.551036+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_24",
+    "config": "D",
+    "run": 2,
+    "session_id": "test_D_S1_24_run2_1778716461332",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:55:38.526213+00:00",
+    "duration_seconds": 77.19,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_D_S1_24_run2_1778716461332"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-13T23:54:25.243418+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "D",
+    "run": 2,
+    "session_id": "test_D_S1_25_run2_1778716543527",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:56:59.940341+00:00",
+    "duration_seconds": 76.41,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": "current_session",
+          "user_id": "authenticated_user"
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": "test_D_S1_25_run2_1778716543527"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-13T23:55:46.684946+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_11",
+    "config": "D",
+    "run": 2,
+    "session_id": "test_D_S2_11_run2_1778716624942",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:57:12.386706+00:00",
+    "duration_seconds": 7.44,
+    "response_text": "{\"error\": \"job_id is required and no completed job found in session state\"}\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": "current_session_123",
+          "user_id": "user_456"
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": "test_D_S2_11_run2_1778716624942"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:57:08.629041+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "D",
+    "run": 2,
+    "session_id": "test_D_S6_SC6_run2_1778716637389",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:57:22.084929+00:00",
+    "duration_seconds": 4.7,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "Your proof has been submitted. Job ID: 1778716640045. You can check the status by asking 'check my status'.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_D_S6_SC6_run2_1778716637389"
+        },
+        "response": "{\n  \"job_id\": \"1778716640045\",\n  \"status_url\": \"/jobs/1778716640045\"\n}",
+        "timestamp": "2026-05-13T23:57:19.971073+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "D",
+    "run": 2,
+    "session_id": "test_D_S6_SC6_run2_1778716637389",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:57:34.674263+00:00",
+    "duration_seconds": 7.59,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "Job 1778716640045: Status is done.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run2_1778716637389"
+        },
+        "response": "{\n  \"active_smts\": [\n    \"s1\"\n  ],\n  \"error\": null,\n  \"job_id\": \"1778716640045\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": {\n    \"active_smts\": [\n      \"s1\"\n    ],\n    \"error\": false\n  },\n  \"snapshots\": {\n    \"proof_end\": null,\n    \"proof_start\": {\n      \"message\": \"System metrics snapshot created.\",\n      \"status\": \"success\"\n    }\n  },\n  \"started_at\": 1778716640.0458956,\n  \"status\": \"done\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-13T23:57:30.567944+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "D",
+    "run": 2,
+    "session_id": "test_D_S6_SC6_run2_1778716637389",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:57:51.171210+00:00",
+    "duration_seconds": 11.5,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "Your proof file has been downloaded. Filename: proofs-1778716640045.zip, size: 378964 bytes. Use the download button to save it.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "download_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run2_1778716637389"
+        },
+        "response": "{\"success\": true, \"job_id\": \"1778716640045\", \"filename\": \"proofs-1778716640045.zip\", \"file_size\": 378964, \"proof_type\": \"KS\"}",
+        "timestamp": "2026-05-13T23:57:47.607259+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "D",
+    "run": 2,
+    "session_id": "test_D_S6_SC6_run2_1778716637389",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:59:23.989025+00:00",
+    "duration_seconds": 87.82,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run2_1778716637389"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-13T23:58:11.065967+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_24",
+    "config": "D",
+    "run": 3,
+    "session_id": "test_D_S1_24_run3_1778716768990",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:00:49.222755+00:00",
+    "duration_seconds": 80.22,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_D_S1_24_run3_1778716768990"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-13T23:59:32.056570+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "D",
+    "run": 3,
+    "session_id": "test_D_S1_25_run3_1778716854225",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:02:18.713257+00:00",
+    "duration_seconds": 84.48,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_id",
+          "user_id": "current_user_id",
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_D_S1_25_run3_1778716854225",
+          "proof_type": "auto"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-14T00:01:06.210680+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_11",
+    "config": "D",
+    "run": 3,
+    "session_id": "test_D_S2_11_run3_1778716943714",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:02:31.856208+00:00",
+    "duration_seconds": 8.14,
+    "response_text": "{\"error\": \"job_id is required and no completed job found in session state\"}\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_D_S2_11_run3_1778716943714"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-14T00:02:28.618083+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "D",
+    "run": 3,
+    "session_id": "test_D_S6_SC6_run3_1778716956860",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:02:41.956549+00:00",
+    "duration_seconds": 5.1,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "Your proof has been submitted. Job ID: 1778716958736. You can check the status by asking 'check my status'.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_D_S6_SC6_run3_1778716956860"
+        },
+        "response": "{\n  \"job_id\": \"1778716958736\",\n  \"status_url\": \"/jobs/1778716958736\"\n}",
+        "timestamp": "2026-05-14T00:02:38.661202+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "D",
+    "run": 3,
+    "session_id": "test_D_S6_SC6_run3_1778716956860",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:02:52.732506+00:00",
+    "duration_seconds": 5.78,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "Job 1778716958736: Status is done.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run3_1778716956860"
+        },
+        "response": "{\n  \"active_smts\": [\n    \"s1\"\n  ],\n  \"error\": null,\n  \"job_id\": \"1778716958736\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": {\n    \"active_smts\": [\n      \"s1\"\n    ],\n    \"error\": false\n  },\n  \"snapshots\": {\n    \"proof_end\": null,\n    \"proof_start\": {\n      \"message\": \"System metrics snapshot created.\",\n      \"status\": \"success\"\n    }\n  },\n  \"started_at\": 1778716958.7366602,\n  \"status\": \"done\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-14T00:02:49.562184+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "D",
+    "run": 3,
+    "session_id": "test_D_S6_SC6_run3_1778716956860",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:03:10.776984+00:00",
+    "duration_seconds": 13.04,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "Your proof file has been downloaded. Filename: proofs-1778716958736.zip, size: 378964 bytes. Use the download button to save it.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "download_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run3_1778716956860"
+        },
+        "response": "{\"success\": true, \"job_id\": \"1778716958736\", \"filename\": \"proofs-1778716958736.zip\", \"file_size\": 378964, \"proof_type\": \"KS\"}",
+        "timestamp": "2026-05-14T00:03:05.167201+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "D",
+    "run": 3,
+    "session_id": "test_D_S6_SC6_run3_1778716956860",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:04:31.446506+00:00",
+    "duration_seconds": 75.67,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_id"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run3_1778716956860"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-14T00:03:17.771918+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_24",
+    "config": "D",
+    "run": 4,
+    "session_id": "test_D_S1_24_run4_1778717076448",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:05:54.474325+00:00",
+    "duration_seconds": 78.02,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_D_S1_24_run4_1778717076448"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-14T00:04:41.415692+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "D",
+    "run": 4,
+    "session_id": "test_D_S1_25_run4_1778717159476",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:07:16.902498+00:00",
+    "duration_seconds": 77.42,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_id"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_D_S1_25_run4_1778717159476"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-14T00:06:02.863700+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_11",
+    "config": "D",
+    "run": 4,
+    "session_id": "test_D_S2_11_run4_1778717241904",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:07:29.663877+00:00",
+    "duration_seconds": 7.76,
+    "response_text": "{\"error\": \"job_id is required and no completed job found in session state\"}\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_123",
+          "user_id": "user_456"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_D_S2_11_run4_1778717241904"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-14T00:07:26.376869+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "D",
+    "run": 4,
+    "session_id": "test_D_S6_SC6_run4_1778717254669",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:07:42.048791+00:00",
+    "duration_seconds": 7.38,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "Your proof has been submitted. Job ID: 1778717257691. You can check the status by asking 'check my status'.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_D_S6_SC6_run4_1778717254669"
+        },
+        "response": "{\n  \"job_id\": \"1778717257691\",\n  \"status_url\": \"/jobs/1778717257691\"\n}",
+        "timestamp": "2026-05-14T00:07:37.617006+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "D",
+    "run": 4,
+    "session_id": "test_D_S6_SC6_run4_1778717254669",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:07:54.351921+00:00",
+    "duration_seconds": 7.3,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "Job 1778717257691: Status is done.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run4_1778717254669"
+        },
+        "response": "{\n  \"active_smts\": [\n    \"s1\"\n  ],\n  \"error\": null,\n  \"job_id\": \"1778717257691\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": {\n    \"active_smts\": [\n      \"s1\"\n    ],\n    \"error\": false\n  },\n  \"snapshots\": {\n    \"proof_end\": null,\n    \"proof_start\": {\n      \"message\": \"System metrics snapshot created.\",\n      \"status\": \"success\"\n    }\n  },\n  \"started_at\": 1778717257.6911473,\n  \"status\": \"done\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-14T00:07:50.707908+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "D",
+    "run": 4,
+    "session_id": "test_D_S6_SC6_run4_1778717254669",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:08:06.191867+00:00",
+    "duration_seconds": 6.84,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "Your proof file has been downloaded. Filename: proofs-1778717257691.zip, size: 378964 bytes. Use the download button to save it.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "download_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run4_1778717254669"
+        },
+        "response": "{\"success\": true, \"job_id\": \"1778717257691\", \"filename\": \"proofs-1778717257691.zip\", \"file_size\": 378964, \"proof_type\": \"KS\"}",
+        "timestamp": "2026-05-14T00:08:03.196533+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "D",
+    "run": 4,
+    "session_id": "test_D_S6_SC6_run4_1778717254669",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:09:29.500285+00:00",
+    "duration_seconds": 78.31,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run4_1778717254669"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-14T00:08:15.332928+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_24",
+    "config": "D",
+    "run": 5,
+    "session_id": "test_D_S1_24_run5_1778717374503",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:10:52.120275+00:00",
+    "duration_seconds": 77.61,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": "abc123",
+          "user_id": null
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": "test_D_S1_24_run5_1778717374503"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-14T00:09:38.676201+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "D",
+    "run": 5,
+    "session_id": "test_D_S1_25_run5_1778717457123",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:12:14.861720+00:00",
+    "duration_seconds": 77.73,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_id",
+          "user_id": "current_user_id"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_D_S1_25_run5_1778717457123"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-14T00:11:01.558655+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_11",
+    "config": "D",
+    "run": 5,
+    "session_id": "test_D_S2_11_run5_1778717539865",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:12:32.685817+00:00",
+    "duration_seconds": 12.82,
+    "response_text": "You have no jobs in this session yet.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "abc123",
+          "user_id": "user456"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_D_S2_11_run5_1778717539865"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-14T00:12:26.437712+00:00"
+      },
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "abc123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_D_S2_11_run5_1778717539865"
+        },
+        "response": "{\n  \"state\": {\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-14T00:12:19.868872\"\n  },\n  \"jobs\": [],\n  \"summary\": \"Latest job: none. Latest completed: none.\",\n  \"recent_messages\": []\n}",
+        "timestamp": "2026-05-14T00:12:29.705406+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "D",
+    "run": 5,
+    "session_id": "test_D_S6_SC6_run5_1778717557692",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:12:42.955065+00:00",
+    "duration_seconds": 5.26,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "Your proof has been submitted. Job ID: 1778717560788. You can check the status by asking 'check my status'.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_D_S6_SC6_run5_1778717557692"
+        },
+        "response": "{\n  \"job_id\": \"1778717560788\",\n  \"status_url\": \"/jobs/1778717560788\"\n}",
+        "timestamp": "2026-05-14T00:12:40.713878+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "D",
+    "run": 5,
+    "session_id": "test_D_S6_SC6_run5_1778717557692",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:12:58.724028+00:00",
+    "duration_seconds": 10.77,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "Job 1778717560788: Status is done.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run5_1778717557692"
+        },
+        "response": "{\n  \"active_smts\": [\n    \"s1\"\n  ],\n  \"error\": null,\n  \"job_id\": \"1778717560788\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": {\n    \"active_smts\": [\n      \"s1\"\n    ],\n    \"error\": false\n  },\n  \"snapshots\": {\n    \"proof_end\": null,\n    \"proof_start\": {\n      \"message\": \"System metrics snapshot created.\",\n      \"status\": \"success\"\n    }\n  },\n  \"started_at\": 1778717560.788071,\n  \"status\": \"done\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-14T00:12:53.667475+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "D",
+    "run": 5,
+    "session_id": "test_D_S6_SC6_run5_1778717557692",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:13:15.745846+00:00",
+    "duration_seconds": 12.02,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "Your proof file has been downloaded. Filename: proofs-1778717560788.zip, size: 378964 bytes. Use the download button to save it.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "download_proof",
+        "arguments": {
+          "job_id": null,
+          "output_filename": null,
+          "proof_type": "auto",
+          "session_id": "current_session_id"
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "output_filename": null,
+          "proof_type": "auto",
+          "session_id": "test_D_S6_SC6_run5_1778717557692"
+        },
+        "response": "{\"success\": true, \"job_id\": \"1778717560788\", \"filename\": \"proofs-1778717560788.zip\", \"file_size\": 378964, \"proof_type\": \"KS\"}",
+        "timestamp": "2026-05-14T00:13:10.850806+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "D",
+    "run": 5,
+    "session_id": "test_D_S6_SC6_run5_1778717557692",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:14:39.726092+00:00",
+    "duration_seconds": 78.98,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run5_1778717557692"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-14T00:13:24.886017+00:00"
+      }
+    ]
+  }
+]

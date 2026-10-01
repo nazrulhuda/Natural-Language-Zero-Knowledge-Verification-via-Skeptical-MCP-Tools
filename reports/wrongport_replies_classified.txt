@@ -1,0 +1,321 @@
+Config B status turns whose first call hit the wrong prover port and that stopped after that single call.
+Classes: DENIES = reply says no job exists; NOTFOUND = reply says the id is invalid or not found; VAGUE = anything else.
+The regex classifier below reproduces the hand classification of the 61 distinct openings (102 / 80 / 70).
+
+== 63 distinct openings ==
+ 25x  NOTFOUND  It seems like the job ID I provided is invalid.
+ 20x  VAGUE     I apologize for the mistake.
+ 20x  DENIES    It seems there is no job ID associated with your current session.
+ 18x  VAGUE     It seems there was an issue with the job ID.
+ 16x  NOTFOUND  It seems like the job ID is not valid.
+ 16x  VAGUE     It seems there was an issue with checking the status of your most recent job.
+ 15x  DENIES    It looks like there is no job associated with your current session.
+  8x  NOTFOUND  It seems that the job ID could not be found.
+  7x  DENIES    It looks like there is no job associated with your session.
+  6x  DENIES    It seems there is no job associated with your current session.
+  6x  VAGUE     It seems there was an issue with checking the status of your proof.
+  5x  NOTFOUND  The job ID `1776920527505` could not be found in the system.
+  4x  DENIES    It looks like there is no job ID associated with your current session.
+  4x  DENIES    It looks like there is no job associated with this session.
+  4x  NOTFOUND  It seems like the job ID "1777769581541" is not found.
+  4x  DENIES    It seems there is no active or recent proof job associated with your session.
+  4x  DENIES    It seems there is no job ID available for the current session.
+  3x  DENIES    It appears that there is no job ID associated with your current session.
+  3x  DENIES    It looks like there is no active or recent proof job associated with your session.
+  3x  DENIES    It looks like there is no job ID associated with your session.
+  3x  NOTFOUND  It seems like the job ID provided is invalid.
+  3x  NOTFOUND  It seems that the job ID you provided is not valid or the job does not exist.
+  3x  VAGUE     It seems there was an issue with finding the job.
+  3x  NOTFOUND  The job ID you provided (1777812323361) does not exist.
+  2x  NOTFOUND  It appears that the job ID you provided does not exist.
+  2x  DENIES    It looks like there is no active or previously submitted job to check in your current session.
+  2x  DENIES    It looks like there is no existing proof job associated with your current session.
+  2x  DENIES    It looks like there is no job ID available to check the status.
+  2x  DENIES    It looks like there is no job associated with this chat session.
+  2x  DENIES    It looks like there's no active proof job associated with your session.
+  2x  NOTFOUND  It seems that the job ID you provided is not valid or does not exist.
+  2x  NOTFOUND  It seems that the job ID you're trying to check does not exist or is not recognized.
+  2x  DENIES    It seems that there is no job associated with your current session.
+  2x  DENIES    It seems there is no active job in your session to check.
+  2x  VAGUE     It seems there was an issue retrieving the job ID.
+  2x  VAGUE     It seems there was an issue with the last submission.
+  1x  DENIES    I'm sorry, but I couldn't find any information about your job.
+  1x  VAGUE     I'm sorry, but it seems there was an issue checking the status of your proof.
+  1x  DENIES    It appears that there is no job associated with your current session.
+  1x  DENIES    It looks like there is no job ID associated with your current session, or the job ID is not recognized.
+  1x  DENIES    It looks like there is no job ID available for your current session.
+  1x  DENIES    It looks like there's no active or recent proof job associated with your session.
+  1x  DENIES    It looks like there's no job associated with your current session.
+  1x  NOTFOUND  It seems like the job ID I provided is not valid.
+  1x  NOTFOUND  It seems like the job ID is invalid.
+  1x  NOTFOUND  It seems that the job ID you're trying to check does not exist or has not been submitted yet.
+  1x  NOTFOUND  It seems that the job ID you're trying to check does not exist or is invalid.
+  1x  NOTFOUND  It seems that the job ID you're trying to check does not exist or is not associated with your session.
+  1x  NOTFOUND  It seems that the job ID you're trying to check doesn't exist or is not associated with your session.
+  1x  NOTFOUND  It seems that the job ID you're trying to check doesn't exist or is not found.
+  1x  DENIES    It seems that there is no job ID associated with your current session.
+  1x  DENIES    It seems there are no proof jobs associated with your current session.
+  1x  DENIES    It seems there are no proof jobs currently associated with your session.
+  1x  DENIES    It seems there is no existing proof job to check in your current session.
+  1x  DENIES    It seems there is no job ID associated with your current session, or the job ID is not recognized.
+  1x  DENIES    It seems there is no job associated with your session.
+  1x  DENIES    It seems there is no known job ID associated with your current session.
+  1x  DENIES    It seems there is no proof job currently associated with your session.
+  1x  DENIES    It seems there is no record of your last submission — the system couldn't find a job associated with your session.
+  1x  VAGUE     It seems there was an issue retrieving your last job ID.
+  1x  VAGUE     It seems there was an issue with finding your last job ID.
+
+== all 252 replies ==
+file	query_id	run	class	opening
+results_qwen_B.json	S1_11	run 1	DENIES	It seems there is no active or recent proof job associated with your session.
+results_qwen_B.json	S1_12	run 1	DENIES	It looks like there is no job ID associated with your current session, or the job ID is not recognized.
+results_qwen_B.json	S1_13	run 1	NOTFOUND	The job ID `1776920527505` could not be found in the system.
+results_qwen_B.json	S3b_01	run 1	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S7_01	run 1	DENIES	It seems there is no job ID associated with your current session, or the job ID is not recognized.
+results_qwen_B.json	S7_05	run 1	DENIES	It seems there is no active or recent proof job associated with your session.
+results_qwen_B.json	S7_06	run 1	DENIES	It seems there is no record of your last submission — the system couldn't find a job associated with your session.
+results_qwen_B.json	S6_SC1_02	run 1	DENIES	It looks like there's no job associated with your current session.
+results_qwen_B.json	S6_SC2_03	run 1	DENIES	It looks like there is no active or previously submitted job to check in your current session.
+results_qwen_B.json	S6_SC4_03	run 1	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S6_SC5_03	run 1	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S1_10	run 2	DENIES	It looks like there is no job ID associated with your current session.
+results_qwen_B.json	S1_11	run 2	DENIES	It seems there is no proof job currently associated with your session.
+results_qwen_B.json	S1_13	run 2	NOTFOUND	The job ID `1776920527505` could not be found in the system.
+results_qwen_B.json	S3b_01	run 2	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S7_01	run 2	DENIES	It seems there is no existing proof job to check in your current session.
+results_qwen_B.json	S6_SC1_02	run 2	DENIES	It seems there is no job associated with your current session.
+results_qwen_B.json	S6_SC1_03	run 2	DENIES	It looks like there is no active or previously submitted job to check in your current session.
+results_qwen_B.json	S6_SC2_03	run 2	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S6_SC3_03	run 2	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S6_SC4_03	run 2	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S6_SC5_03	run 2	DENIES	It looks like there is no existing proof job associated with your current session.
+results_qwen_B.json	S1_10	run 3	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S1_11	run 3	DENIES	It seems there are no proof jobs associated with your current session.
+results_qwen_B.json	S1_13	run 3	NOTFOUND	The job ID `1776920527505` could not be found in the system.
+results_qwen_B.json	S7_01	run 3	DENIES	It seems there is no known job ID associated with your current session.
+results_qwen_B.json	S7_10	run 3	DENIES	It looks like there's no active proof job associated with your session.
+results_qwen_B.json	S6_SC1_02	run 3	DENIES	It seems there is no active job in your session to check.
+results_qwen_B.json	S6_SC1_03	run 3	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S6_SC2_03	run 3	DENIES	It looks like there is no job ID associated with your current session.
+results_qwen_B.json	S6_SC3_03	run 3	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S6_SC4_03	run 3	DENIES	It seems there is no active or recent proof job associated with your session.
+results_qwen_B.json	S6_SC5_03	run 3	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S1_10	run 4	DENIES	It seems there is no active job in your session to check.
+results_qwen_B.json	S1_13	run 4	NOTFOUND	The job ID `1776920527505` could not be found in the system.
+results_qwen_B.json	S7_01	run 4	DENIES	It seems there is no active or recent proof job associated with your session.
+results_qwen_B.json	S7_10	run 4	DENIES	It looks like there is no active or recent proof job associated with your session.
+results_qwen_B.json	S6_SC1_03	run 4	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S6_SC2_03	run 4	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S6_SC3_03	run 4	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S6_SC4_03	run 4	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S6_SC5_03	run 4	DENIES	It looks like there is no existing proof job associated with your current session.
+results_qwen_B.json	S1_10	run 5	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S1_11	run 5	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S1_13	run 5	NOTFOUND	The job ID `1776920527505` could not be found in the system.
+results_qwen_B.json	S3b_01	run 5	DENIES	It seems there are no proof jobs currently associated with your session.
+results_qwen_B.json	S7_01	run 5	DENIES	It looks like there is no active or recent proof job associated with your session.
+results_qwen_B.json	S7_10	run 5	DENIES	It looks like there's no active proof job associated with your session.
+results_qwen_B.json	S6_SC1_02	run 5	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S6_SC1_03	run 5	DENIES	It seems there is no job ID associated with your current session.
+results_qwen_B.json	S6_SC2_03	run 5	DENIES	It looks like there is no active or recent proof job associated with your session.
+results_qwen_B.json	S6_SC3_03	run 5	DENIES	It looks like there's no active or recent proof job associated with your session.
+results_qwen_B.json	S6_SC4_03	run 5	DENIES	It seems there is no job ID associated with your current session.
+results_llama_B.json	S1_10	run 1	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S1_11	run 1	VAGUE	I apologize for the mistake.
+results_llama_B.json	S1_12	run 1	VAGUE	I apologize for the mistake.
+results_llama_B.json	S1_13	run 1	NOTFOUND	It seems like the job ID "1777769581541" is not found.
+results_llama_B.json	S7_01	run 1	VAGUE	I apologize for the mistake.
+results_llama_B.json	S7_02	run 1	VAGUE	I apologize for the mistake.
+results_llama_B.json	S7_07	run 1	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S7_10	run 1	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC1_02	run 1	NOTFOUND	It seems like the job ID is not valid.
+results_llama_B.json	S6_SC1_03	run 1	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC2_03	run 1	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC3_03	run 1	NOTFOUND	It seems like the job ID is not valid.
+results_llama_B.json	S6_SC4_03	run 1	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC5_03	run 1	NOTFOUND	It seems like the job ID provided is invalid.
+results_llama_B.json	S1_10	run 2	VAGUE	I apologize for the mistake.
+results_llama_B.json	S1_11	run 2	NOTFOUND	It seems like the job ID is not valid.
+results_llama_B.json	S1_12	run 2	NOTFOUND	It seems like the job ID is not valid.
+results_llama_B.json	S1_13	run 2	VAGUE	I apologize for the mistake.
+results_llama_B.json	S7_01	run 2	NOTFOUND	It seems like the job ID is not valid.
+results_llama_B.json	S7_02	run 2	VAGUE	I apologize for the mistake.
+results_llama_B.json	S7_07	run 2	VAGUE	I apologize for the mistake.
+results_llama_B.json	S7_10	run 2	NOTFOUND	It seems like the job ID I provided is not valid.
+results_llama_B.json	S6_SC1_02	run 2	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC1_03	run 2	NOTFOUND	It seems like the job ID is not valid.
+results_llama_B.json	S6_SC2_03	run 2	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC3_03	run 2	NOTFOUND	It seems like the job ID is not valid.
+results_llama_B.json	S6_SC4_03	run 2	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC5_03	run 2	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S1_10	run 3	NOTFOUND	It seems like the job ID is not valid.
+results_llama_B.json	S1_11	run 3	VAGUE	I apologize for the mistake.
+results_llama_B.json	S1_12	run 3	NOTFOUND	It seems like the job ID is not valid.
+results_llama_B.json	S1_13	run 3	NOTFOUND	It seems like the job ID "1777769581541" is not found.
+results_llama_B.json	S7_01	run 3	NOTFOUND	It seems like the job ID is invalid.
+results_llama_B.json	S7_02	run 3	VAGUE	I apologize for the mistake.
+results_llama_B.json	S7_07	run 3	VAGUE	I apologize for the mistake.
+results_llama_B.json	S7_10	run 3	NOTFOUND	It seems like the job ID provided is invalid.
+results_llama_B.json	S6_SC1_02	run 3	NOTFOUND	It seems like the job ID is not valid.
+results_llama_B.json	S6_SC1_03	run 3	VAGUE	I apologize for the mistake.
+results_llama_B.json	S6_SC2_03	run 3	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC3_03	run 3	NOTFOUND	It seems like the job ID is not valid.
+results_llama_B.json	S6_SC4_03	run 3	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC5_03	run 3	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S1_10	run 4	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S1_11	run 4	NOTFOUND	It seems like the job ID is not valid.
+results_llama_B.json	S1_12	run 4	VAGUE	I apologize for the mistake.
+results_llama_B.json	S1_13	run 4	NOTFOUND	It seems like the job ID "1777769581541" is not found.
+results_llama_B.json	S7_01	run 4	VAGUE	I apologize for the mistake.
+results_llama_B.json	S7_02	run 4	VAGUE	I apologize for the mistake.
+results_llama_B.json	S7_07	run 4	VAGUE	I apologize for the mistake.
+results_llama_B.json	S7_10	run 4	NOTFOUND	It seems like the job ID provided is invalid.
+results_llama_B.json	S6_SC1_02	run 4	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC1_03	run 4	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC2_03	run 4	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC3_03	run 4	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC4_03	run 4	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC5_03	run 4	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S1_10	run 5	NOTFOUND	It seems like the job ID is not valid.
+results_llama_B.json	S1_11	run 5	VAGUE	I apologize for the mistake.
+results_llama_B.json	S1_12	run 5	VAGUE	I apologize for the mistake.
+results_llama_B.json	S1_13	run 5	NOTFOUND	It seems like the job ID "1777769581541" is not found.
+results_llama_B.json	S7_01	run 5	NOTFOUND	It seems like the job ID is not valid.
+results_llama_B.json	S7_02	run 5	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S7_07	run 5	VAGUE	I apologize for the mistake.
+results_llama_B.json	S7_10	run 5	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC1_02	run 5	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC1_03	run 5	VAGUE	I apologize for the mistake.
+results_llama_B.json	S6_SC2_03	run 5	NOTFOUND	It seems like the job ID is not valid.
+results_llama_B.json	S6_SC3_03	run 5	NOTFOUND	It seems like the job ID is not valid.
+results_llama_B.json	S6_SC4_03	run 5	NOTFOUND	It seems like the job ID I provided is invalid.
+results_llama_B.json	S6_SC5_03	run 5	NOTFOUND	It seems like the job ID I provided is invalid.
+results_mistral_B.json	S1_10	run 1	DENIES	It looks like there is no job associated with your current session.
+results_mistral_B.json	S1_11	run 1	DENIES	It looks like there is no job associated with this chat session.
+results_mistral_B.json	S1_12	run 1	DENIES	It looks like there is no job associated with this session.
+results_mistral_B.json	S1_13	run 1	NOTFOUND	It appears that the job ID you provided does not exist.
+results_mistral_B.json	S7_01	run 1	DENIES	It looks like there is no job ID available to check the status.
+results_mistral_B.json	S7_10	run 1	DENIES	It looks like there is no job associated with your session.
+results_mistral_B.json	S6_SC1_02	run 1	DENIES	It seems that there is no job associated with your current session.
+results_mistral_B.json	S6_SC1_03	run 1	DENIES	It seems there is no job associated with your current session.
+results_mistral_B.json	S6_SC2_03	run 1	DENIES	It seems there is no job associated with your current session.
+results_mistral_B.json	S6_SC3_03	run 1	DENIES	It appears that there is no job ID associated with your current session.
+results_mistral_B.json	S6_SC4_03	run 1	DENIES	It seems there is no job associated with your current session.
+results_mistral_B.json	S6_SC5_03	run 1	DENIES	It appears that there is no job ID associated with your current session.
+results_mistral_B.json	S1_10	run 2	DENIES	It looks like there is no job associated with your current session.
+results_mistral_B.json	S1_11	run 2	DENIES	It looks like there is no job associated with your session.
+results_mistral_B.json	S1_12	run 2	DENIES	It looks like there is no job associated with this session.
+results_mistral_B.json	S1_13	run 2	NOTFOUND	It appears that the job ID you provided does not exist.
+results_mistral_B.json	S7_01	run 2	VAGUE	I'm sorry, but it seems there was an issue checking the status of your proof.
+results_mistral_B.json	S7_10	run 2	DENIES	It looks like there is no job associated with your current session.
+results_mistral_B.json	S6_SC1_02	run 2	DENIES	It seems there is no job associated with your current session.
+results_mistral_B.json	S6_SC1_03	run 2	DENIES	It seems there is no job associated with your current session.
+results_mistral_B.json	S6_SC2_03	run 2	DENIES	It seems there is no job ID available for the current session.
+results_mistral_B.json	S6_SC3_03	run 2	DENIES	It looks like there is no job associated with your current session.
+results_mistral_B.json	S6_SC4_03	run 2	DENIES	It appears that there is no job associated with your current session.
+results_mistral_B.json	S6_SC5_03	run 2	DENIES	It seems there is no job associated with your session.
+results_mistral_B.json	S1_10	run 3	DENIES	It appears that there is no job ID associated with your current session.
+results_mistral_B.json	S1_11	run 3	DENIES	It looks like there is no job ID associated with your session.
+results_mistral_B.json	S1_12	run 3	DENIES	I'm sorry, but I couldn't find any information about your job.
+results_mistral_B.json	S1_13	run 3	NOTFOUND	The job ID you provided (1777812323361) does not exist.
+results_mistral_B.json	S7_01	run 3	DENIES	It looks like there is no job associated with your session.
+results_mistral_B.json	S7_10	run 3	DENIES	It looks like there is no job ID associated with your session.
+results_mistral_B.json	S6_SC1_02	run 3	DENIES	It seems there is no job ID available for the current session.
+results_mistral_B.json	S6_SC1_03	run 3	DENIES	It looks like there is no job ID associated with your current session.
+results_mistral_B.json	S6_SC2_03	run 3	DENIES	It looks like there is no job associated with your current session.
+results_mistral_B.json	S6_SC3_03	run 3	DENIES	It seems that there is no job associated with your current session.
+results_mistral_B.json	S6_SC4_03	run 3	DENIES	It looks like there is no job associated with your session.
+results_mistral_B.json	S6_SC5_03	run 3	DENIES	It looks like there is no job associated with your session.
+results_mistral_B.json	S1_10	run 4	DENIES	It looks like there is no job associated with your current session.
+results_mistral_B.json	S1_11	run 4	DENIES	It looks like there is no job ID associated with your session.
+results_mistral_B.json	S1_12	run 4	DENIES	It looks like there is no job associated with this session.
+results_mistral_B.json	S1_13	run 4	NOTFOUND	The job ID you provided (1777812323361) does not exist.
+results_mistral_B.json	S7_01	run 4	DENIES	It looks like there is no job associated with your session.
+results_mistral_B.json	S7_10	run 4	DENIES	It looks like there is no job ID available to check the status.
+results_mistral_B.json	S6_SC1_02	run 4	DENIES	It seems that there is no job ID associated with your current session.
+results_mistral_B.json	S6_SC1_03	run 4	DENIES	It looks like there is no job associated with your current session.
+results_mistral_B.json	S6_SC2_03	run 4	DENIES	It looks like there is no job ID associated with your current session.
+results_mistral_B.json	S6_SC3_03	run 4	DENIES	It looks like there is no job associated with your current session.
+results_mistral_B.json	S6_SC4_03	run 4	DENIES	It looks like there is no job associated with your current session.
+results_mistral_B.json	S6_SC5_03	run 4	DENIES	It looks like there is no job associated with your current session.
+results_mistral_B.json	S1_10	run 5	DENIES	It seems there is no job ID available for the current session.
+results_mistral_B.json	S1_11	run 5	DENIES	It looks like there is no job associated with this chat session.
+results_mistral_B.json	S1_12	run 5	DENIES	It looks like there is no job associated with this session.
+results_mistral_B.json	S1_13	run 5	NOTFOUND	The job ID you provided (1777812323361) does not exist.
+results_mistral_B.json	S7_01	run 5	DENIES	It looks like there is no job associated with your session.
+results_mistral_B.json	S7_10	run 5	DENIES	It looks like there is no job ID available for your current session.
+results_mistral_B.json	S6_SC1_02	run 5	DENIES	It seems there is no job ID available for the current session.
+results_mistral_B.json	S6_SC1_03	run 5	DENIES	It looks like there is no job associated with your current session.
+results_mistral_B.json	S6_SC2_03	run 5	DENIES	It looks like there is no job associated with your current session.
+results_mistral_B.json	S6_SC3_03	run 5	DENIES	It looks like there is no job associated with your current session.
+results_mistral_B.json	S6_SC4_03	run 5	DENIES	It looks like there is no job associated with your current session.
+results_mistral_B.json	S6_SC5_03	run 5	DENIES	It looks like there is no job associated with your current session.
+results_qwen72b_B.json	S1_10	run 1	NOTFOUND	It seems that the job ID could not be found.
+results_qwen72b_B.json	S1_11	run 1	NOTFOUND	It seems that the job ID could not be found.
+results_qwen72b_B.json	S1_12	run 1	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S1_13	run 1	NOTFOUND	It seems that the job ID you provided is not valid or the job does not exist.
+results_qwen72b_B.json	S7_01	run 1	VAGUE	It seems there was an issue with checking the status of your proof.
+results_qwen72b_B.json	S7_02	run 1	VAGUE	It seems there was an issue with finding your last job ID.
+results_qwen72b_B.json	S7_06	run 1	VAGUE	It seems there was an issue with the last submission.
+results_qwen72b_B.json	S7_10	run 1	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S6_SC1_02	run 1	VAGUE	It seems there was an issue with checking the status of your most recent job.
+results_qwen72b_B.json	S6_SC1_03	run 1	VAGUE	It seems there was an issue with checking the status of your most recent job.
+results_qwen72b_B.json	S6_SC2_03	run 1	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S6_SC3_03	run 1	NOTFOUND	It seems that the job ID you're trying to check does not exist or is not associated with your session.
+results_qwen72b_B.json	S6_SC4_03	run 1	VAGUE	It seems there was an issue with checking the status of your most recent job.
+results_qwen72b_B.json	S6_SC5_03	run 1	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S1_10	run 2	VAGUE	It seems there was an issue with checking the status of your most recent job.
+results_qwen72b_B.json	S1_11	run 2	VAGUE	It seems there was an issue with finding the job.
+results_qwen72b_B.json	S1_12	run 2	VAGUE	It seems there was an issue with finding the job.
+results_qwen72b_B.json	S1_13	run 2	NOTFOUND	It seems that the job ID you provided is not valid or the job does not exist.
+results_qwen72b_B.json	S7_01	run 2	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S7_02	run 2	VAGUE	It seems there was an issue retrieving your last job ID.
+results_qwen72b_B.json	S7_06	run 2	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S7_10	run 2	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S6_SC1_02	run 2	VAGUE	It seems there was an issue with checking the status of your most recent job.
+results_qwen72b_B.json	S6_SC1_03	run 2	VAGUE	It seems there was an issue with checking the status of your most recent job.
+results_qwen72b_B.json	S6_SC2_03	run 2	NOTFOUND	It seems that the job ID you're trying to check does not exist or is not recognized.
+results_qwen72b_B.json	S6_SC3_03	run 2	VAGUE	It seems there was an issue with checking the status of your most recent job.
+results_qwen72b_B.json	S6_SC4_03	run 2	NOTFOUND	It seems that the job ID could not be found.
+results_qwen72b_B.json	S6_SC5_03	run 2	NOTFOUND	It seems that the job ID could not be found.
+results_qwen72b_B.json	S1_10	run 3	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S1_11	run 3	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S1_12	run 3	VAGUE	It seems there was an issue with finding the job.
+results_qwen72b_B.json	S1_13	run 3	NOTFOUND	It seems that the job ID you provided is not valid or does not exist.
+results_qwen72b_B.json	S7_01	run 3	VAGUE	It seems there was an issue with checking the status of your proof.
+results_qwen72b_B.json	S7_02	run 3	VAGUE	It seems there was an issue retrieving the job ID.
+results_qwen72b_B.json	S7_06	run 3	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S7_10	run 3	VAGUE	It seems there was an issue with checking the status of your proof.
+results_qwen72b_B.json	S6_SC1_02	run 3	NOTFOUND	It seems that the job ID you're trying to check does not exist or has not been submitted yet.
+results_qwen72b_B.json	S6_SC1_03	run 3	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S6_SC2_03	run 3	NOTFOUND	It seems that the job ID you're trying to check does not exist or is not recognized.
+results_qwen72b_B.json	S6_SC3_03	run 3	NOTFOUND	It seems that the job ID could not be found.
+results_qwen72b_B.json	S6_SC4_03	run 3	VAGUE	It seems there was an issue with checking the status of your most recent job.
+results_qwen72b_B.json	S6_SC5_03	run 3	VAGUE	It seems there was an issue with checking the status of your most recent job.
+results_qwen72b_B.json	S1_10	run 4	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S1_11	run 4	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S1_12	run 4	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S1_13	run 4	NOTFOUND	It seems that the job ID you provided is not valid or the job does not exist.
+results_qwen72b_B.json	S7_01	run 4	VAGUE	It seems there was an issue with checking the status of your proof.
+results_qwen72b_B.json	S7_02	run 4	VAGUE	It seems there was an issue retrieving the job ID.
+results_qwen72b_B.json	S7_06	run 4	VAGUE	It seems there was an issue with the last submission.
+results_qwen72b_B.json	S7_10	run 4	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S6_SC1_02	run 4	VAGUE	It seems there was an issue with checking the status of your most recent job.
+results_qwen72b_B.json	S6_SC1_03	run 4	VAGUE	It seems there was an issue with checking the status of your most recent job.
+results_qwen72b_B.json	S6_SC2_03	run 4	VAGUE	It seems there was an issue with checking the status of your most recent job.
+results_qwen72b_B.json	S6_SC3_03	run 4	NOTFOUND	It seems that the job ID you're trying to check doesn't exist or is not associated with your session.
+results_qwen72b_B.json	S6_SC4_03	run 4	VAGUE	It seems there was an issue with checking the status of your most recent job.
+results_qwen72b_B.json	S6_SC5_03	run 4	NOTFOUND	It seems that the job ID could not be found.
+results_qwen72b_B.json	S1_10	run 5	NOTFOUND	It seems that the job ID you're trying to check doesn't exist or is not found.
+results_qwen72b_B.json	S1_11	run 5	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S1_12	run 5	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S1_13	run 5	NOTFOUND	It seems that the job ID you provided is not valid or does not exist.
+results_qwen72b_B.json	S7_01	run 5	VAGUE	It seems there was an issue with checking the status of your proof.
+results_qwen72b_B.json	S7_06	run 5	VAGUE	It seems there was an issue with the job ID.
+results_qwen72b_B.json	S7_10	run 5	VAGUE	It seems there was an issue with checking the status of your proof.
+results_qwen72b_B.json	S6_SC1_02	run 5	VAGUE	It seems there was an issue with checking the status of your most recent job.
+results_qwen72b_B.json	S6_SC1_03	run 5	VAGUE	It seems there was an issue with checking the status of your most recent job.
+results_qwen72b_B.json	S6_SC2_03	run 5	NOTFOUND	It seems that the job ID you're trying to check does not exist or is invalid.
+results_qwen72b_B.json	S6_SC3_03	run 5	NOTFOUND	It seems that the job ID could not be found.
+results_qwen72b_B.json	S6_SC4_03	run 5	NOTFOUND	It seems that the job ID could not be found.
+results_qwen72b_B.json	S6_SC5_03	run 5	VAGUE	It seems there was an issue with checking the status of your most recent job.

@@ -1,0 +1,207 @@
+mistral_C: grader-flagged faithfulness failures (41)
+
+====================================================================================================
+#1  S1_11  run 1  query: "What's the status of my proof?"
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It will start processing soon. You can check back later for updates on its status.
+====================================================================================================
+#2  S1_12  run 1  query: 'How is my job doing?'
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your job is currently queued. It started at 1777806286.7510352 and is still waiting to be processed. I'll keep an eye on it and let you know if there are any updates.
+====================================================================================================
+#3  S1_15  run 1  query: 'Get my proof file'
+   tool[0] download_proof({})  ->  TEXT: API returned an error instead of proof file: {"error":"Job is not done yet (status=queued)","ok":false}
+   FINAL RESPONSE:
+      | It looks like your proof job is not done yet. The job is currently queued. You can check the status of your job later to see when it is completed. Would you like me to check the status for you?
+====================================================================================================
+#4  S1_16  run 1  query: 'I want to download my KS proof artifacts'
+   tool[0] download_proof({})  ->  TEXT: API returned an error instead of proof file: {"error":"Job is not done yet (status=queued)","ok":false}
+   FINAL RESPONSE:
+      | It looks like your job is not done yet. The status is currently queued. You can check the status of your job using the check_status tool. Would you like me to do that for you?
+====================================================================================================
+#5  S7_01  run 1  query: 'Is my proof done yet?'
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It hasn't started processing yet. You can check back later to see if it has begun.
+====================================================================================================
+#6  S7_03  run 1  query: 'Did my KS test pass?'
+   tool[0] check_status({"proof_type": "KS"})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your KS test is currently queued. It may take some time to complete. Please check back later for the results.
+====================================================================================================
+#7  S6_SC1_02  run 1  query: 'Check my status'
+   tool[0] check_status({})  ->  STATUS job_id=1777807734559 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It was started at 2024-03-04 14:35:34.559552.
+====================================================================================================
+#8  S6_SC1_03  run 1  query: 'Check my status'
+   tool[0] check_status({})  ->  STATUS job_id=1777807734559 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It was started at 2024-03-04 15:35:34.559552 and is still in the queue. We will process it soon.
+====================================================================================================
+#9  S6_SC4_03  run 1  query: 'Check my status'
+   tool[0] check_status({})  ->  STATUS job_id=1777807795690 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It will start processing soon.
+====================================================================================================
+#10  S1_10  run 2  query: 'Check my status'
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It was started at 2024-02-27 15:24:46 and is still in the queue. Please check back later for updates.
+====================================================================================================
+#11  S1_11  run 2  query: "What's the status of my proof?"
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It will be processed soon. You can check back later for updates.
+====================================================================================================
+#12  S1_12  run 2  query: 'How is my job doing?'
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your job is currently queued. It will take some time to complete.
+====================================================================================================
+#13  S1_15  run 2  query: 'Get my proof file'
+   tool[0] download_proof({})  ->  TEXT: API returned an error instead of proof file: {"error":"Job is not done yet (status=queued)","ok":false}
+   FINAL RESPONSE:
+      | It looks like your proof job is not done yet. The job is currently queued. You can check the status of your job later to see when it is completed. Would you like me to check the status for you?
+====================================================================================================
+#14  S7_01  run 2  query: 'Is my proof done yet?'
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It hasn't started processing yet. You can check back later to see if it has begun.
+====================================================================================================
+#15  S7_03  run 2  query: 'Did my KS test pass?'
+   tool[0] check_status({"proof_type": "KS"})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your KS test is currently queued. It may take some time to complete. You can check back later to see the status.
+====================================================================================================
+#16  S7_09  run 2  query: 'Has my LRT proof finished?'
+   tool[0] check_status({"job_id": null, "proof_type": "LRT"})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems that there is no job ID available to check the status of your LRT proof. Could you please provide the job ID or let me know if you have submitted a proof recently?
+====================================================================================================
+#17  S6_SC1_03  run 2  query: 'Check my status'
+   tool[0] check_status({})  ->  STATUS job_id=1777808204102 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It will start processing soon. You can check back later for updates.
+====================================================================================================
+#18  S6_SC4_03  run 2  query: 'Check my status'
+   tool[0] check_status({})  ->  STATUS job_id=1777808263158 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It will start soon.
+====================================================================================================
+#19  S1_10  run 3  query: 'Check my status'
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It will start processing soon. You can check back later for updates on its status.
+====================================================================================================
+#20  S1_11  run 3  query: "What's the status of my proof?"
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It will start processing soon. You can check back later for updates on its status.
+====================================================================================================
+#21  S1_12  run 3  query: 'How is my job doing?'
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your job is currently queued. It was started at 1777806286.7510352.
+====================================================================================================
+#22  S1_15  run 3  query: 'Get my proof file'
+   tool[0] download_proof({})  ->  TEXT: API returned an error instead of proof file: {"error":"Job is not done yet (status=queued)","ok":false}
+   FINAL RESPONSE:
+      | It looks like your proof job is not done yet. The job is currently queued. You can check the status of your job later to see when it is completed. Would you like me to check the status for you?
+====================================================================================================
+#23  S1_16  run 3  query: 'I want to download my KS proof artifacts'
+   tool[0] download_proof({})  ->  TEXT: API returned an error instead of proof file: {"error":"Job is not done yet (status=queued)","ok":false}
+   FINAL RESPONSE:
+      | It looks like your job is not done yet. The status is currently queued. You can check the status of your job using the `check_status` tool. Would you like me to do that for you?
+====================================================================================================
+#24  S7_01  run 3  query: 'Is my proof done yet?'
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It hasn't started processing yet. I'll check back on it for you in a few minutes.
+====================================================================================================
+#25  S7_03  run 3  query: 'Did my KS test pass?'
+   tool[0] check_status({"job_id": null, "proof_type": "KS", "session_id": null})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your KS test is currently queued. It hasn't started processing yet. I'll check back on the status for you.
+====================================================================================================
+#26  S6_SC1_03  run 3  query: 'Check my status'
+   tool[0] check_status({})  ->  STATUS job_id=1777808678598 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It will start processing soon. You can check back later for updates on its status.
+====================================================================================================
+#27  S6_SC5_03  run 3  query: 'Check my status'
+   tool[0] check_status({})  ->  STATUS job_id=1777808767503 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It was started at 2024-03-02 15:32:47.503923 and is still in the queue. We will process it soon.
+====================================================================================================
+#28  S1_10  run 4  query: 'Check my status'
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It will start processing soon.
+====================================================================================================
+#29  S1_11  run 4  query: "What's the status of my proof?"
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It will start processing soon. You can check back later for updates.
+====================================================================================================
+#30  S1_12  run 4  query: 'How is my job doing?'
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your job is currently queued. It will start processing soon.
+====================================================================================================
+#31  S7_01  run 4  query: 'Is my proof done yet?'
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It hasn't started processing yet. You can check back later to see if it has begun.
+====================================================================================================
+#32  S7_03  run 4  query: 'Did my KS test pass?'
+   tool[0] check_status({"proof_type": "KS"})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your KS test is currently queued. It may take some time to complete. Please check back later for the results.
+====================================================================================================
+#33  S7_10  run 4  query: "What's going on with my proof right now?"
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It started at 2024-03-02 14:34:46 and is still waiting to be processed. I'll keep an eye on it for you.
+====================================================================================================
+#34  S6_SC3_03  run 4  query: 'Check my status'
+   tool[0] check_status({})  ->  STATUS job_id=1777809241004 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It will start processing soon. You can check back later for updates.
+====================================================================================================
+#35  S1_10  run 5  query: 'Check my status'
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It will start processing soon.
+====================================================================================================
+#36  S1_12  run 5  query: 'How is my job doing?'
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your job is currently queued. It started at 1777806286.7510352 and is still waiting to be processed. I'll keep an eye on it for you.
+====================================================================================================
+#37  S1_15  run 5  query: 'Get my proof file'
+   tool[0] download_proof({})  ->  TEXT: API returned an error instead of proof file: {"error":"Job is not done yet (status=queued)","ok":false}
+   FINAL RESPONSE:
+      | I'm sorry, but your proof job is not done yet. It is currently queued. You can check the status of your job later to see when it is completed.
+====================================================================================================
+#38  S7_01  run 5  query: 'Is my proof done yet?'
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It hasn't started processing yet. I'll check back on the status for you.
+====================================================================================================
+#39  S7_03  run 5  query: 'Did my KS test pass?'
+   tool[0] check_status({"proof_type": "KS"})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your KS test is currently queued. It may take some time to complete. I'll check the status for you periodically.
+====================================================================================================
+#40  S7_10  run 5  query: "What's going on with my proof right now?"
+   tool[0] check_status({})  ->  STATUS job_id=1777806286751 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It hasn't started processing yet. You can check back later to see if it has moved to the "running" or "completed" status.
+====================================================================================================
+#41  S6_SC5_03  run 5  query: 'Check my status'
+   tool[0] check_status({})  ->  STATUS job_id=1777809808625 status=queued result.error=None
+   FINAL RESPONSE:
+      | Your proof job is currently queued. It will start processing soon. You can check back later for updates.

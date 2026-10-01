@@ -1,0 +1,387 @@
+
+====================================================================================================
+1. Test suite composition (Table II) and record totals
+====================================================================================================
+  OK   Source 1 queries                                                 paper=23           recomputed=23
+  OK   Source 2 queries                                                 paper=10           recomputed=10
+  OK   Source 3b queries                                                paper=5            recomputed=5
+  OK   Source 4 queries                                                 paper=5            recomputed=5
+  OK   Source 5 queries                                                 paper=5            recomputed=5
+  OK   Source 6 queries                                                 paper=17           recomputed=17
+  OK   Source 7 queries                                                 paper=10           recomputed=10
+  OK   executed main queries (all sources except 3a)                    paper=75           recomputed=75
+  OK   authored but never executed (Source 3a)                          paper=5            recomputed=5
+  OK   verification extension queries                                   paper=7            recomputed=7
+  OK   results files                                                    paper=24           recomputed=24
+  OK   records across all results files                                 paper=6371         recomputed=6371
+  OK   records for S3a_01                                               paper=0            recomputed=0
+  OK   records for S3a_02                                               paper=0            recomputed=0
+  OK   records for S3a_03                                               paper=0            recomputed=0
+  OK   records for S3a_04                                               paper=0            recomputed=0
+  OK   records for S3a_05                                               paper=0            recomputed=0
+
+====================================================================================================
+2. Table IV: Qwen 3 32B across configurations (mean over 5 runs)
+====================================================================================================
+  OK   Qwen A tool selection                                            paper=86.3         recomputed=86.3
+  OK   Qwen A task completion                                           paper=70.2         recomputed=70.2
+  OK   Qwen A Source 1 task completion                                  paper=56.5         recomputed=56.5
+  OK   Qwen A Source 6 task completion                                  paper=20.0         recomputed=20.0
+  OK   Qwen A tool-use rate (Source 7)                                  paper=100.0        recomputed=100.0
+  OK   Qwen A parameter correctness (post-interceptor)                  paper=100.0        recomputed=100.0
+  OK   Qwen B tool selection                                            paper=89.0         recomputed=89.0
+  OK   Qwen B task completion                                           paper=84.5         recomputed=84.5
+  OK   Qwen B Source 1 task completion                                  paper=87.8         recomputed=87.8
+  OK   Qwen B Source 6 task completion                                  paper=70.8         recomputed=70.8
+  OK   Qwen B tool-use rate (Source 7)                                  paper=100.0        recomputed=100.0
+  OK   Qwen B parameter correctness (post-interceptor)                  paper=100.0        recomputed=100.0
+  OK   Qwen C tool selection                                            paper=88.4         recomputed=88.4
+  OK   Qwen C task completion                                           paper=90.3         recomputed=90.3
+  OK   Qwen C Source 1 task completion                                  paper=97.4         recomputed=97.4
+  OK   Qwen C Source 6 task completion                                  paper=87.5         recomputed=87.5
+  OK   Qwen C tool-use rate (Source 7)                                  paper=100.0        recomputed=100.0
+  OK   Qwen C parameter correctness (post-interceptor)                  paper=100.0        recomputed=100.0
+  OK   Qwen D tool selection                                            paper=88.6         recomputed=88.6
+  OK   Qwen D task completion                                           paper=93.0         recomputed=93.0
+  OK   Qwen D Source 1 task completion                                  paper=99.1         recomputed=99.1
+  OK   Qwen D Source 6 task completion                                  paper=93.8         recomputed=93.8
+  OK   Qwen D tool-use rate (Source 7)                                  paper=100.0        recomputed=100.0
+  OK   Qwen D parameter correctness (post-interceptor)                  paper=100.0        recomputed=100.0
+  OK   Qwen A Source 2 task completion                                  paper=72.0         recomputed=72.0
+  OK   Qwen A Source 4 task completion                                  paper=60.0         recomputed=60.0
+  OK   Qwen B Source 2 task completion                                  paper=76.0         recomputed=76.0
+  OK   Qwen B Source 4 task completion                                  paper=60.0         recomputed=60.0
+  OK   Qwen C Source 2 task completion                                  paper=76.0         recomputed=76.0
+  OK   Qwen C Source 4 task completion                                  paper=56.0         recomputed=56.0
+  OK   Qwen D Source 2 task completion                                  paper=80.0         recomputed=80.0
+  OK   Qwen D Source 4 task completion                                  paper=60.0         recomputed=60.0
+  OK   Qwen gain A->B (from printed values)                             paper=14.3         recomputed=14.3
+  OK   Qwen gain B->C (from printed values)                             paper=5.8          recomputed=5.8
+  OK   Qwen gain C->D (from printed values)                             paper=2.7          recomputed=2.7
+
+====================================================================================================
+3. Table VI: within-model ablations (Qwen, Mistral, Llama) and A*
+====================================================================================================
+  OK   qwen A tool_selection                                            paper=86.3         recomputed=86.3
+  OK   qwen B tool_selection                                            paper=89.0         recomputed=89.0
+  OK   qwen C tool_selection                                            paper=88.4         recomputed=88.4
+  OK   qwen D tool_selection                                            paper=88.6         recomputed=88.6
+  OK   mistral A tool_selection                                         paper=79.4         recomputed=79.4
+  OK   mistral B tool_selection                                         paper=82.0         recomputed=82.0
+  OK   mistral C tool_selection                                         paper=80.3         recomputed=80.3
+  OK   mistral D tool_selection                                         paper=81.0         recomputed=81.0
+  OK   llama A tool_selection                                           paper=74.1         recomputed=74.1
+  OK   llama B tool_selection                                           paper=77.4         recomputed=77.4
+  OK   llama C tool_selection                                           paper=77.8         recomputed=77.8
+  OK   llama D tool_selection                                           paper=77.3         recomputed=77.3
+  OK   qwen A task_completion                                           paper=70.2         recomputed=70.2
+  OK   qwen B task_completion                                           paper=84.5         recomputed=84.5
+  OK   qwen C task_completion                                           paper=90.3         recomputed=90.3
+  OK   qwen D task_completion                                           paper=93.0         recomputed=93.0
+  OK   mistral A task_completion                                        paper=65.1         recomputed=65.1
+  OK   mistral B task_completion                                        paper=79.7         recomputed=79.7
+  OK   mistral C task_completion                                        paper=80.5         recomputed=80.5
+  OK   mistral D task_completion                                        paper=88.4         recomputed=88.4
+  OK   llama A task_completion                                          paper=54.9         recomputed=54.9
+  OK   llama B task_completion                                          paper=69.3         recomputed=69.3
+  OK   llama C task_completion                                          paper=68.1         recomputed=68.1
+  OK   llama D task_completion                                          paper=78.1         recomputed=78.1
+  OK   qwen A bypass                                                    paper=100.0        recomputed=100.0
+  OK   qwen B bypass                                                    paper=100.0        recomputed=100.0
+  OK   qwen C bypass                                                    paper=100.0        recomputed=100.0
+  OK   qwen D bypass                                                    paper=100.0        recomputed=100.0
+  OK   mistral A bypass                                                 paper=74.0         recomputed=74.0
+  OK   mistral B bypass                                                 paper=72.0         recomputed=72.0
+  OK   mistral C bypass                                                 paper=76.0         recomputed=76.0
+  OK   mistral D bypass                                                 paper=78.0         recomputed=78.0
+  OK   llama A bypass                                                   paper=80.0         recomputed=80.0
+  OK   llama B bypass                                                   paper=80.0         recomputed=80.0
+  OK   llama C bypass                                                   paper=80.0         recomputed=80.0
+  OK   llama D bypass                                                   paper=80.0         recomputed=80.0
+  OK   qwen A* task completion                                          paper=88.5         recomputed=88.5
+  OK   mistral A* task completion                                       paper=81.2         recomputed=81.2
+  OK   llama A* task completion                                         paper=66.1         recomputed=66.1
+  OK   qwen A->D task-completion gain (from printed values)             paper=22.8         recomputed=22.8
+  OK   llama A->D task-completion gain (from printed values)            paper=23.2         recomputed=23.2
+  OK   mistral A->D task-completion gain (from printed values)          paper=23.3         recomputed=23.3
+  OK   qwen D minus C task completion (from printed values)             paper=2.7          recomputed=2.7
+  OK   mistral D minus C task completion (from printed values)          paper=7.9          recomputed=7.9
+  OK   llama D minus C task completion (from printed values)            paper=10.0         recomputed=10.0
+  OK   qwen Source 2 range low                                          paper=72.0         recomputed=72.0
+  OK   qwen Source 2 range high                                         paper=80.0         recomputed=80.0
+  OK   mistral Source 2 range low                                       paper=54.0         recomputed=54.0
+  OK   mistral Source 2 range high                                      paper=70.0         recomputed=70.0
+  OK   llama Source 2 range low                                         paper=24.0         recomputed=24.0
+  OK   llama Source 2 range high                                        paper=50.0         recomputed=50.0
+  OK   largest C-vs-D tool-selection gap on any model                   paper=0.7          recomputed=0.7
+
+====================================================================================================
+4. Authentication split, placeholder identities, cascade exclusions (Qwen)
+====================================================================================================
+  OK   Qwen A auth-dependent task completion                            paper=47.5         recomputed=47.5
+  OK   Qwen A non-auth task completion                                  paper=93.5         recomputed=93.5
+  OK   Qwen B auth-dependent task completion                            paper=77.5         recomputed=77.5
+  OK   Qwen B non-auth task completion                                  paper=93.5         recomputed=93.5
+  OK   Qwen C auth-dependent task completion                            paper=88.4         recomputed=88.4
+  OK   Qwen C non-auth task completion                                  paper=92.9         recomputed=92.9
+  OK   Qwen D auth-dependent task completion                            paper=93.0         recomputed=93.0
+  OK   Qwen D non-auth task completion                                  paper=92.9         recomputed=92.9
+  OK   Qwen A* auth-dependent task completion                           paper=85.3         recomputed=85.3
+  OK   Config A placeholders: qwen current_user_id                      paper=14           recomputed=14
+  OK   Config A placeholders: qwen user123                              paper=5            recomputed=5
+  OK   Config A placeholders: llama your_user_id                        paper=1            recomputed=1
+  OK   Qwen A scenario records excluded by cascade (of 85)              paper=60           recomputed=60
+  OK   Qwen B scenario records excluded by cascade (of 85)              paper=15           recomputed=15
+  OK   Qwen C scenario records excluded by cascade (of 85)              paper=0            recomputed=0
+  OK   Qwen D scenario records excluded by cascade (of 85)              paper=0            recomputed=0
+  OK   Qwen A_STAR scenario records excluded by cascade (of 85)         paper=3            recomputed=3
+
+====================================================================================================
+5. Section V-A: tool-selection mismatches (Config C) and fallback usage
+====================================================================================================
+  OK   Config C mismatches per run                                      paper=8.6          recomputed=8.6
+  OK   Config C mismatches as share of 75 queries (%)                   paper=11.5         recomputed=11.5
+  OK     no tool called, Source 2                                       paper=2.0          recomputed=2.0
+  OK     no tool called, Source 3                                       paper=3.2          recomputed=3.2
+  OK     tool called on Source 4 (NONE expected)                        paper=2.2          recomputed=2.2
+  OK     wrong tool, Sources 1 and 7 (genuine confusion)                paper=1.2          recomputed=1.2
+  OK   qwen C status calls                                              paper=86           recomputed=86
+  OK   qwen C status calls without proof_type                           paper=62           recomputed=62
+  OK   qwen C status calls without job_id                               paper=76           recomputed=76
+  OK   llama C status calls                                             paper=108          recomputed=108
+  OK   llama C status calls without proof_type                          paper=59           recomputed=59
+  OK   llama C status calls without job_id                              paper=84           recomputed=84
+  OK   mistral C status calls                                           paper=83           recomputed=83
+  OK   mistral C status calls without proof_type                        paper=44           recomputed=44
+  OK   mistral C status calls without job_id                            paper=70           recomputed=70
+
+====================================================================================================
+6. Fixture asymmetry: Config A without the 21 fixture-dependent queries
+====================================================================================================
+  OK   fixture-dependent isolated queries                               paper=21           recomputed=21
+  OK   qwen A excluding the 21                                          paper=65.2         recomputed=65.2
+  OK   qwen C excluding the 21                                          paper=88.3         recomputed=88.3
+  OK   qwen A->C gap, all queries (from printed values)                 paper=20.1         recomputed=20.1
+  OK   qwen A->C gap, excluding the 21 (from printed values)            paper=23.1         recomputed=23.1
+  OK   llama A excluding the 21                                         paper=42.4         recomputed=42.4
+  OK   llama C excluding the 21                                         paper=67.2         recomputed=67.2
+  OK   llama A->C gap, all queries (from printed values)                paper=13.2         recomputed=13.2
+  OK   llama A->C gap, excluding the 21 (from printed values)           paper=24.8         recomputed=24.8
+  OK   mistral A excluding the 21                                       paper=63.8         recomputed=63.8
+  OK   mistral C excluding the 21                                       paper=86.4         recomputed=86.4
+  OK   mistral A->C gap, all queries (from printed values)              paper=15.4         recomputed=15.4
+  OK   mistral A->C gap, excluding the 21 (from printed values)         paper=22.6         recomputed=22.6
+
+====================================================================================================
+7. Config A*: identity through the prompt
+====================================================================================================
+  OK   qwen A* identity-tool calls on authenticated turns               paper=123          recomputed=123
+  OK   qwen A*   of which carried the correct UUID                      paper=123          recomputed=123
+  OK   qwen A*   with a wrong or placeholder user_id                    paper=0            recomputed=0
+  OK   mistral A* identity-tool calls on authenticated turns            paper=108          recomputed=108
+  OK   mistral A*   of which carried the correct UUID                   paper=108          recomputed=108
+  OK   mistral A*   with a wrong or placeholder user_id                 paper=0            recomputed=0
+  OK   llama A* identity-tool calls on authenticated turns              paper=118          recomputed=118
+  OK   llama A*   of which carried the correct UUID                     paper=113          recomputed=113
+  OK   llama A*   with a wrong or placeholder user_id                   paper=0            recomputed=0
+  OK   Llama A* misses all on S1_10                                     paper=S1_10:5      recomputed=S1_10:5
+  OK   Qwen A* sequential turns whose first call is check_status        paper=29           recomputed=29
+  OK     of which hit the wrong port                                    paper=3            recomputed=3
+  OK   Qwen A* Source 6 task completion                                 paper=90.8         recomputed=90.8
+
+====================================================================================================
+8. Table V: wrong-port routing in Config B, and its removal in Config C
+====================================================================================================
+  OK   qwen B wrong-port turns                                          paper=68           recomputed=68
+  OK   qwen B stopped after one call                                    paper=53           recomputed=53
+  OK   qwen B retried                                                   paper=15           recomputed=15
+  OK   qwen B denied the job exists                                     paper=48           recomputed=48
+  OK   qwen B id invalid or not found                                   paper=5            recomputed=5
+  OK   qwen B vague                                                     paper=0            recomputed=0
+  OK   llama B wrong-port turns                                         paper=70           recomputed=70
+  OK   llama B stopped after one call                                   paper=70           recomputed=70
+  OK   llama B retried                                                  paper=0            recomputed=0
+  OK   llama B denied the job exists                                    paper=0            recomputed=0
+  OK   llama B id invalid or not found                                  paper=50           recomputed=50
+  OK   llama B vague                                                    paper=20           recomputed=20
+  OK   mistral B wrong-port turns                                       paper=60           recomputed=60
+  OK   mistral B stopped after one call                                 paper=60           recomputed=60
+  OK   mistral B retried                                                paper=0            recomputed=0
+  OK   mistral B denied the job exists                                  paper=54           recomputed=54
+  OK   mistral B id invalid or not found                                paper=5            recomputed=5
+  OK   mistral B vague                                                  paper=1            recomputed=1
+  OK   qwen72b B wrong-port turns                                       paper=69           recomputed=69
+  OK   qwen72b B stopped after one call                                 paper=69           recomputed=69
+  OK   qwen72b B retried                                                paper=0            recomputed=0
+  OK   qwen72b B denied the job exists                                  paper=0            recomputed=0
+  OK   qwen72b B id invalid or not found                                paper=20           recomputed=20
+  OK   qwen72b B vague                                                  paper=49           recomputed=49
+  OK   TOTAL wrong-port                                                 paper=267          recomputed=267
+  OK   TOTAL stopped                                                    paper=252          recomputed=252
+  OK   TOTAL retried                                                    paper=15           recomputed=15
+  OK   TOTAL denied                                                     paper=102          recomputed=102
+  OK   TOTAL not found                                                  paper=80           recomputed=80
+  OK   TOTAL vague                                                      paper=70           recomputed=70
+  OK   distinct opening sentences among the 252 stops                   paper=61           recomputed=61
+       note: an earlier draft printed 63; 61 is the count under every definition of 'opening sentence'
+       (first sentence, trust label stripped or kept, truncated or not). The 102/80/70 split is unaffected.
+  wrote reports\wrongport_replies_classified.txt (252 replies, 61 distinct openings)
+  OK   qwen wrong-port turns Config B                                   paper=68           recomputed=68
+  OK   qwen wrong-port turns Config C                                   paper=0            recomputed=0
+  OK   llama wrong-port turns Config B                                  paper=70           recomputed=70
+  OK   llama wrong-port turns Config C                                  paper=0            recomputed=0
+  OK   mistral wrong-port turns Config B                                paper=60           recomputed=60
+  OK   mistral wrong-port turns Config C                                paper=0            recomputed=0
+  OK   wrong-port turns, three models, Config B                         paper=198          recomputed=198
+  OK   wrong-port turns, three models, Config C                         paper=0            recomputed=0
+  OK   Qwen C first-call 404s are only the two control queries          paper=S2_07:5,S7_09:5 recomputed=S2_07:5,S7_09:5
+  OK   Qwen B first-call check_status turns                             paper=88           recomputed=88
+  OK   Qwen B of which returned 404                                     paper=78           recomputed=78
+  OK   Qwen C first-call check_status turns                             paper=86           recomputed=86
+  OK   Qwen C of which returned 404                                     paper=10           recomputed=10
+  OK   Llama + Mistral + Qwen2.5-72B wrong-port turns                   paper=199          recomputed=199
+  OK     of which made a further call                                   paper=0            recomputed=0
+  OK   Qwen3-235B first-call 404s (all 86 records, controls included)   paper=19           recomputed=19
+  OK     of which made a further call                                   paper=6            recomputed=6
+  OK     wrong-port only (controls excluded)                            paper=17           recomputed=17
+
+====================================================================================================
+9. Retry cost (Qwen status queries: S1_10 to S1_13 and the Source 7 status queries)
+====================================================================================================
+  OK   status queries selected                                          paper=9            recomputed=9
+  OK   Qwen A status turns                                              paper=45           recomputed=45
+  OK   Qwen A mean tool calls per status turn                           paper=1.16         recomputed=1.2
+  OK   Qwen A mean seconds per status turn                              paper=15.3         recomputed=15.3
+  OK   Qwen B status turns                                              paper=45           recomputed=45
+  OK   Qwen B mean tool calls per status turn                           paper=1.44         recomputed=1.4
+  OK   Qwen B mean seconds per status turn                              paper=16.6         recomputed=16.6
+  OK   Qwen C status turns                                              paper=45           recomputed=45
+  OK   Qwen C mean tool calls per status turn                           paper=1.0          recomputed=1.0
+  OK   Qwen C mean seconds per status turn                              paper=12.4         recomputed=12.4
+  OK   Qwen D status turns                                              paper=45           recomputed=45
+  OK   Qwen D mean tool calls per status turn                           paper=1.11         recomputed=1.1
+  OK   Qwen D mean seconds per status turn                              paper=11.9         recomputed=11.9
+
+====================================================================================================
+10. Override vs. an invented key: Llama's download calls
+====================================================================================================
+  OK   Llama B download calls with invented job id 12345                paper=25           recomputed=25
+  OK   Llama B   of which failed                                        paper=25           recomputed=25
+  OK   Llama B   invented session id abc123 replaced by interceptor     paper=25 of 25     recomputed=25 of 25
+  OK   Llama C download calls with invented job id 12345                paper=25           recomputed=25
+  OK   Llama C   of which failed                                        paper=25           recomputed=25
+  OK   Llama C   invented session id abc123 replaced by interceptor     paper=25 of 25     recomputed=25 of 25
+  OK   Llama D download calls with invented job id 12345                paper=25           recomputed=25
+  OK   Llama D   of which failed                                        paper=25           recomputed=25
+  OK   Llama D   invented session id abc123 replaced by interceptor     paper=25 of 25     recomputed=25 of 25
+
+====================================================================================================
+11. Model-specific behaviour: download steps, impossible requests, tool use
+====================================================================================================
+  OK   qwen B Source 6 download steps that called a tool (of 10)        paper=10           recomputed=10
+  OK   qwen C Source 6 download steps that called a tool (of 10)        paper=10           recomputed=10
+  OK   qwen D Source 6 download steps that called a tool (of 10)        paper=10           recomputed=10
+  OK   mistral B Source 6 download steps that called a tool (of 10)     paper=0            recomputed=0
+  OK   mistral C Source 6 download steps that called a tool (of 10)     paper=0            recomputed=0
+  OK   mistral D Source 6 download steps that called a tool (of 10)     paper=0            recomputed=0
+  OK   Qwen and Llama Source 4 turns with a tool call per config, minimum paper=9            recomputed=9
+  OK   Qwen and Llama Source 4 turns with a tool call per config, maximum paper=11           recomputed=11
+  OK   mistral Source 4 turns with a tool call (all configs)            paper=0            recomputed=0
+  OK   qwen A Source 7 turns that called a tool (of 50)                 paper=50           recomputed=50
+  OK   qwen B Source 7 turns that called a tool (of 50)                 paper=50           recomputed=50
+  OK   qwen C Source 7 turns that called a tool (of 50)                 paper=50           recomputed=50
+  OK   qwen D Source 7 turns that called a tool (of 50)                 paper=50           recomputed=50
+  OK   llama A Source 7 turns that called a tool (of 50)                paper=40           recomputed=40
+  OK   llama B Source 7 turns that called a tool (of 50)                paper=40           recomputed=40
+  OK   llama C Source 7 turns that called a tool (of 50)                paper=40           recomputed=40
+  OK   llama D Source 7 turns that called a tool (of 50)                paper=40           recomputed=40
+  OK   mistral A Source 7 turns that called a tool (of 50)              paper=37           recomputed=37
+  OK   mistral B Source 7 turns that called a tool (of 50)              paper=36           recomputed=36
+  OK   mistral C Source 7 turns that called a tool (of 50)              paper=38           recomputed=38
+  OK   mistral D Source 7 turns that called a tool (of 50)              paper=39           recomputed=39
+
+====================================================================================================
+12. Fabrications (released detector), trust labels, verification successes
+====================================================================================================
+  OK   zero-tool action claims across all 24 files                      paper=7            recomputed=7
+  OK     in results_llama_A_STAR.json                                   paper=5            recomputed=5
+  OK     in results_mistral_A_STAR.json                                 paper=2            recomputed=2
+  OK     in any non-A* file                                             paper=0            recomputed=0
+  OK   tool outputs containing invented job id 1777821051116            paper=0            recomputed=0
+  OK     tool ARGUMENTS carrying it (the model passed its own invention to the next call) paper=1            recomputed=1
+  OK   turns labelled [Backed by COSMeTIC prover]                       paper=4862         recomputed=4862
+  OK   turns labelled [Not backed by COSMeTIC prover]                   paper=1476         recomputed=1476
+  OK   turns with no label                                              paper=33           recomputed=33
+  OK   turns with a cryptographic tier                                  paper=0            recomputed=0
+  OK   turns with a successful verify_proof call                        paper=45           recomputed=45
+
+====================================================================================================
+13. Verification extension (Section V-D): table, lifecycle by tool calls, tool choice
+====================================================================================================
+  OK   verify_qwen_A tool selection                                     paper=100.0        recomputed=100.0
+  OK   verify_qwen_A task completion                                    paper=60.0         recomputed=60.0
+  OK   verify_qwen_A full lifecycle: all four tools called and verify passed (of 5) paper=0            recomputed=0
+  OK   verify_qwen_B tool selection                                     paper=100.0        recomputed=100.0
+  OK   verify_qwen_B task completion                                    paper=80.0         recomputed=80.0
+  OK   verify_qwen_B full lifecycle: all four tools called and verify passed (of 5) paper=0            recomputed=0
+  OK   verify_qwen_C tool selection                                     paper=100.0        recomputed=100.0
+  OK   verify_qwen_C task completion                                    paper=94.3         recomputed=94.3
+  OK   verify_qwen_C full lifecycle: all four tools called and verify passed (of 5) paper=5            recomputed=5
+  OK   verify_qwen_D tool selection                                     paper=100.0        recomputed=100.0
+  OK   verify_qwen_D task completion                                    paper=100.0        recomputed=100.0
+  OK   verify_qwen_D full lifecycle: all four tools called and verify passed (of 5) paper=5            recomputed=5
+  OK   verify_mistral_C tool selection                                  paper=46.7         recomputed=46.7
+  OK   verify_mistral_C task completion                                 paper=83.3         recomputed=83.3
+  OK   verify_mistral_C full lifecycle: all four tools called and verify passed (of 5) paper=0            recomputed=0
+  OK   verify_mistral_D tool selection                                  paper=60.0         recomputed=60.0
+  OK   verify_mistral_D task completion                                 paper=93.3         recomputed=93.3
+  OK   verify_mistral_D full lifecycle: all four tools called and verify passed (of 5) paper=0            recomputed=0
+  OK   Mistral C verify turns                                           paper=20           recomputed=20
+  OK   Mistral C verify turns whose first call was verify_proof         paper=7            recomputed=7
+  OK   Mistral C lifecycle download steps that called any tool          paper=0            recomputed=0
+  OK   Mistral D verify turns                                           paper=20           recomputed=20
+  OK   Mistral D verify turns whose first call was verify_proof         paper=9            recomputed=9
+  OK   Mistral D lifecycle download steps that called any tool          paper=0            recomputed=0
+  OK   Qwen B verify_proof calls                                        paper=24           recomputed=24
+  OK     returned 'proof_type is required'                              paper=10           recomputed=10
+  OK     returned 'no completed job'                                    paper=10           recomputed=10
+  OK     succeeded                                                      paper=4            recomputed=4
+  OK     mis-routed (404)                                               paper=0            recomputed=0
+
+====================================================================================================
+14. Grading validity: original grader vs corrected grader
+====================================================================================================
+  OK   Qwen A original-grader faithfulness                              paper=93.2         recomputed=93.2
+  OK   Qwen B original-grader faithfulness                              paper=83.8         recomputed=83.8
+  OK   Qwen C original-grader faithfulness                              paper=97.7         recomputed=97.7
+  OK   Qwen D original-grader faithfulness                              paper=99.0         recomputed=99.0
+  OK   Qwen A_STAR original-grader faithfulness                         paper=88.4         recomputed=88.4
+  OK   original-grader faithfulness, minimum over the three main models paper=83.7         recomputed=83.7
+  OK   original-grader faithfulness, maximum over the three main models paper=100.0        recomputed=100.0
+  OK   Qwen3-235B original-grader faithfulness (2 runs)                 paper=79.2         recomputed=79.2
+  OK   Qwen B records flagged by the original grader                    paper=47           recomputed=47
+  OK   Qwen A* corrected-grader faithfulness                            paper=99.7         recomputed=99.7
+  OK   corrected-grader faithfulness, all other 14 cells                paper=100.0        recomputed=100.0
+
+====================================================================================================
+15. Section VI-C: response length, determinism, no-tool turns (Qwen C vs D)
+====================================================================================================
+  OK   Qwen C mean reply length on tool turns (chars)                   paper=348.7        recomputed=348.7
+  OK   Qwen D mean reply length on tool turns (chars)                   paper=196.0        recomputed=196.0
+  OK   C longer than D by (%)                                           paper=78           recomputed=77.9
+  OK   Qwen D queries byte-identical across all 5 runs (of 75)          paper=34           recomputed=34
+  OK   Qwen C queries byte-identical across all 5 runs (of 75)          paper=1            recomputed=1
+  OK   Qwen D turns with no tool call (of 375)                          paper=67           recomputed=67
+
+====================================================================================================
+[H] Figures established by hand-reading (reports/), reported in the paper but not recomputed here
+====================================================================================================
+  [H] 47 Qwen Config B grader-flagged replies: 32 correct error reports, 8 multi-call recoveries, 4 cached-status restatements, 3 omitted job id (reports/inspection_qwen32b_B_flagged_47.txt)
+  [H] 4 turns in which Qwen restated the cached Redis status after a failed live check (the B3 failure mode)
+  [H] Mistral Source 4 capability promises: 0, 4, 6, 0, 8 in A, B, C, D, A* (18 records read)
+  [H] the 63 distinct opening sentences were classified by hand; the regex in section 8 reproduces that classification
+  [H] each of the 151 grader-flagged records was read and none was an ungrounded success claim (eval/test_grading_faithfulness_v2.py checks the corrected grader against those labels)
+
+====================================================================================================
+SUMMARY: 311 figures match the paper, 0 differ
+====================================================================================================

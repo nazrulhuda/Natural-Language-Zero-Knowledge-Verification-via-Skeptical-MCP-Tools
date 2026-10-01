@@ -1,0 +1,842 @@
+[
+  {
+    "query_id": "S1_24",
+    "config": "D",
+    "run": 1,
+    "session_id": "test_D_S1_24_run1_1778718403634",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:28:07.585883+00:00",
+    "duration_seconds": 83.95,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S1_24_run1_1778718403634"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-14T00:26:44.887344+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "D",
+    "run": 1,
+    "session_id": "test_D_S1_25_run1_1778718492586",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:28:14.138238+00:00",
+    "duration_seconds": 1.55,
+    "response_text": "To determine if your proof is valid, I need to verify the status of your proof job. Could you please provide the job ID or let me know the type of proof (e.g., logistic accuracy, KS, LRT) you want to check?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S2_11",
+    "config": "D",
+    "run": 1,
+    "session_id": "test_D_S2_11_run1_1778718499139",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:28:21.095454+00:00",
+    "duration_seconds": 1.96,
+    "response_text": "{\"error\": \"job_id is required and no completed job found in session state\"}\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S2_11_run1_1778718499139"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-14T00:28:20.059147+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "D",
+    "run": 1,
+    "session_id": "test_D_S6_SC6_run1_1778718506097",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:28:28.479971+00:00",
+    "duration_seconds": 2.38,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "Your proof has been submitted. Job ID: 1778718507163. You can check the status by asking 'check my status'.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_D_S6_SC6_run1_1778718506097"
+        },
+        "response": "{\n  \"job_id\": \"1778718507163\",\n  \"status_url\": \"/jobs/1778718507163\"\n}",
+        "timestamp": "2026-05-14T00:28:27.088209+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "D",
+    "run": 1,
+    "session_id": "test_D_S6_SC6_run1_1778718506097",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:28:35.954951+00:00",
+    "duration_seconds": 2.47,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "Job 1778718507163: Status is done.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run1_1778718506097"
+        },
+        "response": "{\n  \"active_smts\": [\n    \"s1\"\n  ],\n  \"error\": null,\n  \"job_id\": \"1778718507163\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": {\n    \"active_smts\": [\n      \"s1\"\n    ],\n    \"error\": false\n  },\n  \"snapshots\": {\n    \"proof_end\": null,\n    \"proof_start\": {\n      \"message\": \"System metrics snapshot created.\",\n      \"status\": \"success\"\n    }\n  },\n  \"started_at\": 1778718507.1634984,\n  \"status\": \"done\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-14T00:28:34.387372+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "D",
+    "run": 1,
+    "session_id": "test_D_S6_SC6_run1_1778718506097",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:28:42.399806+00:00",
+    "duration_seconds": 1.44,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "To download your proof, I need to know the job ID associated with your proof. Could you please provide the job ID?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "D",
+    "run": 1,
+    "session_id": "test_D_S6_SC6_run1_1778718506097",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:28:48.490790+00:00",
+    "duration_seconds": 1.09,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "I'm sorry, but I currently don't have the tools to verify your proof. Is there another way I can assist you or something else you would like help with?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S1_24",
+    "config": "D",
+    "run": 2,
+    "session_id": "test_D_S1_24_run2_1778718533492",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:30:23.332841+00:00",
+    "duration_seconds": 89.83,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S1_24_run2_1778718533492"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-14T00:28:54.813895+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "D",
+    "run": 2,
+    "session_id": "test_D_S1_25_run2_1778718628333",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:30:30.724687+00:00",
+    "duration_seconds": 2.38,
+    "response_text": "To determine if your proof is valid, I need to verify the status of your proof job. Could you please provide the job ID or any additional details you have about the proof?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S2_11",
+    "config": "D",
+    "run": 2,
+    "session_id": "test_D_S2_11_run2_1778718635725",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:30:37.432788+00:00",
+    "duration_seconds": 1.71,
+    "response_text": "I'm sorry, but I currently don't have the tools to verify your proof. If you have any other questions or need assistance with something else, feel free to ask!\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "D",
+    "run": 2,
+    "session_id": "test_D_S6_SC6_run2_1778718642435",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:30:46.992338+00:00",
+    "duration_seconds": 4.56,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "Your proof has been submitted. Job ID: 1778718644389. You can check the status by asking 'check my status'.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_D_S6_SC6_run2_1778718642435"
+        },
+        "response": "{\n  \"job_id\": \"1778718644389\",\n  \"status_url\": \"/jobs/1778718644389\"\n}",
+        "timestamp": "2026-05-14T00:30:44.312663+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "D",
+    "run": 2,
+    "session_id": "test_D_S6_SC6_run2_1778718642435",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:30:55.325264+00:00",
+    "duration_seconds": 3.33,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "Job 1778718644389: Status is done.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run2_1778718642435"
+        },
+        "response": "{\n  \"active_smts\": [\n    \"s1\"\n  ],\n  \"error\": null,\n  \"job_id\": \"1778718644389\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": {\n    \"active_smts\": [\n      \"s1\"\n    ],\n    \"error\": false\n  },\n  \"snapshots\": {\n    \"proof_end\": null,\n    \"proof_start\": {\n      \"message\": \"System metrics snapshot created.\",\n      \"status\": \"success\"\n    }\n  },\n  \"started_at\": 1778718644.3898966,\n  \"status\": \"done\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-14T00:30:53.331521+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "D",
+    "run": 2,
+    "session_id": "test_D_S6_SC6_run2_1778718642435",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:31:02.670458+00:00",
+    "duration_seconds": 2.34,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "To download your proof, I need to know the job ID associated with the proof you want to download. Could you please provide the job ID?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "D",
+    "run": 2,
+    "session_id": "test_D_S6_SC6_run2_1778718642435",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:31:09.166234+00:00",
+    "duration_seconds": 1.5,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "I'm sorry, but I currently don't have the tools to verify your proof. Is there another way I can assist you or something else you would like help with?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S1_24",
+    "config": "D",
+    "run": 3,
+    "session_id": "test_D_S1_24_run3_1778718674167",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:31:15.784669+00:00",
+    "duration_seconds": 1.61,
+    "response_text": "I'm sorry, but I currently don't have the tools to verify your proof. Is there another way I can assist you or something else you would like help with?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S1_25",
+    "config": "D",
+    "run": 3,
+    "session_id": "test_D_S1_25_run3_1778718680786",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:32:34.252781+00:00",
+    "duration_seconds": 73.46,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S1_25_run3_1778718680786"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-14T00:31:21.602496+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_11",
+    "config": "D",
+    "run": 3,
+    "session_id": "test_D_S2_11_run3_1778718759254",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:32:40.641822+00:00",
+    "duration_seconds": 1.39,
+    "response_text": "I'm sorry, but I currently don't have the tools to verify your proof. Is there another way I can assist you or something else you would like help with?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "D",
+    "run": 3,
+    "session_id": "test_D_S6_SC6_run3_1778718765645",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:32:48.401162+00:00",
+    "duration_seconds": 2.76,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "Your proof has been submitted. Job ID: 1778718766654. You can check the status by asking 'check my status'.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_D_S6_SC6_run3_1778718765645"
+        },
+        "response": "{\n  \"job_id\": \"1778718766654\",\n  \"status_url\": \"/jobs/1778718766654\"\n}",
+        "timestamp": "2026-05-14T00:32:46.597586+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "D",
+    "run": 3,
+    "session_id": "test_D_S6_SC6_run3_1778718765645",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:32:55.411865+00:00",
+    "duration_seconds": 2.01,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "Job 1778718766654: Status is done.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run3_1778718765645"
+        },
+        "response": "{\n  \"active_smts\": [\n    \"s1\"\n  ],\n  \"error\": null,\n  \"job_id\": \"1778718766654\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": {\n    \"active_smts\": [\n      \"s1\"\n    ],\n    \"error\": false\n  },\n  \"snapshots\": {\n    \"proof_end\": null,\n    \"proof_start\": {\n      \"message\": \"System metrics snapshot created.\",\n      \"status\": \"success\"\n    }\n  },\n  \"started_at\": 1778718766.6540582,\n  \"status\": \"done\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-14T00:32:54.281250+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "D",
+    "run": 3,
+    "session_id": "test_D_S6_SC6_run3_1778718765645",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:33:03.374809+00:00",
+    "duration_seconds": 2.96,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "To download your proof, I need to know the job ID associated with the proof you want to download. Could you please provide the job ID?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "D",
+    "run": 3,
+    "session_id": "test_D_S6_SC6_run3_1778718765645",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:33:09.642753+00:00",
+    "duration_seconds": 1.27,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "I'm sorry, but I currently don't have the tools to verify your proof. Is there another way I can assist you or something else you would like help with?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S1_24",
+    "config": "D",
+    "run": 4,
+    "session_id": "test_D_S1_24_run4_1778718794644",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:34:57.757559+00:00",
+    "duration_seconds": 103.11,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S1_24_run4_1778718794644"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-14T00:33:15.592892+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "D",
+    "run": 4,
+    "session_id": "test_D_S1_25_run4_1778718902759",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:35:04.151571+00:00",
+    "duration_seconds": 1.39,
+    "response_text": "To determine if your proof is valid, I need to verify the status of your proof job. Could you please provide the job ID or any details related to the proof job you want to check?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S2_11",
+    "config": "D",
+    "run": 4,
+    "session_id": "test_D_S2_11_run4_1778718909153",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:35:12.031453+00:00",
+    "duration_seconds": 2.88,
+    "response_text": "{\"error\": \"job_id is required and no completed job found in session state\"}\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S2_11_run4_1778718909153"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-14T00:35:10.108099+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "D",
+    "run": 4,
+    "session_id": "test_D_S6_SC6_run4_1778718917035",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:35:19.456872+00:00",
+    "duration_seconds": 2.42,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "Your proof has been submitted. Job ID: 1778718918218. You can check the status by asking 'check my status'.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_D_S6_SC6_run4_1778718917035"
+        },
+        "response": "{\n  \"job_id\": \"1778718918218\",\n  \"status_url\": \"/jobs/1778718918218\"\n}",
+        "timestamp": "2026-05-14T00:35:18.159827+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "D",
+    "run": 4,
+    "session_id": "test_D_S6_SC6_run4_1778718917035",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:35:26.930781+00:00",
+    "duration_seconds": 2.47,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "Job 1778718918218: Status is done.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run4_1778718917035"
+        },
+        "response": "{\n  \"active_smts\": [\n    \"s1\"\n  ],\n  \"error\": null,\n  \"job_id\": \"1778718918218\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": {\n    \"active_smts\": [\n      \"s1\"\n    ],\n    \"error\": false\n  },\n  \"snapshots\": {\n    \"proof_end\": null,\n    \"proof_start\": {\n      \"message\": \"System metrics snapshot created.\",\n      \"status\": \"success\"\n    }\n  },\n  \"started_at\": 1778718918.2189157,\n  \"status\": \"done\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-14T00:35:25.300375+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "D",
+    "run": 4,
+    "session_id": "test_D_S6_SC6_run4_1778718917035",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:35:33.008694+00:00",
+    "duration_seconds": 1.08,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "To download your proof, I need to know the job ID associated with your proof. Could you please provide the job ID?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "D",
+    "run": 4,
+    "session_id": "test_D_S6_SC6_run4_1778718917035",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:36:50.005191+00:00",
+    "duration_seconds": 72.0,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run4_1778718917035"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-14T00:35:38.844947+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_24",
+    "config": "D",
+    "run": 5,
+    "session_id": "test_D_S1_24_run5_1778719015007",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:38:07.389595+00:00",
+    "duration_seconds": 72.38,
+    "response_text": "Proof verification PASSED.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S1_24_run5_1778719015007"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-14T00:36:55.985165+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "D",
+    "run": 5,
+    "session_id": "test_D_S1_25_run5_1778719092391",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:38:14.557940+00:00",
+    "duration_seconds": 2.16,
+    "response_text": "To determine if your proof is valid, I will need to verify the status of your proof job. Could you please provide the job ID or any details related to the proof job you want to check?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S2_11",
+    "config": "D",
+    "run": 5,
+    "session_id": "test_D_S2_11_run5_1778719099560",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:38:26.480491+00:00",
+    "duration_seconds": 6.92,
+    "response_text": "{\"error\": \"job_id is required and no completed job found in session state\"}\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S2_11_run5_1778719099560"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-14T00:38:25.202684+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "D",
+    "run": 5,
+    "session_id": "test_D_S6_SC6_run5_1778719111484",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:38:34.232511+00:00",
+    "duration_seconds": 2.75,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "Your proof has been submitted. Job ID: 1778719112659. You can check the status by asking 'check my status'.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_D_S6_SC6_run5_1778719111484"
+        },
+        "response": "{\n  \"job_id\": \"1778719112659\",\n  \"status_url\": \"/jobs/1778719112659\"\n}",
+        "timestamp": "2026-05-14T00:38:32.575415+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "D",
+    "run": 5,
+    "session_id": "test_D_S6_SC6_run5_1778719111484",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:38:42.692068+00:00",
+    "duration_seconds": 3.46,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "Job 1778719112659: Status is done.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_D_S6_SC6_run5_1778719111484"
+        },
+        "response": "{\n  \"active_smts\": [\n    \"s1\"\n  ],\n  \"error\": null,\n  \"job_id\": \"1778719112659\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": {\n    \"active_smts\": [\n      \"s1\"\n    ],\n    \"error\": false\n  },\n  \"snapshots\": {\n    \"proof_end\": null,\n    \"proof_start\": {\n      \"message\": \"System metrics snapshot created.\",\n      \"status\": \"success\"\n    }\n  },\n  \"started_at\": 1778719112.6591425,\n  \"status\": \"done\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-14T00:38:40.193285+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "D",
+    "run": 5,
+    "session_id": "test_D_S6_SC6_run5_1778719111484",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:38:49.222901+00:00",
+    "duration_seconds": 1.53,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "To download your proof, I need to know the job ID associated with the proof you want to download. Could you please provide the job ID?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "D",
+    "run": 5,
+    "session_id": "test_D_S6_SC6_run5_1778719111484",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-14T00:38:56.061818+00:00",
+    "duration_seconds": 1.84,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "I'm sorry, but I currently don't have the tools needed to verify your proof. Is there another way I can assist you or something else you would like help with?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  }
+]

@@ -1,0 +1,14 @@
+# Runtime dependencies for the backend (app.py) and the MCP prover server (proverserver.py).
+# The evaluation runner (eval/test_runner.py) additionally needs requests, redis and
+# psycopg2-binary, all listed here. Versions are unpinned; the reported runs used the
+# releases current in April-May 2026.
+langchain-openai
+langchain-mcp-adapters
+mcp
+langgraph
+python-dotenv
+flask
+redis
+psycopg2-binary
+bcrypt
+requests

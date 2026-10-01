@@ -1,0 +1,1071 @@
+[
+  {
+    "query_id": "S1_24",
+    "config": "A",
+    "run": 1,
+    "session_id": "test_A_S1_24_run1_1778714838546",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:27:54.492762+00:00",
+    "duration_seconds": 35.95,
+    "response_text": "It seems you don't have any completed proof jobs in your session history. Would you like to:\n1. Submit a new proof job using your saved hash (logistic_accuracy/KS/LRT)?\n2. Check the status of an existing job?\n3. Provide a specific job ID to verify?\n\nLet me know how you'd like to proceed!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S1_24_run1_1778714838546",
+          "user_id": "user123"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:27:44.830135+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "A",
+    "run": 1,
+    "session_id": "test_A_S1_25_run1_1778714879493",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:28:11.111177+00:00",
+    "duration_seconds": 11.62,
+    "response_text": "It looks like there are no existing proof jobs in your session. Would you like to submit a new proof job now? If so, please specify which type of proof you'd like to run (logistic accuracy, KS, or LRT), and I'll help start the process.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_id",
+          "user_id": "current_user_id",
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S1_25_run1_1778714879493",
+          "user_id": "current_user_id",
+          "proof_type": "auto"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:28:04.738203+00:00"
+      },
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "current_session_id"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S1_25_run1_1778714879493"
+        },
+        "response": "{\n  \"state\": {\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-13T23:27:59.498141\"\n  },\n  \"jobs\": [],\n  \"summary\": \"Latest job: none. Latest completed: none.\",\n  \"recent_messages\": []\n}",
+        "timestamp": "2026-05-13T23:28:08.563650+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_11",
+    "config": "A",
+    "run": 1,
+    "session_id": "test_A_S2_11_run1_1778714896112",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:28:22.512928+00:00",
+    "duration_seconds": 6.4,
+    "response_text": "It looks like there's no completed proof job in your current session. To verify a proof, you'll need to:\n\n1. First ensure you have a completed job (status \"done\")\n2. Either provide a specific job ID, or \n3. Let me check your session history for completed jobs\n\nWould you like me to show you all your jobs to find one that's completed, or do you have a specific job ID to verify?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_id",
+          "user_id": "authenticated_user_id"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S2_11_run1_1778714896112",
+          "user_id": "authenticated_user_id"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:28:20.020573+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "A",
+    "run": 1,
+    "session_id": "test_A_S6_SC6_run1_1778714907515",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:28:33.133480+00:00",
+    "duration_seconds": 5.62,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "It looks like you need to sign in to proceed with proving your data in the KS application. Please sign in using the provided authentication method, and then we can submit the proof job for your saved hash.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_A_S6_SC6_run1_1778714907515"
+        },
+        "response": "Please sign in first.",
+        "timestamp": "2026-05-13T23:28:29.791475+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "A",
+    "run": 1,
+    "session_id": "test_A_S6_SC6_run1_1778714907515",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:28:44.855311+00:00",
+    "duration_seconds": 6.72,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "It looks like there are no proof jobs currently in your session. Would you like to submit a proof job now? You can specify which type of proof you'd like to run (logistic accuracy, KS, or LRT), and I can help set it up for you.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "session_id": "current_session_id"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S6_SC6_run1_1778714907515"
+        },
+        "response": "{\"error\": \"job_id is required and no latest job found in session state\"}",
+        "timestamp": "2026-05-13T23:28:42.678212+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "A",
+    "run": 1,
+    "session_id": "test_A_S6_SC6_run1_1778714907515",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:28:59.603579+00:00",
+    "duration_seconds": 9.75,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "It looks like you haven't submitted any proof jobs yet, or none have completed. To download a proof, we first need to submit a job using your data. Would you like to submit a proof job now? You can choose between logistic accuracy, KS, or LRT, and I can help monitor its status until completion.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "download_proof",
+        "arguments": {
+          "session_id": "current_session_123",
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S6_SC6_run1_1778714907515",
+          "proof_type": "auto"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:28:56.073316+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "A",
+    "run": 1,
+    "session_id": "test_A_S6_SC6_run1_1778714907515",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:29:08.539299+00:00",
+    "duration_seconds": 3.94,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "It looks like there are no completed proof jobs in your session history that can be verified. Would you like to submit a new proof job now? You can specify which type of proof you'd like to run (logistic accuracy, KS, or LRT), and I can help set it up and track its progress.\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S1_24",
+    "config": "A",
+    "run": 2,
+    "session_id": "test_A_S1_24_run2_1778714953540",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:29:22.124580+00:00",
+    "duration_seconds": 8.58,
+    "response_text": "It seems there are no completed proof jobs in your session history. Would you like to:\n1) Submit a new proof job now (logistic accuracy, KS, or LRT)?\n2) Check the status of a specific job using its ID?\n3) View all jobs in your session history?\n\nPlease let me know how you'd like to proceed.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": "current_session_123",
+          "user_id": "user_456"
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": "test_A_S1_24_run2_1778714953540",
+          "user_id": "user_456"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:29:17.513463+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "A",
+    "run": 2,
+    "session_id": "test_A_S1_25_run2_1778714967125",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:29:36.415447+00:00",
+    "duration_seconds": 9.29,
+    "response_text": "It looks like there are no proof jobs in your current session. Would you like to submit a new proof job for verification? If so, please specify the type of proof (KS, LRT, or logistic_accuracy) you'd like to run.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_id",
+          "user_id": "current_user_id",
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S1_25_run2_1778714967125",
+          "user_id": "current_user_id",
+          "proof_type": "auto"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:29:31.557048+00:00"
+      },
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "current_session_id"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S1_25_run2_1778714967125"
+        },
+        "response": "{\n  \"state\": {\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-13T23:29:27.129682\"\n  },\n  \"jobs\": [],\n  \"summary\": \"Latest job: none. Latest completed: none.\",\n  \"recent_messages\": []\n}",
+        "timestamp": "2026-05-13T23:29:34.275588+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_11",
+    "config": "A",
+    "run": 2,
+    "session_id": "test_A_S2_11_run2_1778714981416",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:29:51.607472+00:00",
+    "duration_seconds": 10.19,
+    "response_text": "It looks like there are no completed proof jobs in your session yet. To verify a proof, you'll need to:\n\n1. First submit a proof job using `prove_my_data` (or `prove_hash` if you have a specific hash)\n2. Wait for it to complete (check with `check_status`)\n3. Then you can verify it with `verify_proof`\n\nWould you like me to help you submit a new proof job now?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S2_11_run2_1778714981416",
+          "user_id": "user123"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:29:46.919131+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "A",
+    "run": 2,
+    "session_id": "test_A_S6_SC6_run2_1778714996610",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:30:03.422408+00:00",
+    "duration_seconds": 6.81,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "To proceed with proving your data in the KS application, you'll need to sign in first. If you don't have an account, you can create one. Alternatively, if you'd prefer not to sign in, you can provide your raw hash value directly, and I can submit a proof job for it explicitly.\n\nWould you like to:\n1. Sign in to access your saved data, or\n2. Provide your raw hash to proceed anonymously?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_A_S6_SC6_run2_1778714996610"
+        },
+        "response": "Please sign in first.",
+        "timestamp": "2026-05-13T23:29:58.918841+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "A",
+    "run": 2,
+    "session_id": "test_A_S6_SC6_run2_1778714996610",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:30:14.546838+00:00",
+    "duration_seconds": 6.12,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "It looks like there are no proof jobs currently associated with your session. Would you like to:\n1. Submit a new proof job (e.g., for logistic accuracy, KS, or LRT), or\n2. Provide a specific job ID to check a different job's status?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "session_id": "abc123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S6_SC6_run2_1778714996610"
+        },
+        "response": "{\"error\": \"job_id is required and no latest job found in session state\"}",
+        "timestamp": "2026-05-13T23:30:12.736436+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "A",
+    "run": 2,
+    "session_id": "test_A_S6_SC6_run2_1778714996610",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:30:24.805167+00:00",
+    "duration_seconds": 5.26,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "It seems there are no active or completed proof jobs in your current session. To download a proof, you'll first need to:\n\n1. **Submit a proof job** (e.g., for logistic accuracy, KS, or LRT), or  \n2. **Provide a specific job ID** if you have one from a prior submission  \n\nWould you like to submit a new job now, or do you have a job ID to reference?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "A",
+    "run": 2,
+    "session_id": "test_A_S6_SC6_run2_1778714996610",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:30:33.529364+00:00",
+    "duration_seconds": 3.72,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "To verify your proof, we first need a completed job to reference. It appears there are no completed proof jobs in your current session. Would you like to:\n\n1. **Submit a new proof job** (e.g., for logistic accuracy, KS, or LRT) to generate a verifiable result, or  \n2. **Provide a specific job ID** from a prior submission that you\u2019d like to verify?  \n\nLet me know how you\u2019d like to proceed!\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S1_24",
+    "config": "A",
+    "run": 3,
+    "session_id": "test_A_S1_24_run3_1778715038531",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:30:47.723563+00:00",
+    "duration_seconds": 9.19,
+    "response_text": "It seems there are no completed proof jobs in your session yet. To verify a proof, you first need to:\n\n1. Submit a proof job using `prove_my_data` (for your saved hash) or `prove_hash` (for a specific hash)\n2. Wait for the job to complete (status will show \"done\")\n3. Then run verification\n\nWould you like me to check the status of any existing jobs, or would you like to submit a new proof job for verification?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S1_24_run3_1778715038531",
+          "user_id": "user123"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:30:43.764738+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "A",
+    "run": 3,
+    "session_id": "test_A_S1_25_run3_1778715052725",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:31:02.996443+00:00",
+    "duration_seconds": 10.27,
+    "response_text": "It looks like you haven't submitted any proof jobs yet. Would you like to submit a proof for your data now? If so, please specify which type of proof you'd like to run (logistic_accuracy, KS, or LRT). For example:\n- \"Submit a proof for my data in KS\"\n- \"Run logistic accuracy proof for my hash\"\n- \"Start LRT verification with my data\"\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_id",
+          "user_id": "current_user_id",
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S1_25_run3_1778715052725",
+          "user_id": "current_user_id",
+          "proof_type": "auto"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:30:57.328907+00:00"
+      },
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "current_session_id"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S1_25_run3_1778715052725"
+        },
+        "response": "{\n  \"state\": {\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-13T23:30:52.729843\"\n  },\n  \"jobs\": [],\n  \"summary\": \"Latest job: none. Latest completed: none.\",\n  \"recent_messages\": []\n}",
+        "timestamp": "2026-05-13T23:31:00.214232+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_11",
+    "config": "A",
+    "run": 3,
+    "session_id": "test_A_S2_11_run3_1778715067998",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:31:17.794685+00:00",
+    "duration_seconds": 9.8,
+    "response_text": "It seems there are no completed proof jobs in your session yet. To verify a proof, you first need to:\n\n1. Submit a proof job using `prove_my_data` (for your saved hash) or `prove_hash` (for a specific hash)\n2. Wait for the job to complete (status will show \"done\")\n3. Then run verification\n\nWould you like me to check the status of any existing jobs, or would you like to submit a new proof job for verification?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S2_11_run3_1778715067998",
+          "user_id": "user123"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:31:12.730428+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "A",
+    "run": 3,
+    "session_id": "test_A_S6_SC6_run3_1778715082798",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:31:28.779853+00:00",
+    "duration_seconds": 5.98,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "To proceed with proving your data in the KS application, you'll need to sign in first. If you don't have an account, you can create one. Alternatively, if you'd prefer not to sign in, you can provide your raw hash value directly, and I can submit a proof job for it explicitly.\n\nWould you like to:\n1. Sign in to access your saved data, or\n2. Provide your raw hash to proceed anonymously?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_A_S6_SC6_run3_1778715082798"
+        },
+        "response": "Please sign in first.",
+        "timestamp": "2026-05-13T23:31:25.169420+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "A",
+    "run": 3,
+    "session_id": "test_A_S6_SC6_run3_1778715082798",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:31:43.287809+00:00",
+    "duration_seconds": 9.51,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "It looks like there are no active or previously submitted proof jobs associated with your current session. To check a proof status, you'll need to either:\n\n1. **Submit a new proof job first** (e.g., \"Prove my data in KS\" or \"Submit a job for hash 6f in LRT\"), or  \n2. Provide a specific `job_id` if you have one from a prior submission.\n\nWould you like to submit a new proof job now?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "session_id": "current_session"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S6_SC6_run3_1778715082798"
+        },
+        "response": "{\"error\": \"job_id is required and no latest job found in session state\"}",
+        "timestamp": "2026-05-13T23:31:39.206180+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "A",
+    "run": 3,
+    "session_id": "test_A_S6_SC6_run3_1778715082798",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:31:53.928747+00:00",
+    "duration_seconds": 5.64,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "It looks like no proof jobs have been submitted or completed in your current session. To download a proof, you'll first need to:\n\n1. **Submit a proof job** (e.g., \"Prove my data in KS\"), wait for it to complete, and then\n2. Use the `download_proof` tool once the job status is \"done\"\n\nWould you like to submit a new proof job now? If so, I can help with that.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "abc123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S6_SC6_run3_1778715082798"
+        },
+        "response": "{\n  \"state\": {\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-13T23:31:22.802556\"\n  },\n  \"jobs\": [],\n  \"summary\": \"Latest job: none. Latest completed: none.\",\n  \"recent_messages\": [\n    {\n      \"role\": \"user\",\n      \"content\": \"Prove my data in KS\",\n      \"timestamp\": \"2026-05-13T23:31:28.772972\"\n    },\n    {\n      \"role\": \"assistant\",\n      \"content\": \"To proceed with proving your data in the KS application, you'll need to sign in first. If you don't have an account, you can create one. Alternatively, if you'd prefer not to sign in, you can provide your raw hash value directly, and I can submit a proof job for it explicitly.\\n\\nWould you like to:\\n1. Sign in to access your saved data, or\\n2. Provide your raw hash to proceed anonymously?\",\n      \"timestamp\": \"2026-05-13T23:31:28.776031\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Check my status\",\n      \"timestamp\": \"2026-05-13T23:31:43.279713\"\n    },\n    {\n      \"role\": \"assistant\",\n      \"content\": \"It looks like there are no active or previously submitted proof jobs associated with your current session. To check a proof status, you'll need to either:\\n\\n1. **Submit a new proof job first** (e.g., \\\"Prove my data in KS\\\" or \\\"Submit a job for hash 6f in LRT\\\"), or  \\n2. Provide a specific `job_id` if you have one from a prior submission.\\n\\nWould you like to submit a new proof job now?\",\n      \"timestamp\": \"2026-05-13T23:31:43.283057\"\n    }\n  ]\n}",
+        "timestamp": "2026-05-13T23:31:51.576932+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "A",
+    "run": 3,
+    "session_id": "test_A_S6_SC6_run3_1778715082798",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:32:02.216137+00:00",
+    "duration_seconds": 3.29,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "To verify a proof, we first need a completed proof job. It looks like no proof jobs have been submitted or completed in your current session. Let's start by submitting a proof job (e.g., \"Prove my data in KS\"), wait for it to complete (\"done\" status), and then we can verify it. Would you like to proceed with submitting a new job?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S1_24",
+    "config": "A",
+    "run": 4,
+    "session_id": "test_A_S1_24_run4_1778715127218",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:32:14.200692+00:00",
+    "duration_seconds": 6.98,
+    "response_text": "It seems there are no completed proof jobs in your session yet. To verify a proof, you'll need to either:\n\n1. Provide a specific job ID (if you have one), or  \n2. Check the status of your current jobs to find a completed one  \n\nWould you like me to check the status of your active jobs, or do you have a job ID to verify?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_123",
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S1_24_run4_1778715127218",
+          "proof_type": "auto"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:32:10.073687+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "A",
+    "run": 4,
+    "session_id": "test_A_S1_25_run4_1778715139202",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:32:29.513741+00:00",
+    "duration_seconds": 10.31,
+    "response_text": "It seems I don't have access to a completed job ID for verification. To check proof validity, we need to:\n\n1. First confirm your job has completed (verification only works on completed jobs)\n2. Then run the verification process\n\nWould you like me to:\n1. Check the status of your latest job to see if it's ready for verification?\n2. Or do you have a specific job ID you'd like me to verify?\n\nPlease let me know how you'd like to proceed.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_id"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S1_25_run4_1778715139202"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:32:22.832317+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_11",
+    "config": "A",
+    "run": 4,
+    "session_id": "test_A_S2_11_run4_1778715154516",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:32:42.564338+00:00",
+    "duration_seconds": 8.05,
+    "response_text": "It looks like there's no completed proof job to verify in your current session. Would you like to:\n\n1. Check the status of an existing job (using `check_status`)\n2. Submit a new proof job first (using `prove_my_data` or `prove_hash`)\n3. Provide a specific job ID to verify?\n\nLet me know how you'd like to proceed!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S2_11_run4_1778715154516",
+          "user_id": "user123"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:32:39.306854+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "A",
+    "run": 4,
+    "session_id": "test_A_S6_SC6_run4_1778715167568",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:32:51.596555+00:00",
+    "duration_seconds": 4.03,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "To proceed with proving your data in the KS application, you'll need to sign in first. This allows us to automatically retrieve your saved hash from our records. Please sign in, and then we can submit the proof job for you.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_A_S6_SC6_run4_1778715167568"
+        },
+        "response": "Please sign in first.",
+        "timestamp": "2026-05-13T23:32:49.840074+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "A",
+    "run": 4,
+    "session_id": "test_A_S6_SC6_run4_1778715167568",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:33:02.474900+00:00",
+    "duration_seconds": 5.88,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "It looks like there is no recent KS proof job in your session history. Would you like to:\n1. Submit a new proof job for your data in KS?\n2. Provide a specific job ID to check a different job?\n\nLet me know how you'd like to proceed.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_A_S6_SC6_run4_1778715167568"
+        },
+        "response": "{\"error\": \"job_id is required and no latest job found in session state\"}",
+        "timestamp": "2026-05-13T23:32:58.691244+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "A",
+    "run": 4,
+    "session_id": "test_A_S6_SC6_run4_1778715167568",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:33:21.191020+00:00",
+    "duration_seconds": 13.72,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "It looks like there are no completed proof jobs in your session yet. Would you like to submit a new proof job for your data in the KS application first? Let me know how you'd like to proceed.\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "A",
+    "run": 4,
+    "session_id": "test_A_S6_SC6_run4_1778715167568",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:33:30.630497+00:00",
+    "duration_seconds": 4.44,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "It looks like you haven't submitted or completed a proof job yet. Verification requires a completed job to check cryptographic validity. Would you like to:\n1. Submit a new proof job for your data in KS first?\n2. Provide a specific job ID to verify an existing proof?\n\nLet me know how you'd like to proceed.\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S1_24",
+    "config": "A",
+    "run": 5,
+    "session_id": "test_A_S1_24_run5_1778715215632",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:33:42.501794+00:00",
+    "duration_seconds": 6.87,
+    "response_text": "It looks like there's no completed proof job in your current session. To verify a proof, you'll need to:\n\n1. Either provide a specific job ID you'd like to verify\n2. Or submit a new proof job first (using `prove_my_data` or `prove_hash`)\n\nWould you like to submit a new proof job now, or do you have a specific job ID you'd like to verify?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": "test_A_S1_24_run5_1778715215632"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:33:39.875148+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "A",
+    "run": 5,
+    "session_id": "test_A_S1_25_run5_1778715227503",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:33:56.943107+00:00",
+    "duration_seconds": 9.44,
+    "response_text": "It looks like you haven't submitted any proof jobs yet, or all jobs are still in progress. Would you like to:\n1. Submit a new proof job for your data (logistic accuracy, KS, or LRT)?\n2. Check the status of a specific job ID?\n\nLet me know how you'd like to proceed!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_id",
+          "user_id": "current_user_id",
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S1_25_run5_1778715227503",
+          "user_id": "current_user_id",
+          "proof_type": "auto"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:33:51.756799+00:00"
+      },
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "current_session_id"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S1_25_run5_1778715227503"
+        },
+        "response": "{\n  \"state\": {\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-13T23:33:47.508379\"\n  },\n  \"jobs\": [],\n  \"summary\": \"Latest job: none. Latest completed: none.\",\n  \"recent_messages\": []\n}",
+        "timestamp": "2026-05-13T23:33:54.635846+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_11",
+    "config": "A",
+    "run": 5,
+    "session_id": "test_A_S2_11_run5_1778715241946",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:34:07.423788+00:00",
+    "duration_seconds": 5.48,
+    "response_text": "It seems there is no completed proof job in your session yet. Would you like me to check the status of your latest proof job to see if it's still processing, or would you like to verify a different job?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": "current_session_123",
+          "user_id": "user_456"
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": "test_A_S2_11_run5_1778715241946",
+          "user_id": "user_456"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:34:05.125136+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "A",
+    "run": 5,
+    "session_id": "test_A_S6_SC6_run5_1778715252429",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:34:18.204697+00:00",
+    "duration_seconds": 5.77,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "To proceed with proving your data in the KS application, you need to be signed in so we can retrieve your saved hash. Please sign in or provide your raw hash value, and then we can submit the proof job for you.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_A_S6_SC6_run5_1778715252429"
+        },
+        "response": "Please sign in first.",
+        "timestamp": "2026-05-13T23:34:14.615209+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "A",
+    "run": 5,
+    "session_id": "test_A_S6_SC6_run5_1778715252429",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:34:30.729992+00:00",
+    "duration_seconds": 7.53,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "It looks like there are no existing proof jobs in your session. Would you like to:\n\n1. Submit a new proof job for your data (KS application)?\n2. Provide a specific job ID to check its status?\n\nLet me know how you'd like to proceed!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "session_id": "current_session_id"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_A_S6_SC6_run5_1778715252429"
+        },
+        "response": "{\"error\": \"job_id is required and no latest job found in session state\"}",
+        "timestamp": "2026-05-13T23:34:27.265696+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "A",
+    "run": 5,
+    "session_id": "test_A_S6_SC6_run5_1778715252429",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:34:39.433387+00:00",
+    "duration_seconds": 3.7,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "To download your proof, I'll need the specific job ID associated with the proof you want to retrieve. Could you please provide the job ID? If you're unsure, you can check your job history or status using the \"check status\" command first.\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "A",
+    "run": 5,
+    "session_id": "test_A_S6_SC6_run5_1778715252429",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:34:51.764792+00:00",
+    "duration_seconds": 7.33,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "It looks like there are no completed proof jobs in your session to verify. Would you like to:\n\n1. **Check the status** of an existing job (provide a job ID), or  \n2. **Submit a new proof job** for your data (e.g., in KS, LRT, or logistic accuracy)?\n\nLet me know how you'd like to proceed!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "proof_type": "auto",
+          "session_id": "test_A_S6_SC6_run5_1778715252429"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:34:48.875880+00:00"
+      }
+    ]
+  }
+]

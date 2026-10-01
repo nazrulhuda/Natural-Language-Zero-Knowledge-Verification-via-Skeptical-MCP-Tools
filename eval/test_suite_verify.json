@@ -1,0 +1,100 @@
+[
+  {
+    "_comment": "=== verify_proof test suite — 7 new queries (Source 1, 2, 6) ==="
+  },
+  {
+    "id": "S1_24",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Verify my proof",
+    "user_state": {
+      "logged_in": true,
+      "has_completed_job": true
+    },
+    "expected_tool": "verify_proof",
+    "should_contain": ["verif"],
+    "should_not_contain": ["error", "fail"],
+    "tests": "B4 (latest completed job fallback) + B5 (stored proof_type) — verifies the user's most recent completed job without an explicit job_id."
+  },
+  {
+    "id": "S1_25",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Is my proof valid?",
+    "user_state": {
+      "logged_in": true,
+      "has_completed_job": true
+    },
+    "expected_tool": "verify_proof",
+    "should_contain": ["verif"],
+    "should_not_contain": ["error", "fail"],
+    "tests": "Same surface as S1_24, different phrasing — checks tool selection robustness."
+  },
+  {
+    "id": "S2_11",
+    "source": 2,
+    "mode": "isolated",
+    "query": "Verify my proof",
+    "user_state": {
+      "logged_in": true,
+      "has_completed_job": false
+    },
+    "expected_tool": "verify_proof",
+    "expected_outcome": "error_no_completed_job",
+    "should_contain": ["no completed job", "no completed", "no job", "submit", "no proof"],
+    "should_not_contain": ["passed", "verified successfully", "PASSED"],
+    "tests": "Source 2 error: no completed job exists. Verify must fail; LLM must not fabricate a PASSED outcome."
+  },
+  {
+    "id": "S6_SC6_01",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 6,
+    "step": 1,
+    "query": "Prove my data in KS",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "prove_my_data",
+    "expected_params": {
+      "proof_type": "KS"
+    },
+    "should_contain": ["submitted", "job"],
+    "tests": "Submits the proof job that subsequent steps will check/download/verify."
+  },
+  {
+    "id": "S6_SC6_02",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 6,
+    "step": 2,
+    "query": "Check my status",
+    "expected_tool": "check_status",
+    "should_contain": ["status"],
+    "tests": "B4 — must find job from step 1 via Redis fallback. B5 — must use stored proof_type KS."
+  },
+  {
+    "id": "S6_SC6_03",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 6,
+    "step": 3,
+    "query": "Download my proof",
+    "expected_tool": "download_proof",
+    "should_contain": ["download"],
+    "tests": "Downloads the proof file from step 1. Should resolve job_id via B4 fallback."
+  },
+  {
+    "id": "S6_SC6_04",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 6,
+    "step": 4,
+    "query": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "should_contain": ["verif"],
+    "should_not_contain": ["error", "fail"],
+    "tests": "Verifies cryptographic validity of the proof generated in step 1 and downloaded in step 3. Full ZKP lifecycle: prove → status → download → verify."
+  }
+]

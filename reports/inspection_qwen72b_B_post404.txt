@@ -1,0 +1,72 @@
+Qwen2.5-72B Config B: records with a 404 AND any success-ish word
+
+====================================================================================================
+#1  S7_01  run 1  source 7  query: 'Is my proof done yet?'
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems there was an issue with checking the status of your proof. The job ID might be incorrect or the job might not have been submitted yet. Could you please provide the correct job ID or confirm if you have submitted a proof job? If you're unsure, I can help you check the status of the most recent job.
+====================================================================================================
+#2  S7_02  run 1  source 7  query: 'What was my last job ID?'
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems there was an issue with finding your last job ID. Could you please provide more details or check if you have any ongoing or completed jobs? If you have a specific job ID in mind, let me know, and I can check the status for you.
+====================================================================================================
+#3  S7_06  run 1  source 7  query: 'What happened with my last submission?'
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems there was an issue with the last submission. The job ID could not be found. Could you please provide the specific job ID or check if you have any ongoing or completed jobs by asking for a session summary?
+====================================================================================================
+#4  S7_02  run 2  source 7  query: 'What was my last job ID?'
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems there was an issue retrieving your last job ID. Could you please provide more details or check if you have any ongoing or completed jobs? If you have a specific job ID in mind, let me know, and I can check the status for you.
+====================================================================================================
+#5  S7_09  run 2  source 7  query: 'Has my LRT proof finished?'
+   tool[0] check_status({"job_id": null, "proof_type": "LRT", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems that the job ID for your LRT proof is not found. Could you please provide the specific job ID or confirm if you have submitted an LRT proof job recently? If you're not sure, I can check the status of the most recent job in your session.
+====================================================================================================
+#6  S7_10  run 2  source 7  query: "What's going on with my proof right now?"
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems there was an issue with the job ID. Could you please provide the specific job ID or confirm if you want to check the status of the most recent job you submitted?
+====================================================================================================
+#7  S6_SC5_03  run 2  source 6  query: 'Check my status'
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems that the job ID could not be found. Could you please provide the specific job ID or check if you have any ongoing or completed jobs? If you're unsure, I can help you check all your jobs. What would you like to do?
+====================================================================================================
+#8  S7_02  run 3  source 7  query: 'What was my last job ID?'
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems there was an issue retrieving the job ID. Could you please provide more details or check if you have any ongoing or completed jobs? If you have a specific job ID in mind, please share it with me.
+====================================================================================================
+#9  S7_09  run 3  source 7  query: 'Has my LRT proof finished?'
+   tool[0] check_status({"job_id": null, "proof_type": "LRT", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems that the job ID for your LRT proof is not found. Could you please provide the specific job ID or confirm if you have submitted an LRT proof job recently? If you're unsure, I can check the status of the most recent job in your session.
+====================================================================================================
+#10  S6_SC1_02  run 3  source 6  query: 'Check my status'
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems that the job ID you're trying to check does not exist or has not been submitted yet. Could you please provide the correct job ID or confirm if you have submitted any jobs recently? If you're unsure, I can check the status of the most recent job in your session.
+====================================================================================================
+#11  S7_01  run 4  source 7  query: 'Is my proof done yet?'
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems there was an issue with checking the status of your proof. The job ID might be incorrect or the job might not have been submitted yet. Could you please provide the job ID or confirm if you have submitted a proof job? If you're unsure, I can help you check the status of the most recent job.
+====================================================================================================
+#12  S7_06  run 4  source 7  query: 'What happened with my last submission?'
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems there was an issue with the last submission. The job ID could not be found. Could you please provide the job ID or the type of proof you submitted (logistic accuracy, KS, or LRT)? This will help me check the status more accurately.
+====================================================================================================
+#13  S7_01  run 5  source 7  query: 'Is my proof done yet?'
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems there was an issue with checking the status of your proof. The job ID might be incorrect or the job might not have been submitted yet. Could you please provide the correct job ID or confirm if you have submitted a proof job? If you're unsure, I can help you check the status of the most recent job.
+====================================================================================================
+#14  S7_09  run 5  source 7  query: 'Has my LRT proof finished?'
+   tool[0] check_status({"job_id": null, "proof_type": "LRT", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems that the job ID for your LRT proof is not found. Could you please provide the specific job ID or confirm if you have submitted an LRT proof job before? If you're unsure, I can check your session history for you.

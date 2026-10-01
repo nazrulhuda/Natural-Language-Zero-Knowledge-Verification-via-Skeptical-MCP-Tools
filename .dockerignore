@@ -1,0 +1,19 @@
+# Keep the build context to what the Dockerfiles actually COPY.
+.git
+.gitignore
+.gitattributes
+__pycache__
+*.pyc
+.env
+.env.*
+results/
+reports/
+paper/
+downloads/
+data/
+eval/
+sql/
+dataset_users.csv
+*.md
+.vscode
+.idea

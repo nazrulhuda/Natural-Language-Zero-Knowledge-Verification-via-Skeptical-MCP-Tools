@@ -1,0 +1,57 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+# Authors' server-specific notes (QuickRun.local.md): private IPs, paths, credentials
+*.local.md
+
+# Manuscript drafts are not part of the code artifact
+paper/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+venv/
+.venv/
+env/
+ENV/
+
+# Runtime data recreated by the stack or the runner
+downloads/
+*.tmp
+logs/
+*.log
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Docker local overrides
+docker-compose.override.yml
+docker-compose.*.yml
+
+# Test tooling caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Superseded working analyses (kept locally; not part of the artifact)
+reports/archive_local/
+
+# CoSMeTIC's synthetic input data: a runtime cache recreated by /admin/sync-dataset,
+# and an unused export of the users table. Obtain from CoSMeTIC, not from this repository.
+data/
+dataset_users.csv
+
+# Files not part of the release (kept locally)
+local_archive/

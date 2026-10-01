@@ -1,0 +1,106 @@
+services:
+  # Prover MCP Server
+  proverserver:
+    build:
+      context: .
+      dockerfile: Dockerfile.prover
+    container_name: mcp-prover-server
+    ports:
+      - "8003:8003"
+    environment:
+      - PROVER_MCP_PORT=8003
+      - PROVER_MCP_HOST=0.0.0.0
+      - DOWNLOADS_DIR=/app/downloads
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - DATABASE_URL=postgresql://mcp_user:mcp_password@postgres:5432/mcpdb
+      - INPUT_FILES_ZIP_URL=http://COSMeTICprover-input-files:5015/input-files/zip
+      - INPUT_ZIPS_DIR=/app/data/input_zips
+      - CONFIG=${CONFIG:-C}
+      - EVAL_MODE=${EVAL_MODE:-true}
+    volumes:
+      - ./downloads:/app/downloads
+      - ./data/input_zips:/app/data/input_zips
+    networks:
+      - mcp-network
+      - regulatory_hypothesis_tests_default
+    depends_on:
+      - redis
+      - postgres
+    restart: unless-stopped
+
+  # Flask Backend Application
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: mcp-backend
+    ports:
+      - "5001:5001"
+    environment:
+      - FLASK_PORT=5001
+      - DEEPINFRA_API_KEY=${DEEPINFRA_API_KEY}
+      - SECRET_KEY=${SECRET_KEY:-dev-secret-change-me}
+      - PROVER_MCP_URL=http://proverserver:8003/mcp
+      - DOWNLOADS_DIR=/app/downloads
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - DATABASE_URL=postgresql://mcp_user:mcp_password@postgres:5432/mcpdb
+      - INPUT_FILES_ZIP_URL=http://COSMeTICprover-input-files:5015/input-files/zip
+      - INPUT_ZIPS_DIR=/app/data/input_zips
+      - CONFIG=${CONFIG:-C}
+      - EVAL_MODE=${EVAL_MODE:-true}
+      - LLM_MODEL=${LLM_MODEL:-Qwen/Qwen3-32B}
+    volumes:
+      - ./downloads:/app/downloads
+      - ./data/input_zips:/app/data/input_zips
+    depends_on:
+      - proverserver
+      - redis
+      - postgres
+    networks:
+      - mcp-network
+      - regulatory_hypothesis_tests_default
+    restart: unless-stopped
+
+  # Redis for Context Storage
+  redis:
+    image: redis:7-alpine
+    container_name: mcp-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - mcp-network
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+
+  # Postgres for persistent auth/hash storage
+  postgres:
+    image: postgres:16-alpine
+    container_name: mcp-postgres
+    environment:
+      - POSTGRES_DB=mcpdb
+      - POSTGRES_USER=mcp_user
+      - POSTGRES_PASSWORD=mcp_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./sql:/docker-entrypoint-initdb.d:ro
+    networks:
+      - mcp-network
+    restart: unless-stopped
+
+networks:
+  mcp-network:
+    driver: bridge
+  # External network created by the COSMeTIC stack (see Prerequisites in README).
+  # The chatbot's backend + prover join it to reach COSMeTICprover on 5012-5015.
+  regulatory_hypothesis_tests_default:
+    external: true
+
+volumes:
+  redis-data:
+  postgres-data:

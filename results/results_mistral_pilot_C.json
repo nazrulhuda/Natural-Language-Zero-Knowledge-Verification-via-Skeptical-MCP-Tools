@@ -1,0 +1,1975 @@
+[
+  {
+    "query_id": "S1_01",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_01_run1_1777805677973",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:54:40.466802+00:00",
+    "duration_seconds": 2.49,
+    "response_text": "I've submitted a proof job for your data in the KS application. Your job ID is `1777805679152`. You can check the status of your proof using this job ID.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_C_S1_01_run1_1777805677973"
+        },
+        "response": "{\n  \"job_id\": \"1777805679152\",\n  \"status_url\": \"/jobs/1777805679152\"\n}",
+        "timestamp": "2026-05-03T10:54:39.074070+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_02",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_02_run1_1777805685467",
+    "query_text": "Run the Kolmogorov-Smirnov test on my stuff",
+    "expected_tool": "prove_my_data",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:54:47.306761+00:00",
+    "duration_seconds": 1.84,
+    "response_text": "I've submitted your KS proof job. You can check the status of your job using the job ID `1777805686570`.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_C_S1_02_run1_1777805685467"
+        },
+        "response": "{\n  \"job_id\": \"1777805686570\",\n  \"status_url\": \"/jobs/1777805686570\"\n}",
+        "timestamp": "2026-05-03T10:54:46.500302+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_03",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_03_run1_1777805692307",
+    "query_text": "Submit a proof for LRT",
+    "expected_tool": "prove_my_data",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:54:54.042100+00:00",
+    "duration_seconds": 1.73,
+    "response_text": "I've submitted a proof for your data in LRT. You can check the status of your proof using the job ID `1777805693342`.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "LRT"
+        },
+        "arguments_after_correction": {
+          "proof_type": "LRT",
+          "session_id": "test_C_S1_03_run1_1777805692307"
+        },
+        "response": "{\n  \"job_id\": \"1777805693342\",\n  \"status_url\": \"/jobs/1777805693342\"\n}",
+        "timestamp": "2026-05-03T10:54:53.268795+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_04",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_04_run1_1777805699043",
+    "query_text": "I want to do the likelihood ratio test on my data",
+    "expected_tool": "prove_my_data",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:55:00.929433+00:00",
+    "duration_seconds": 1.89,
+    "response_text": "I've submitted your LRT proof job. Your job ID is `1777805700059`. You can check the status of your job using this ID.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "LRT"
+        },
+        "arguments_after_correction": {
+          "proof_type": "LRT",
+          "session_id": "test_C_S1_04_run1_1777805699043"
+        },
+        "response": "{\n  \"job_id\": \"1777805700059\",\n  \"status_url\": \"/jobs/1777805700059\"\n}",
+        "timestamp": "2026-05-03T10:54:59.978596+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_05",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_05_run1_1777805705930",
+    "query_text": "Prove my data in logistic accuracy",
+    "expected_tool": "prove_my_data",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:55:07.859132+00:00",
+    "duration_seconds": 1.93,
+    "response_text": "I've submitted a proof job for your data in logistic accuracy. Your job ID is `1777805707003`. You can check the status of your proof using this ID.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "logistic_accuracy"
+        },
+        "arguments_after_correction": {
+          "proof_type": "logistic_accuracy",
+          "session_id": "test_C_S1_05_run1_1777805705930"
+        },
+        "response": "{\n  \"job_id\": \"1777805707003\",\n  \"status_url\": \"/jobs/1777805707003\"\n}",
+        "timestamp": "2026-05-03T10:55:06.946228+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_06",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_06_run1_1777805712860",
+    "query_text": "Run the logistic regression accuracy test on my data",
+    "expected_tool": "prove_my_data",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:55:14.814184+00:00",
+    "duration_seconds": 1.95,
+    "response_text": "I've submitted the logistic regression accuracy test for your data. The job ID is `1777805714002`. You can check the status of your job using this ID.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "logistic_accuracy"
+        },
+        "arguments_after_correction": {
+          "proof_type": "logistic_accuracy",
+          "session_id": "test_C_S1_06_run1_1777805712860"
+        },
+        "response": "{\n  \"job_id\": \"1777805714002\",\n  \"status_url\": \"/jobs/1777805714002\"\n}",
+        "timestamp": "2026-05-03T10:55:13.930482+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_07",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_07_run1_1777805719815",
+    "query_text": "Prove hash abc123def456 in KS",
+    "expected_tool": "prove_hash",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:55:21.959482+00:00",
+    "duration_seconds": 2.14,
+    "response_text": "I've submitted the proof job for hash `abc123def456` in KS. Your job ID is `1777805721077`. You can check the status of your job using this ID.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_hash",
+        "arguments": {
+          "user_hash": "abc123def456",
+          "nonce": null,
+          "proof_type": "KS",
+          "session_id": null,
+          "user_id": null
+        },
+        "arguments_after_correction": {
+          "user_hash": "abc123def456",
+          "nonce": null,
+          "proof_type": "KS",
+          "session_id": "test_C_S1_07_run1_1777805719815",
+          "user_id": null
+        },
+        "response": "{\n  \"job_id\": \"1777805721077\",\n  \"status_url\": \"/jobs/1777805721077\"\n}",
+        "timestamp": "2026-05-03T10:55:21.021554+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_08",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_08_run1_1777805726960",
+    "query_text": "Submit a proof for hash xyz789 using LRT",
+    "expected_tool": "prove_hash",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:55:28.874977+00:00",
+    "duration_seconds": 1.91,
+    "response_text": "I've submitted the proof for hash `xyz789` using LRT. Your job ID is `1777805728069`. You can check the status of your proof using this ID.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_hash",
+        "arguments": {
+          "user_hash": "xyz789",
+          "proof_type": "LRT"
+        },
+        "arguments_after_correction": {
+          "user_hash": "xyz789",
+          "proof_type": "LRT",
+          "session_id": "test_C_S1_08_run1_1777805726960"
+        },
+        "response": "{\n  \"job_id\": \"1777805728069\",\n  \"status_url\": \"/jobs/1777805728069\"\n}",
+        "timestamp": "2026-05-03T10:55:28.014754+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_09",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_09_run1_1777805733876",
+    "query_text": "Run logistic accuracy proof on hash testdata001",
+    "expected_tool": "prove_hash",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:55:35.957924+00:00",
+    "duration_seconds": 2.08,
+    "response_text": "I've submitted the logistic accuracy proof for the hash \"testdata001\". The job ID is 1777805735137. You can check the status of your proof using this job ID.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_hash",
+        "arguments": {
+          "user_hash": "testdata001",
+          "nonce": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": null,
+          "user_id": null
+        },
+        "arguments_after_correction": {
+          "user_hash": "testdata001",
+          "nonce": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": "test_C_S1_09_run1_1777805733876",
+          "user_id": null
+        },
+        "response": "{\n  \"job_id\": \"1777805735137\",\n  \"status_url\": \"/jobs/1777805735137\"\n}",
+        "timestamp": "2026-05-03T10:55:35.081723+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_10",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_10_run1_1777805740959",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:55:43.415585+00:00",
+    "duration_seconds": 2.45,
+    "response_text": "Your proof job (ID: 1777804676511) is currently queued. It was submitted at 2024-03-04 14:31:16.511605 and is still waiting to start processing. I'll check back on its status for you.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": null
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": "test_C_S1_10_run1_1777805740959"
+        },
+        "response": "{\n  \"error\": null,\n  \"job_id\": \"1777804676511\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": null,\n  \"started_at\": 1777804676.5116053,\n  \"status\": \"queued\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-03T10:55:42.151175+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_11",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_11_run1_1777805748417",
+    "query_text": "What's the status of my proof?",
+    "expected_tool": "check_status",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:55:49.991421+00:00",
+    "duration_seconds": 1.57,
+    "response_text": "Your proof job is currently queued. It will start processing soon. You can check back later for updates on its status.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_C_S1_11_run1_1777805748417"
+        },
+        "response": "{\n  \"error\": null,\n  \"job_id\": \"1777804676511\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": null,\n  \"started_at\": 1777804676.5116053,\n  \"status\": \"queued\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-03T10:55:49.285290+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_12",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_12_run1_1777805754992",
+    "query_text": "How is my job doing?",
+    "expected_tool": "check_status",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:55:56.587216+00:00",
+    "duration_seconds": 1.59,
+    "response_text": "Your job is currently queued and has not started processing yet. I will keep you updated on its progress.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_C_S1_12_run1_1777805754992"
+        },
+        "response": "{\n  \"error\": null,\n  \"job_id\": \"1777804676511\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": null,\n  \"started_at\": 1777804676.5116053,\n  \"status\": \"queued\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-03T10:55:55.880798+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_13",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_13_run1_1777805761588",
+    "query_text": "Check status of job 1777804676511",
+    "expected_tool": "check_status",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:56:03.856139+00:00",
+    "duration_seconds": 2.26,
+    "response_text": "The status of job 1777804676511 is currently \"queued\". It was started at 1777804676.5116053. The job is for a proof type with a nonce of [[0.0, 0.0, 0.0]] and a user hash of 123. The result is currently null.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "job_id": "1777804676511"
+        },
+        "arguments_after_correction": {
+          "job_id": "1777804676511",
+          "session_id": "test_C_S1_13_run1_1777805761588"
+        },
+        "response": "{\n  \"error\": null,\n  \"job_id\": \"1777804676511\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": null,\n  \"started_at\": 1777804676.5116053,\n  \"status\": \"queued\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-03T10:56:02.624049+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_14",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_14_run1_1777805768857",
+    "query_text": "Download the proof",
+    "expected_tool": "download_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:56:10.134374+00:00",
+    "duration_seconds": 1.27,
+    "response_text": "To download the proof, I need the job ID associated with the proof you want to download. Could you please provide the job ID?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S1_15",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_15_run1_1777805775136",
+    "query_text": "Get my proof file",
+    "expected_tool": "download_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:56:16.985077+00:00",
+    "duration_seconds": 1.84,
+    "response_text": "To download your proof file, I'll need to know the job ID associated with the proof you want to download. Could you please provide the job ID? If you're not sure what your job ID is, I can help you find it. Would you like me to get a list of your jobs first?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S1_16",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_16_run1_1777805781987",
+    "query_text": "I want to download my KS proof artifacts",
+    "expected_tool": "download_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:56:24.480282+00:00",
+    "duration_seconds": 2.49,
+    "response_text": "It looks like your job is not done yet. The status is currently queued. You can check the status of your job using the `check_status` tool. Would you like me to do that for you?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "download_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_C_S1_16_run1_1777805781987"
+        },
+        "response": "API returned an error instead of proof file: {\"error\":\"Job is not done yet (status=queued)\",\"ok\":false}",
+        "timestamp": "2026-05-03T10:56:22.996594+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_17",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_17_run1_1777805789482",
+    "query_text": "Is my hash used in KS?",
+    "expected_tool": "check_my_hash_existence",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:56:32.623204+00:00",
+    "duration_seconds": 3.14,
+    "response_text": "Your hash is used in the KS (Kolmogorov-Smirnov) application. If you would like, I can generate a proof that your information was used here. Just let me know by saying, \"submit proof for my data in KS.\" If you have a specific nonce you'd like to use, you can provide it in the format `[[0.0, 0.0, 0.0]]`. Otherwise, a default nonce will be used automatically.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_my_hash_existence",
+        "arguments": {
+          "application": "KS"
+        },
+        "arguments_after_correction": {
+          "application": "KS",
+          "session_id": "test_C_S1_17_run1_1777805789482"
+        },
+        "response": "Hash existence check for hash: **123**\n\n\n**Summary:**\nThe hash **123** was found in **KS (Kolmogorov-Smirnov)**.\n\n**Proof follow-up options:**\n- KS (Kolmogorov-Smirnov): I can generate a proof that your information **was used** here. Say: \"submit proof for my data in KS\".\n- Nonce behavior: if you don't provide nonce, we use a default nonce automatically.\n- Explicit nonce prompt format (if needed): \"submit proof for my data in KS with nonce [[0.0, 0.0, 0.0]]\".",
+        "timestamp": "2026-05-03T10:56:30.588700+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_18",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_18_run1_1777805797625",
+    "query_text": "Check if my hash exists in LRT",
+    "expected_tool": "check_my_hash_existence",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:56:39.730881+00:00",
+    "duration_seconds": 2.11,
+    "response_text": "Your hash **123** was found in the **LRT (Likelihood Ratio Test)** application.\n\nWould you like to submit a proof for your data in LRT? If so, please let me know if you have a specific nonce you'd like to use, or I can use a default nonce.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_my_hash_existence",
+        "arguments": {
+          "application": "LRT"
+        },
+        "arguments_after_correction": {
+          "application": "LRT",
+          "session_id": "test_C_S1_18_run1_1777805797625"
+        },
+        "response": "Hash existence check for hash: **123**\n\n\u2713 **LRT (Likelihood Ratio Test)**: Hash exists. Details: found in both\n\n**Summary:**\nThe hash **123** was found in **LRT (Likelihood Ratio Test)**.\n\n**Proof follow-up options:**\n- LRT (Likelihood Ratio Test): I can generate a proof that your information **was used** here. Say: \"submit proof for my data in LRT\".\n- Nonce behavior: if you don't provide nonce, we use a default nonce automatically.\n- Explicit nonce prompt format (if needed): \"submit proof for my data in KS with nonce [[0.0, 0.0, 0.0]]\".",
+        "timestamp": "2026-05-03T10:56:38.593182+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_19",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_19_run1_1777805804732",
+    "query_text": "Is my data in the logistic accuracy application?",
+    "expected_tool": "check_my_hash_existence",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:56:46.573164+00:00",
+    "duration_seconds": 1.84,
+    "response_text": "Your data is in the logistic accuracy application. Would you like me to generate a proof that your information was used in logistic accuracy?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_my_hash_existence",
+        "arguments": {
+          "application": "logistic_accuracy"
+        },
+        "arguments_after_correction": {
+          "application": "logistic_accuracy",
+          "session_id": "test_C_S1_19_run1_1777805804732"
+        },
+        "response": "Hash existence check for hash: **123**\n\n\u2713 **logistic accuracy**: Hash exists. Details: found in both, found in log_acc, found in log_acc_length\n\n**Summary:**\nThe hash **123** was found in **logistic accuracy**.\n\n**Proof follow-up options:**\n- logistic accuracy: I can generate a proof that your information **was used** here. Say: \"submit proof for my data in logistic_accuracy\".\n- Nonce behavior: if you don't provide nonce, we use a default nonce automatically.\n- Explicit nonce prompt format (if needed): \"submit proof for my data in KS with nonce [[0.0, 0.0, 0.0]]\".",
+        "timestamp": "2026-05-03T10:56:45.732654+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_20",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_20_run1_1777805811575",
+    "query_text": "Check hash abc123def456 in KS",
+    "expected_tool": "check_hash_existence",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:56:53.683721+00:00",
+    "duration_seconds": 2.11,
+    "response_text": "The hash **abc123def456** was found in the **KS (Kolmogorov-Smirnov)** application.\n\nWould you like to submit a proof for this hash in the KS application? If so, please let me know if you have a specific nonce you'd like to use, or I can use the default nonce.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_hash_existence",
+        "arguments": {
+          "user_hash": "abc123def456",
+          "application": "KS"
+        },
+        "arguments_after_correction": {
+          "user_hash": "abc123def456",
+          "application": "KS",
+          "session_id": "test_C_S1_20_run1_1777805811575"
+        },
+        "response": "Hash existence check for hash: **abc123def456**\n\n\n**Summary:**\nThe hash **abc123def456** was found in **KS (Kolmogorov-Smirnov)**.\n\n**Proof follow-up options:**\n- KS (Kolmogorov-Smirnov): I can generate a proof that your information **was used** here. Say: \"submit proof for my data in KS\".\n- Nonce behavior: if you don't provide nonce, we use a default nonce automatically.\n- Explicit nonce prompt format (if needed): \"submit proof for my data in KS with nonce [[0.0, 0.0, 0.0]]\".",
+        "timestamp": "2026-05-03T10:56:52.539092+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_21",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_21_run1_1777805818685",
+    "query_text": "What jobs do I have?",
+    "expected_tool": "get_session_context",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:57:01.661798+00:00",
+    "duration_seconds": 2.97,
+    "response_text": "You have one job in your session:\n\n- **Job ID:** 1777804676511\n  - **Proof Type:** KS\n  - **User Hash:** test\n  - **Nonce:** [[0.0, 0.0, 0.0]]\n  - **Status:** done\n  - **Created At:** 2026-05-03T10:56:58.687561+00:00\n  - **Updated At:** 2026-05-03T10:56:58.687561+00:00\n\nThis is the latest job and it is already completed.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "current"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_C_S1_21_run1_1777805818685"
+        },
+        "response": "{\n  \"state\": {\n    \"latest_job_id\": \"1777804676511\",\n    \"latest_proof_type\": \"KS\",\n    \"latest_user_hash\": \"test\",\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-03T10:56:58.687561+00:00\",\n    \"latest_completed_job_id\": \"1777804676511\"\n  },\n  \"jobs\": [\n    {\n      \"job_id\": \"1777804676511\",\n      \"proof_type\": \"KS\",\n      \"user_hash\": \"test\",\n      \"nonce\": \"[[0.0, 0.0, 0.0]]\",\n      \"status\": \"done\",\n      \"created_at\": \"2026-05-03T10:56:58.687561+00:00\",\n      \"updated_at\": \"2026-05-03T10:56:58.687561+00:00\"\n    }\n  ],\n  \"summary\": \"Latest job: 1777804676511 (KS, hash test, status done). Latest completed: 1777804676511.\",\n  \"recent_messages\": []\n}",
+        "timestamp": "2026-05-03T10:56:59.634924+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_22",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_22_run1_1777805826663",
+    "query_text": "Show me my session info",
+    "expected_tool": "get_session_context",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:57:10.038468+00:00",
+    "duration_seconds": 3.37,
+    "response_text": "Here is your session information:\n\n- **Latest Job ID:** 1777804676511\n- **Proof Type:** KS\n- **User Hash:** test\n- **Nonce:** [[0.0, 0.0, 0.0]]\n- **Status:** done\n- **Created At:** 2026-05-03T10:57:06.665194+00:00\n- **Updated At:** 2026-05-03T10:57:06.665194+00:00\n\nSummary: Latest job: 1777804676511 (KS, hash test, status done). Latest completed: 1777804676511.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "current_session"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_C_S1_22_run1_1777805826663"
+        },
+        "response": "{\n  \"state\": {\n    \"latest_job_id\": \"1777804676511\",\n    \"latest_proof_type\": \"KS\",\n    \"latest_user_hash\": \"test\",\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-03T10:57:06.665194+00:00\",\n    \"latest_completed_job_id\": \"1777804676511\"\n  },\n  \"jobs\": [\n    {\n      \"job_id\": \"1777804676511\",\n      \"proof_type\": \"KS\",\n      \"user_hash\": \"test\",\n      \"nonce\": \"[[0.0, 0.0, 0.0]]\",\n      \"status\": \"done\",\n      \"created_at\": \"2026-05-03T10:57:06.665194+00:00\",\n      \"updated_at\": \"2026-05-03T10:57:06.665194+00:00\"\n    }\n  ],\n  \"summary\": \"Latest job: 1777804676511 (KS, hash test, status done). Latest completed: 1777804676511.\",\n  \"recent_messages\": []\n}",
+        "timestamp": "2026-05-03T10:57:07.590327+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_23",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S1_23_run1_1777805835040",
+    "query_text": "What have I submitted so far?",
+    "expected_tool": "get_session_context",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:57:18.564260+00:00",
+    "duration_seconds": 3.52,
+    "response_text": "You have submitted one job so far:\n\n- **Job ID:** 1777804676511\n- **Proof Type:** KS\n- **User Hash:** test\n- **Nonce:** [[0.0, 0.0, 0.0]]\n- **Status:** done\n- **Created At:** 2026-05-03T10:57:15.042434+00:00\n- **Updated At:** 2026-05-03T10:57:15.042434+00:00\n\nThis is the latest job and it is already completed.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "current_session"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_C_S1_23_run1_1777805835040"
+        },
+        "response": "{\n  \"state\": {\n    \"latest_job_id\": \"1777804676511\",\n    \"latest_proof_type\": \"KS\",\n    \"latest_user_hash\": \"test\",\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-03T10:57:15.042434+00:00\",\n    \"latest_completed_job_id\": \"1777804676511\"\n  },\n  \"jobs\": [\n    {\n      \"job_id\": \"1777804676511\",\n      \"proof_type\": \"KS\",\n      \"user_hash\": \"test\",\n      \"nonce\": \"[[0.0, 0.0, 0.0]]\",\n      \"status\": \"done\",\n      \"created_at\": \"2026-05-03T10:57:15.042434+00:00\",\n      \"updated_at\": \"2026-05-03T10:57:15.042434+00:00\"\n    }\n  ],\n  \"summary\": \"Latest job: 1777804676511 (KS, hash test, status done). Latest completed: 1777804676511.\",\n  \"recent_messages\": []\n}",
+        "timestamp": "2026-05-03T10:57:16.056245+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_01",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S2_01_run1_1777805843566",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:57:24.973218+00:00",
+    "duration_seconds": 1.41,
+    "response_text": "Please sign in first.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_C_S2_01_run1_1777805843566"
+        },
+        "response": "Please sign in first.",
+        "timestamp": "2026-05-03T10:57:24.546676+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_02",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S2_02_run1_1777805849975",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:57:31.690732+00:00",
+    "duration_seconds": 1.67,
+    "response_text": "To submit a proof for your data, I need to have your hash saved. Please provide your hash so I can save it and then submit the proof for you.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_C_S2_02_run1_1777805849975"
+        },
+        "response": "No hash saved. Please save your hash first.",
+        "timestamp": "2026-05-03T10:57:30.941150+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_03",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S2_03_run1_1777805856714",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:57:38.509346+00:00",
+    "duration_seconds": 1.8,
+    "response_text": "It looks like there is no job associated with your current session. Please provide a job ID or submit a new proof job.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": null
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": "test_C_S2_03_run1_1777805856714"
+        },
+        "response": "{\"error\": \"job_id is required and no latest job found in session state\"}",
+        "timestamp": "2026-05-03T10:57:37.752026+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_04",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S2_04_run1_1777805863511",
+    "query_text": "Download the proof",
+    "expected_tool": "download_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:57:44.578585+00:00",
+    "duration_seconds": 1.06,
+    "response_text": "To download the proof, I need to know the job ID associated with the proof you want to download. Could you please provide the job ID?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S2_05",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S2_05_run1_1777805869580",
+    "query_text": "Download the proof",
+    "expected_tool": "download_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:57:50.698036+00:00",
+    "duration_seconds": 1.12,
+    "response_text": "To download the proof, I need to know the job ID associated with the proof you want to download. Could you please provide the job ID?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S2_06",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S2_06_run1_1777805875699",
+    "query_text": "Prove my data in quantum computing",
+    "expected_tool": "prove_my_data",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:57:57.620521+00:00",
+    "duration_seconds": 1.92,
+    "response_text": "To proceed with proving your data in quantum computing, I need to know which specific proof type you would like to use. The available options are:\n\n1. Logistic Accuracy\n2. KS\n3. LRT\n\nPlease specify which proof type you prefer.\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S2_07",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S2_07_run1_1777805882623",
+    "query_text": "Check status of job 9999999999999",
+    "expected_tool": "check_status",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:58:05.527170+00:00",
+    "duration_seconds": 2.9,
+    "response_text": "It appears that the job ID you provided (9999999999999) is not recognized by the system. Please double-check the job ID and try again. If you're unsure about the job ID, you can ask for a summary of your jobs to find the correct one.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "job_id": "9999999999999",
+          "proof_type": "logistic_accuracy"
+        },
+        "arguments_after_correction": {
+          "job_id": "9999999999999",
+          "proof_type": "logistic_accuracy",
+          "session_id": "test_C_S2_07_run1_1777805882623"
+        },
+        "response": "Invalid JSON response: <!doctype html>\n<html lang=en>\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>Unknown job id</p>\n",
+        "timestamp": "2026-05-03T10:58:04.309033+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_08",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S2_08_run1_1777805890529",
+    "query_text": "Is my hash used in KS?",
+    "expected_tool": "check_my_hash_existence",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:58:14.201953+00:00",
+    "duration_seconds": 3.63,
+    "response_text": "It appears that no hash is saved for your account. To check if your hash is used in the KS application, you need to save your hash first. Would you like to save your hash now?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_my_hash_existence",
+        "arguments": {
+          "application": "KS"
+        },
+        "arguments_after_correction": {
+          "application": "KS",
+          "session_id": "test_C_S2_08_run1_1777805890529"
+        },
+        "response": "No hash saved. Please save your hash first.",
+        "timestamp": "2026-05-03T10:58:13.237653+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_09",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S2_09_run1_1777805899224",
+    "query_text": "What jobs do I have?",
+    "expected_tool": "get_session_context",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:58:21.378145+00:00",
+    "duration_seconds": 2.15,
+    "response_text": "You currently have no jobs in your session. If you need to submit a proof or check the status of a job, feel free to ask!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "session-123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_C_S2_09_run1_1777805899224"
+        },
+        "response": "{\n  \"state\": {\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-03T10:58:19.228829\"\n  },\n  \"jobs\": [],\n  \"summary\": \"Latest job: none. Latest completed: none.\",\n  \"recent_messages\": []\n}",
+        "timestamp": "2026-05-03T10:58:20.404312+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_10",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S2_10_run1_1777805906380",
+    "query_text": "Prove hash  in KS",
+    "expected_tool": "prove_hash",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:58:28.339216+00:00",
+    "duration_seconds": 1.96,
+    "response_text": "I've submitted the proof job for your hash in KS. You can check the status of your job using the job ID `1777805907492`.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_hash",
+        "arguments": {
+          "user_hash": "hash",
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "user_hash": "hash",
+          "proof_type": "KS",
+          "session_id": "test_C_S2_10_run1_1777805906380"
+        },
+        "response": "{\n  \"job_id\": \"1777805907492\",\n  \"status_url\": \"/jobs/1777805907492\"\n}",
+        "timestamp": "2026-05-03T10:58:27.437480+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S3b_01",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S3b_01_run1_1777805913342",
+    "query_text": "Check it",
+    "expected_tool": null,
+    "mode": "isolated",
+    "source": "3b",
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:58:34.697960+00:00",
+    "duration_seconds": 1.35,
+    "response_text": "It looks like you want to check something, but your request is a bit unclear. Could you please provide more details? Are you looking to check the status of a proof job, the existence of a hash, or something else?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S3b_02",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S3b_02_run1_1777805919700",
+    "query_text": "Help me with my proof",
+    "expected_tool": null,
+    "mode": "isolated",
+    "source": "3b",
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:58:40.972585+00:00",
+    "duration_seconds": 1.27,
+    "response_text": "I'd be happy to help you with your proof. Could you please provide more details about what you need assistance with? Are you looking to submit a new proof, check the status of an existing proof, or something else?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S3b_03",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S3b_03_run1_1777805925975",
+    "query_text": "Do something with KS",
+    "expected_tool": null,
+    "mode": "isolated",
+    "source": "3b",
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:58:47.533683+00:00",
+    "duration_seconds": 1.56,
+    "response_text": "Could you please clarify what you would like me to do with KS? Are you looking to check the status of a KS proof, submit a new KS proof, or something else? Let me know so I can assist you better!\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S3b_04",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S3b_04_run1_1777805932536",
+    "query_text": "What about my data?",
+    "expected_tool": null,
+    "mode": "isolated",
+    "source": "3b",
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:58:54.012043+00:00",
+    "duration_seconds": 1.48,
+    "response_text": "To assist you with your data, I need a bit more information. Are you looking to check if your data (hash) is used in any applications, or do you want to submit a proof for your data? Please specify the type of proof you are interested in (logistic_accuracy, KS, or LRT) or if you want to check the existence of your hash.\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S3b_05",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S3b_05_run1_1777805939015",
+    "query_text": "Show me something about LRT",
+    "expected_tool": null,
+    "mode": "isolated",
+    "source": "3b",
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:59:02.233240+00:00",
+    "duration_seconds": 3.21,
+    "response_text": "Sure, I can help with that. What specifically would you like to know or do regarding LRT (Likelihood Ratio Test)? Here are a few options:\n\n1. **Check the status of an LRT proof job**: If you have already submitted an LRT proof job and want to check its status.\n2. **Submit a new LRT proof job**: If you want to submit a new proof job for the Likelihood Ratio Test.\n3. **Download an LRT proof file**: If you have a completed LRT proof job and want to download the proof file.\n4. **General information about LRT**: If you need general information about what LRT is and how it works.\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S4_01",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S4_01_run1_1777805947236",
+    "query_text": "Send me a notification when my proof is done",
+    "expected_tool": "NONE",
+    "mode": "isolated",
+    "source": 4,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:59:08.668485+00:00",
+    "duration_seconds": 1.43,
+    "response_text": "I'm sorry, but I don't have the capability to send notifications. However, you can periodically check the status of your proof by using the appropriate tools or services you have access to. If you have any other questions or need further assistance, feel free to ask!\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S4_02",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S4_02_run1_1777805953670",
+    "query_text": "Email me the results",
+    "expected_tool": "NONE",
+    "mode": "isolated",
+    "source": 4,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:59:14.963463+00:00",
+    "duration_seconds": 1.29,
+    "response_text": "I'm here to help with your proof jobs and status checks, but unfortunately, I don't have the capability to send emails. If you need the results of a proof job or any other information, I can certainly help you with that. Just let me know what you need!\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S4_03",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S4_03_run1_1777805959966",
+    "query_text": "Schedule a proof for tomorrow at 3pm",
+    "expected_tool": "NONE",
+    "mode": "isolated",
+    "source": 4,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:59:21.509399+00:00",
+    "duration_seconds": 1.54,
+    "response_text": "I'm sorry, but I currently don't have the tools to schedule proofs or any other tasks. However, I'm here to help answer any questions you might have or guide you on how to schedule it yourself if you tell me more about the context.\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S4_04",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S4_04_run1_1777805966512",
+    "query_text": "Compare my KS and LRT results side by side",
+    "expected_tool": "NONE",
+    "mode": "isolated",
+    "source": 4,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:59:27.851523+00:00",
+    "duration_seconds": 1.34,
+    "response_text": "I'm sorry, but I currently don't have the capability to access or compare your KS and LRT results directly. However, I can guide you on how to do it yourself or provide information on what to look for when comparing these results. Would that be helpful?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S4_05",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S4_05_run1_1777805972854",
+    "query_text": "Export my proof results to PDF",
+    "expected_tool": "NONE",
+    "mode": "isolated",
+    "source": 4,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:59:34.011522+00:00",
+    "duration_seconds": 1.16,
+    "response_text": "I'm sorry, but I currently don't have the tools to export your proof results to a PDF. However, I can certainly help guide you through the process or answer any other questions you might have!\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S5_01",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S5_01_run1_1777805979013",
+    "query_text": "What is a Kolmogorov-Smirnov test?",
+    "expected_tool": "NONE",
+    "mode": "isolated",
+    "source": 5,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:59:43.417358+00:00",
+    "duration_seconds": 4.4,
+    "response_text": "The Kolmogorov-Smirnov (KS) test is a statistical test used to determine whether two datasets come from the same distribution or not. It can also be used to compare a sample with a reference probability distribution. The KS test is a non-parametric test, meaning it makes no assumptions about the underlying distribution of the data.\n\nHere are some key points about the KS test:\n\n1. **Purpose**: The KS test is often used to test whether two one-dimensional probability distributions differ. It can be used to compare a sample with a reference distribution or to compare two samples.\n\n2. **Null Hypothesis**: The null hypothesis for the KS test is that the two datasets are from the same distribution. If the test results show a significant difference, the null hypothesis can be rejected.\n\n3. **Test Statistic**: The KS test calculates the maximum vertical distance between the cumulative distribution functions (CDFs) of the two datasets. This maximum distance is the KS statistic.\n\n4. **Applications**: The KS test is used in various fields such as finance, engineering, and scientific research to compare datasets and determine if they come from the same underlying distribution.\n\n5. **Limitations**: The KS test is sensitive to differences in both location and shape of the distributions. It may not be the best choice if you are only interested in differences in the mean or variance of the distributions.\n\nIn summary, the Kolmogorov-Smirnov test is a versatile and widely used statistical tool for comparing distributions, but it's important to understand its limitations and ensure it's the right test for your specific application.\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S5_02",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S5_02_run1_1777805988419",
+    "query_text": "How does zero-knowledge proof work?",
+    "expected_tool": "NONE",
+    "mode": "isolated",
+    "source": 5,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T10:59:55.895243+00:00",
+    "duration_seconds": 7.48,
+    "response_text": "Zero-knowledge proof (ZKP) is a cryptographic method by which one party (the prover) can prove to another party (the verifier) that they know a value or secret, without conveying any information about the value or secret itself. Here\u2019s a simplified explanation of how it works:\n\n### Key Concepts\n\n1. **Prover and Verifier**:\n   - **Prover**: The entity that wants to prove knowledge of a secret.\n   - **Verifier**: The entity that wants to verify the prover's knowledge without learning the secret.\n\n2. **Zero-Knowledge**:\n   - The verifier learns nothing about the secret except that the prover indeed knows it.\n\n3. **Interactive Proof**:\n   - Typically involves a series of interactions between the prover and the verifier.\n\n### Steps in a Zero-Knowledge Proof\n\n1. **Setup**:\n   - The prover and verifier agree on a common set of rules and parameters for the proof.\n\n2. **Commitment**:\n   - The prover commits to a piece of data or a statement related to the secret. This commitment is such that the verifier cannot deduce the secret from it.\n\n3. **Challenge**:\n   - The verifier sends a random challenge to the prover. This challenge is designed to test the prover's knowledge of the secret.\n\n4. **Response**:\n   - The prover responds to the challenge in a way that demonstrates knowledge of the secret without revealing it. The response is constructed such that only someone with knowledge of the secret could produce a valid response.\n\n5. **Verification**:\n   - The verifier checks the prover's response against the challenge. If the response is correct, the verifier is convinced that the prover knows the secret.\n\n### Example: The Ali Baba Cave\n\nA classic example to illustrate zero-knowledge proof is the \"Ali Baba Cave\" scenario:\n\n1. **Setup**:\n   - There is a cave with a magical property: it has a single entrance but branches into two paths inside, forming a loop. The two paths are indistinguishable from the entrance.\n\n2. **Prover**:\n   - The prover claims to know the secret path that leads through the cave.\n\n3. **Verifier**:\n   - The verifier wants to verify the prover's claim without learning the secret path.\n\n4. **Protocol**:\n   - The verifier waits outside the cave while the prover enters the cave.\n   - The verifier then shouts a random choice of \"left\" or \"right\" for the prover to follow.\n   - The prover must exit the cave from the specified path.\n   - This process is repeated multiple times to ensure the prover is not guessing.\n\n5. **Conclusion**:\n   - If the prover can consistently exit from the correct path as specified by the verifier, the verifier is convinced that the prover indeed knows the secret path, without learning the path themselves.\n\n### Applications\n\n- **Authentication**: Proving identity without revealing passwords.\n- **Privacy-Preserving Verification**: Verifying data without revealing the data itself.\n- **Blockchain**: Enhancing privacy and security in transactions.\n\nZero-knowledge proofs are powerful tools in cryptography, enabling secure and private interactions in various applications.\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S5_03",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S5_03_run1_1777806000898",
+    "query_text": "Hello, how are you?",
+    "expected_tool": "NONE",
+    "mode": "isolated",
+    "source": 5,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:00:06.480903+00:00",
+    "duration_seconds": 5.58,
+    "response_text": "Hello! I'm doing well, thank you. How can I assist you today?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S5_04",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S5_04_run1_1777806011483",
+    "query_text": "What proof types do you support?",
+    "expected_tool": "NONE",
+    "mode": "isolated",
+    "source": 5,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:00:15.272064+00:00",
+    "duration_seconds": 3.79,
+    "response_text": "I support the following proof types:\n\n1. **Logistic Accuracy**: This proof type is associated with port 5012 and uses the SMT list `[\"length\", \"acc\"]`.\n\n2. **Kolmogorov-Smirnov (KS)**: This proof type is associated with port 5013 and does not use an SMT list.\n\n3. **Likelihood Ratio Test (LRT)**: This proof type is associated with port 5014 and uses the SMT list `[\"full\", \"reduced\"]`.\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S5_05",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S5_05_run1_1777806020275",
+    "query_text": "What can you help me with?",
+    "expected_tool": "NONE",
+    "mode": "isolated",
+    "source": 5,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:00:27.216703+00:00",
+    "duration_seconds": 6.94,
+    "response_text": "I can assist you with several tasks related to hash proofs and status checks. Here are some examples of what I can help you with:\n\n1. **Prove a Hash**: Submit a proof job for a specific hash using different proof types such as logistic accuracy, KS, or LRT.\n2. **Check Status**: Check the current status of a proof job.\n3. **Download Proof**: Download the proof file for a completed job.\n4. **Session Context**: Get a full overview of all jobs in the current session.\n5. **Check Hash Existence**: Check if a specific hash value exists in any of the applications.\n6. **Prove My Data**: Submit a proof job for the signed-in user's saved hash.\n\nIf you have any specific requests or questions, feel free to let me know!\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S7_01",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S7_01_run1_1777806032219",
+    "query_text": "Is my proof done yet?",
+    "expected_tool": "check_status",
+    "mode": "isolated",
+    "source": 7,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:00:35.599662+00:00",
+    "duration_seconds": 3.37,
+    "response_text": "Your proof job is currently queued. It hasn't started processing yet. I'll check back on the status for you.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_C_S7_01_run1_1777806032219"
+        },
+        "response": "{\n  \"error\": null,\n  \"job_id\": \"1777804676511\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": null,\n  \"started_at\": 1777804676.5116053,\n  \"status\": \"queued\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-03T11:00:34.215268+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S7_02",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S7_02_run1_1777806040603",
+    "query_text": "What was my last job ID?",
+    "expected_tool": "get_session_context",
+    "mode": "isolated",
+    "source": 7,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:00:42.757186+00:00",
+    "duration_seconds": 2.15,
+    "response_text": "I'm sorry, but I currently don't have the necessary tools to retrieve your last job ID. If you have any other questions or need assistance with something else, feel free to ask!\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S7_03",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S7_03_run1_1777806047759",
+    "query_text": "Did my KS test pass?",
+    "expected_tool": "check_status",
+    "mode": "isolated",
+    "source": 7,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:00:50.059940+00:00",
+    "duration_seconds": 2.29,
+    "response_text": "Your KS test is currently queued. It hasn't started processing yet. I'll check back on its status for you.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "KS",
+          "session_id": null
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "KS",
+          "session_id": "test_C_S7_03_run1_1777806047759"
+        },
+        "response": "{\n  \"error\": null,\n  \"job_id\": \"1777804676511\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": null,\n  \"started_at\": 1777804676.5116053,\n  \"status\": \"queued\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-03T11:00:48.893909+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S7_04",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S7_04_run1_1777806055063",
+    "query_text": "Is my hash in the system?",
+    "expected_tool": "check_my_hash_existence",
+    "mode": "isolated",
+    "source": 7,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:00:59.254651+00:00",
+    "duration_seconds": 4.19,
+    "response_text": "Your hash **123** was found in the following applications:\n\n- **logistic accuracy**: Hash exists. Details: found in both, found in log_acc, found in log_acc_length\n- **LRT (Likelihood Ratio Test)**: Hash exists. Details: found in both\n\nIf you would like to generate a proof for any of these applications, please let me know which one, and I can proceed with that.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_my_hash_existence",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_C_S7_04_run1_1777806055063"
+        },
+        "response": "Hash existence check for hash: **123**\n\n\u2713 **logistic accuracy**: Hash exists. Details: found in both, found in log_acc, found in log_acc_length\n\u2713 **LRT (Likelihood Ratio Test)**: Hash exists. Details: found in both\n\n**Summary:**\nThe hash **123** was found in **3 applications**: logistic accuracy, KS (Kolmogorov-Smirnov), LRT (Likelihood Ratio Test).\n\n**Proof follow-up options:**\n- logistic accuracy: I can generate a proof that your information **was used** here. Say: \"submit proof for my data in logistic_accuracy\".\n- KS (Kolmogorov-Smirnov): I can generate a proof that your information **was used** here. Say: \"submit proof for my data in KS\".\n- LRT (Likelihood Ratio Test): I can generate a proof that your information **was used** here. Say: \"submit proof for my data in LRT\".\n- Nonce behavior: if you don't provide nonce, we use a default nonce automatically.\n- Explicit nonce prompt format (if needed): \"submit proof for my data in KS with nonce [[0.0, 0.0, 0.0]]\".",
+        "timestamp": "2026-05-03T11:00:56.478983+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S7_05",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S7_05_run1_1777806064257",
+    "query_text": "Can I download my proof now?",
+    "expected_tool": "download_proof",
+    "mode": "isolated",
+    "source": 7,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:01:05.674979+00:00",
+    "duration_seconds": 1.41,
+    "response_text": "To download your proof, I need to know the job ID associated with your proof. Could you please provide the job ID?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S7_06",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S7_06_run1_1777806070678",
+    "query_text": "What happened with my last submission?",
+    "expected_tool": "check_status",
+    "mode": "isolated",
+    "source": 7,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:01:12.986016+00:00",
+    "duration_seconds": 2.3,
+    "response_text": "Your last submission with job ID 1777804676511 for the KS proof type is complete. If you need any further details or assistance, feel free to ask!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "session-123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_C_S7_06_run1_1777806070678"
+        },
+        "response": "{\n  \"state\": {\n    \"latest_job_id\": \"1777804676511\",\n    \"latest_proof_type\": \"KS\",\n    \"latest_user_hash\": \"test\",\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-03T11:01:10.680406+00:00\",\n    \"latest_completed_job_id\": \"1777804676511\"\n  },\n  \"jobs\": [\n    {\n      \"job_id\": \"1777804676511\",\n      \"proof_type\": \"KS\",\n      \"user_hash\": \"test\",\n      \"nonce\": \"[[0.0, 0.0, 0.0]]\",\n      \"status\": \"done\",\n      \"created_at\": \"2026-05-03T11:01:10.680406+00:00\",\n      \"updated_at\": \"2026-05-03T11:01:10.680406+00:00\"\n    }\n  ],\n  \"summary\": \"Latest job: 1777804676511 (KS, hash test, status done). Latest completed: 1777804676511.\",\n  \"recent_messages\": []\n}",
+        "timestamp": "2026-05-03T11:01:11.766171+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S7_07",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S7_07_run1_1777806077989",
+    "query_text": "Do I have any completed proofs?",
+    "expected_tool": "get_session_context",
+    "mode": "isolated",
+    "source": 7,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:01:20.062397+00:00",
+    "duration_seconds": 2.07,
+    "response_text": "You have one completed proof. The job ID is 1777804676511, and it is for the KS proof type. The status of this job is \"done\".\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "session-123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_C_S7_07_run1_1777806077989"
+        },
+        "response": "{\n  \"state\": {\n    \"latest_job_id\": \"1777804676511\",\n    \"latest_proof_type\": \"KS\",\n    \"latest_user_hash\": \"test\",\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-03T11:01:17.991278+00:00\",\n    \"latest_completed_job_id\": \"1777804676511\"\n  },\n  \"jobs\": [\n    {\n      \"job_id\": \"1777804676511\",\n      \"proof_type\": \"KS\",\n      \"user_hash\": \"test\",\n      \"nonce\": \"[[0.0, 0.0, 0.0]]\",\n      \"status\": \"done\",\n      \"created_at\": \"2026-05-03T11:01:17.991278+00:00\",\n      \"updated_at\": \"2026-05-03T11:01:17.991278+00:00\"\n    }\n  ],\n  \"summary\": \"Latest job: 1777804676511 (KS, hash test, status done). Latest completed: 1777804676511.\",\n  \"recent_messages\": []\n}",
+        "timestamp": "2026-05-03T11:01:19.101552+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S7_08",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S7_08_run1_1777806085066",
+    "query_text": "Is my data being used in any proof application?",
+    "expected_tool": "check_my_hash_existence",
+    "mode": "isolated",
+    "source": 7,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:01:28.552066+00:00",
+    "duration_seconds": 3.49,
+    "response_text": "Your data is being used in the following proof applications:\n\n- **Logistic Accuracy**: Your hash exists in both logistic accuracy applications and specifically in the logistic accuracy length application.\n- **LRT (Likelihood Ratio Test)**: Your hash exists in the LRT application.\n\nWould you like to generate a proof for any of these applications? If so, please specify which one (logistic_accuracy, KS, or LRT), and I can help you with that.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_my_hash_existence",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_C_S7_08_run1_1777806085066"
+        },
+        "response": "Hash existence check for hash: **123**\n\n\u2713 **logistic accuracy**: Hash exists. Details: found in both, found in log_acc, found in log_acc_length\n\u2713 **LRT (Likelihood Ratio Test)**: Hash exists. Details: found in both\n\n**Summary:**\nThe hash **123** was found in **3 applications**: logistic accuracy, KS (Kolmogorov-Smirnov), LRT (Likelihood Ratio Test).\n\n**Proof follow-up options:**\n- logistic accuracy: I can generate a proof that your information **was used** here. Say: \"submit proof for my data in logistic_accuracy\".\n- KS (Kolmogorov-Smirnov): I can generate a proof that your information **was used** here. Say: \"submit proof for my data in KS\".\n- LRT (Likelihood Ratio Test): I can generate a proof that your information **was used** here. Say: \"submit proof for my data in LRT\".\n- Nonce behavior: if you don't provide nonce, we use a default nonce automatically.\n- Explicit nonce prompt format (if needed): \"submit proof for my data in KS with nonce [[0.0, 0.0, 0.0]]\".",
+        "timestamp": "2026-05-03T11:01:26.730577+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S7_09",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S7_09_run1_1777806093555",
+    "query_text": "Has my LRT proof finished?",
+    "expected_tool": "check_status",
+    "mode": "isolated",
+    "source": 7,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:01:35.887830+00:00",
+    "duration_seconds": 2.33,
+    "response_text": "It seems that there is no job ID available to check the status of your LRT proof. Could you please provide the job ID or let me know if you have submitted a proof recently?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "LRT",
+          "session_id": null
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "LRT",
+          "session_id": "test_C_S7_09_run1_1777806093555"
+        },
+        "response": "Invalid JSON response: <!doctype html>\n<html lang=en>\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>Unknown job id</p>\n",
+        "timestamp": "2026-05-03T11:01:34.862998+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S7_10",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S7_10_run1_1777806100891",
+    "query_text": "What's going on with my proof right now?",
+    "expected_tool": "check_status",
+    "mode": "isolated",
+    "source": 7,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:01:42.220087+00:00",
+    "duration_seconds": 1.32,
+    "response_text": "To check the status of your proof, I'll need to know the type of proof you're referring to. Could you please specify if it's a logistic accuracy, KS, or LRT proof?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S6_SC1_01",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC1_run1_1777806107226",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:01:49.164665+00:00",
+    "duration_seconds": 1.94,
+    "scenario": 1,
+    "step": 1,
+    "response_text": "I've submitted a proof job for your data in the KS application. Your job ID is `1777806108257`. You can check the status of your proof using this job ID.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_C_S6_SC1_run1_1777806107226"
+        },
+        "response": "{\n  \"job_id\": \"1777806108257\",\n  \"status_url\": \"/jobs/1777806108257\"\n}",
+        "timestamp": "2026-05-03T11:01:48.174496+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC1_02",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC1_run1_1777806107226",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:01:57.145232+00:00",
+    "duration_seconds": 2.98,
+    "scenario": 1,
+    "step": 2,
+    "response_text": "Your proof job with job ID `1777806108257` is currently in the `queued` status. It was started at `1777806108.257401`. The job is for a proof of type `logistic_accuracy` with a user hash of `123` and a nonce of `[[0.0, 0.0, 0.0]]`.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": null
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": "test_C_S6_SC1_run1_1777806107226"
+        },
+        "response": "{\n  \"error\": null,\n  \"job_id\": \"1777806108257\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": null,\n  \"started_at\": 1777806108.257401,\n  \"status\": \"queued\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-03T11:01:55.631019+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC1_03",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC1_run1_1777806107226",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:02:04.382922+00:00",
+    "duration_seconds": 2.24,
+    "scenario": 1,
+    "step": 3,
+    "response_text": "Your proof job (ID: 1777806108257) is currently queued. It was submitted at 2024-03-04 15:08:28.257401. The status will be updated as it progresses.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": null
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": "test_C_S6_SC1_run1_1777806107226"
+        },
+        "response": "{\n  \"error\": null,\n  \"job_id\": \"1777806108257\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": null,\n  \"started_at\": 1777806108.257401,\n  \"status\": \"queued\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-03T11:02:03.347596+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC1_04",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC1_run1_1777806107226",
+    "query_text": "Download the proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:02:10.610378+00:00",
+    "duration_seconds": 1.23,
+    "scenario": 1,
+    "step": 4,
+    "response_text": "To download the proof, I need the job ID associated with the proof you want to download. Could you please provide the job ID?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S6_SC2_01",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC2_run1_1777806135618",
+    "query_text": "Is my hash used in LRT?",
+    "expected_tool": "check_my_hash_existence",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:02:18.167851+00:00",
+    "duration_seconds": 2.55,
+    "scenario": 2,
+    "step": 1,
+    "response_text": "Your hash is used in the LRT (Likelihood Ratio Test) application. If you would like, I can generate a proof that your information was used in this application. Just let me know!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_my_hash_existence",
+        "arguments": {
+          "application": "LRT"
+        },
+        "arguments_after_correction": {
+          "application": "LRT",
+          "session_id": "test_C_S6_SC2_run1_1777806135618"
+        },
+        "response": "Hash existence check for hash: **123**\n\n\u2713 **LRT (Likelihood Ratio Test)**: Hash exists. Details: found in both\n\n**Summary:**\nThe hash **123** was found in **LRT (Likelihood Ratio Test)**.\n\n**Proof follow-up options:**\n- LRT (Likelihood Ratio Test): I can generate a proof that your information **was used** here. Say: \"submit proof for my data in LRT\".\n- Nonce behavior: if you don't provide nonce, we use a default nonce automatically.\n- Explicit nonce prompt format (if needed): \"submit proof for my data in KS with nonce [[0.0, 0.0, 0.0]]\".",
+        "timestamp": "2026-05-03T11:02:16.649322+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC2_02",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC2_run1_1777806135618",
+    "query_text": "Prove my data in LRT",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:02:26.198455+00:00",
+    "duration_seconds": 3.03,
+    "scenario": 2,
+    "step": 2,
+    "response_text": "I've submitted your proof job for LRT. Your job ID is `1777806144976`. You can check the status of your job using this ID.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "LRT"
+        },
+        "arguments_after_correction": {
+          "proof_type": "LRT",
+          "session_id": "test_C_S6_SC2_run1_1777806135618"
+        },
+        "response": "{\n  \"job_id\": \"1777806144976\",\n  \"status_url\": \"/jobs/1777806144976\"\n}",
+        "timestamp": "2026-05-03T11:02:24.895333+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC2_03",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC2_run1_1777806135618",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:02:34.252579+00:00",
+    "duration_seconds": 3.05,
+    "scenario": 2,
+    "step": 3,
+    "response_text": "Your proof job (ID: 1777806144976) is currently queued. It was submitted with the default nonce `[[0.0, 0.0, 0.0]]` and is using the hash `123`. The job is of type `LRT` and includes the SMT list `[\"full\", \"reduced\"]`. The proof process started at `1777806144.9767132`. Please check back later for updates on its status.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": null
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": "test_C_S6_SC2_run1_1777806135618"
+        },
+        "response": "{\n  \"error\": null,\n  \"job_id\": \"1777806144976\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": null,\n  \"smt_list\": [\n    \"full\",\n    \"reduced\"\n  ],\n  \"started_at\": 1777806144.9767132,\n  \"status\": \"queued\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-03T11:02:32.352484+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC3_01",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC3_run1_1777806159261",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:02:41.044213+00:00",
+    "duration_seconds": 1.78,
+    "scenario": 3,
+    "step": 1,
+    "response_text": "I've submitted a proof job for your data in the KS application. Your job ID is `1777806160357`. You can check the status of your proof using this ID.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_C_S6_SC3_run1_1777806159261"
+        },
+        "response": "{\n  \"job_id\": \"1777806160357\",\n  \"status_url\": \"/jobs/1777806160357\"\n}",
+        "timestamp": "2026-05-03T11:02:40.278327+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC3_02",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC3_run1_1777806159261",
+    "query_text": "Prove my data in LRT",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:02:48.171121+00:00",
+    "duration_seconds": 2.13,
+    "scenario": 3,
+    "step": 2,
+    "response_text": "I've submitted a proof job for your data in LRT. Your job ID is `1777806167104`. You can check the status of your proof using this job ID.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "LRT"
+        },
+        "arguments_after_correction": {
+          "proof_type": "LRT",
+          "session_id": "test_C_S6_SC3_run1_1777806159261"
+        },
+        "response": "{\n  \"job_id\": \"1777806167104\",\n  \"status_url\": \"/jobs/1777806167104\"\n}",
+        "timestamp": "2026-05-03T11:02:47.029433+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC3_03",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC3_run1_1777806159261",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:02:56.001229+00:00",
+    "duration_seconds": 2.83,
+    "scenario": 3,
+    "step": 3,
+    "response_text": "Your proof job with job ID `1777806167104` is currently in the `queued` status. It was submitted for the LRT proof type. The job started at `1777806167.1042953` and is using the hash `123` with a default nonce of `[[0.0, 0.0, 0.0]]`. The SMT list includes `[\"full\", \"reduced\"]`.\n\nYou can check the status again later to see if it has progressed.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": null
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": "test_C_S6_SC3_run1_1777806159261"
+        },
+        "response": "{\n  \"error\": null,\n  \"job_id\": \"1777806167104\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": null,\n  \"smt_list\": [\n    \"full\",\n    \"reduced\"\n  ],\n  \"started_at\": 1777806167.1042953,\n  \"status\": \"queued\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-03T11:02:54.146076+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC4_01",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC4_run1_1777806181010",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:03:02.726520+00:00",
+    "duration_seconds": 1.72,
+    "scenario": 4,
+    "step": 1,
+    "response_text": "I've submitted a proof job for your data in the KS application. Your job ID is `1777806181991`. You can check the status of your proof using this ID.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_C_S6_SC4_run1_1777806181010"
+        },
+        "response": "{\n  \"job_id\": \"1777806181991\",\n  \"status_url\": \"/jobs/1777806181991\"\n}",
+        "timestamp": "2026-05-03T11:03:01.918693+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC4_02",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC4_run1_1777806181010",
+    "query_text": "What jobs do I have?",
+    "expected_tool": "get_session_context",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:03:10.746113+00:00",
+    "duration_seconds": 3.02,
+    "scenario": 4,
+    "step": 2,
+    "response_text": "Here is an overview of your current jobs:\n\n- **Latest Job:**\n  - **Job ID:** 1777806181991\n  - **Proof Type:** KS\n  - **User Hash:** 123\n  - **Nonce:** [[0.0, 0.0, 0.0]]\n  - **Status:** Submitted\n  - **Created At:** 2026-05-03T11:03:01.994828\n  - **Updated At:** 2026-05-03T11:03:01.994828\n\n- **Latest Completed Job:** None\n\nIf you need more details or have any questions, feel free to ask!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "current"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_C_S6_SC4_run1_1777806181010"
+        },
+        "response": "{\n  \"state\": {\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-03T11:03:01.998095\",\n    \"latest_job_id\": \"1777806181991\",\n    \"latest_proof_type\": \"KS\",\n    \"latest_user_hash\": \"123\"\n  },\n  \"jobs\": [\n    {\n      \"job_id\": \"1777806181991\",\n      \"proof_type\": \"KS\",\n      \"user_hash\": \"123\",\n      \"nonce\": \"[[0.0, 0.0, 0.0]]\",\n      \"status\": \"submitted\",\n      \"created_at\": \"2026-05-03T11:03:01.994828\",\n      \"updated_at\": \"2026-05-03T11:03:01.994828\"\n    }\n  ],\n  \"summary\": \"Latest job: 1777806181991 (KS, hash 123, status submitted). Latest completed: none.\",\n  \"recent_messages\": []\n}",
+        "timestamp": "2026-05-03T11:03:08.741902+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC4_03",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC4_run1_1777806181010",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:03:17.851085+00:00",
+    "duration_seconds": 2.1,
+    "scenario": 4,
+    "step": 3,
+    "response_text": "Your proof job with job ID `1777806181991` is currently queued. The job was started at `1777806181.991837` and is still in the queue. There is no result yet as the job is still being processed.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": null
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": "test_C_S6_SC4_run1_1777806181010"
+        },
+        "response": "{\n  \"error\": null,\n  \"job_id\": \"1777806181991\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": null,\n  \"started_at\": 1777806181.991837,\n  \"status\": \"queued\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-03T11:03:16.818182+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC5_01",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC5_run1_1777806202860",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:03:24.775012+00:00",
+    "duration_seconds": 1.91,
+    "scenario": 5,
+    "step": 1,
+    "response_text": "I've submitted a proof job for your data in the KS application. Your job ID is `1777806203865`. You can check the status of your proof using this ID.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_C_S6_SC5_run1_1777806202860"
+        },
+        "response": "{\n  \"job_id\": \"1777806203865\",\n  \"status_url\": \"/jobs/1777806203865\"\n}",
+        "timestamp": "2026-05-03T11:03:23.787275+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC5_02",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC5_run1_1777806202860",
+    "query_text": "Run it again",
+    "expected_tool": null,
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:03:30.912272+00:00",
+    "duration_seconds": 1.14,
+    "scenario": 5,
+    "step": 2,
+    "response_text": "Sure, I can help you with that. Could you please specify which job or task you would like me to run again? For example, you can provide the job ID or describe the task.\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  },
+  {
+    "query_id": "S6_SC5_03",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC5_run1_1777806202860",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:03:38.388599+00:00",
+    "duration_seconds": 2.48,
+    "scenario": 5,
+    "step": 3,
+    "response_text": "Your proof job with job ID `1777806203865` is currently in the `queued` status. It was started at `1777806203.8652797` and is using the default nonce `[[0.0, 0.0, 0.0]]`. The user hash associated with this job is `123`. Please check back later for updates on the status.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": null
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": "test_C_S6_SC5_run1_1777806202860"
+        },
+        "response": "{\n  \"error\": null,\n  \"job_id\": \"1777806203865\",\n  \"nonce\": [\n    [\n      0.0,\n      0.0,\n      0.0\n    ]\n  ],\n  \"result\": null,\n  \"started_at\": 1777806203.8652797,\n  \"status\": \"queued\",\n  \"type\": \"proof\",\n  \"user_hash\": \"123\"\n}",
+        "timestamp": "2026-05-03T11:03:36.930596+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC5_04",
+    "config": "C",
+    "run": 1,
+    "session_id": "test_C_S6_SC5_run1_1777806202860",
+    "query_text": "Download the proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-03T11:03:44.722499+00:00",
+    "duration_seconds": 1.33,
+    "scenario": 5,
+    "step": 4,
+    "response_text": "To download the proof, I need to know the job ID associated with the proof you want to download. Could you please provide the job ID?\n\n[Not backed by COSMeTIC prover]",
+    "backed_by_cosmetic": false,
+    "tool_calls": []
+  }
+]

@@ -1,0 +1,19 @@
+Data license
+
+The evaluation data in this repository is licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0):
+
+  https://creativecommons.org/licenses/by/4.0/
+
+It covers:
+  - results/            the experiment logs (24 files, 6,371 records)
+  - reports/            the hand-read inspection dumps and the verified-numbers ledger
+  - eval/test_suite.json and eval/test_suite_verify.json   the query suites
+
+All accounts, hashes and identifiers in these files are synthetic test fixtures.
+No real participant or patient data is present.
+
+The software (everything else) is licensed under the MIT License; see LICENSE.
+
+Attribution: Md Nazrul Huda Shanto and Paritosh Ramanan, Oklahoma State University,
+2026. Please cite the paper named in CITATION.cff.

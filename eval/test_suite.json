@@ -1,0 +1,1459 @@
+[
+  {
+    "_comment": "=== TYPE 1: NORMAL OPERATIONS (25 queries) ==="
+  },
+  {
+    "_comment": "=== prove_my_data tool (6 queries) ==="
+  },
+  {
+    "id": "S1_01",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Prove my data in KS",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "prove_my_data",
+    "expected_params": {
+      "proof_type": "KS"
+    },
+    "check_nonce_injected": true,
+    "should_contain": [
+      "submitted",
+      "job"
+    ],
+    "should_not_contain": [
+      "error",
+      "not logged in"
+    ]
+  },
+  {
+    "id": "S1_02",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Run the Kolmogorov-Smirnov test on my stuff",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "prove_my_data",
+    "expected_params": {
+      "proof_type": "KS"
+    },
+    "check_nonce_injected": true,
+    "normalization_test": true,
+    "notes": "LLM likely sends 'kolmogorov-smirnov' or similar — tests A1 normalization",
+    "should_contain": [
+      "submitted",
+      "job"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S1_03",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Submit a proof for LRT",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "prove_my_data",
+    "expected_params": {
+      "proof_type": "LRT"
+    },
+    "check_nonce_injected": true,
+    "should_contain": [
+      "submitted",
+      "job"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S1_04",
+    "source": 1,
+    "mode": "isolated",
+    "query": "I want to do the likelihood ratio test on my data",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "prove_my_data",
+    "expected_params": {
+      "proof_type": "LRT"
+    },
+    "check_nonce_injected": true,
+    "normalization_test": true,
+    "notes": "LLM likely sends 'likelihood_ratio_test' or similar — tests A1 normalization",
+    "should_contain": [
+      "submitted",
+      "job"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S1_05",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Prove my data in logistic accuracy",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "prove_my_data",
+    "expected_params": {
+      "proof_type": "logistic_accuracy"
+    },
+    "check_nonce_injected": true,
+    "should_contain": [
+      "submitted",
+      "job"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S1_06",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Run the logistic regression accuracy test on my data",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "prove_my_data",
+    "expected_params": {
+      "proof_type": "logistic_accuracy"
+    },
+    "check_nonce_injected": true,
+    "normalization_test": true,
+    "should_contain": [
+      "submitted",
+      "job"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "_comment": "=== prove_hash tool (3 queries) ==="
+  },
+  {
+    "id": "S1_07",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Prove hash abc123def456 in KS",
+    "user_state": {
+      "logged_in": false
+    },
+    "expected_tool": "prove_hash",
+    "expected_params": {
+      "proof_type": "KS",
+      "user_hash": "abc123def456"
+    },
+    "check_nonce_injected": true,
+    "should_contain": [
+      "submitted",
+      "job"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S1_08",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Submit a proof for hash xyz789 using LRT",
+    "user_state": {
+      "logged_in": false
+    },
+    "expected_tool": "prove_hash",
+    "expected_params": {
+      "proof_type": "LRT",
+      "user_hash": "xyz789"
+    },
+    "check_nonce_injected": true,
+    "should_contain": [
+      "submitted",
+      "job"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S1_09",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Run logistic accuracy proof on hash testdata001",
+    "user_state": {
+      "logged_in": false
+    },
+    "expected_tool": "prove_hash",
+    "expected_params": {
+      "proof_type": "logistic_accuracy",
+      "user_hash": "testdata001"
+    },
+    "check_nonce_injected": true,
+    "should_contain": [
+      "submitted",
+      "job"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "_comment": "=== check_status tool (4 queries) ==="
+  },
+  {
+    "id": "S1_10",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Check my status",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": true
+    },
+    "expected_tool": "check_status",
+    "should_contain": [
+      "status",
+      "job"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S1_11",
+    "source": 1,
+    "mode": "isolated",
+    "query": "What's the status of my proof?",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": true
+    },
+    "expected_tool": "check_status",
+    "should_contain": [
+      "status"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S1_12",
+    "source": 1,
+    "mode": "isolated",
+    "query": "How is my job doing?",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": true
+    },
+    "expected_tool": "check_status",
+    "should_contain": [
+      "status"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S1_13",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Check status of job 1749284736251",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": true
+    },
+    "expected_tool": "check_status",
+    "expected_params": {
+      "job_id": "1749284736251"
+    },
+    "should_contain": [
+      "status"
+    ],
+    "should_not_contain": [
+      "error"
+    ],
+    "notes": "RUNTIME: The job_id 1749284736251 is a placeholder. The test runner must either (a) create a real job first and substitute the ID, or (b) inject this job_id into Redis before running the query. The should_contain check for the job_id should use whatever ID was actually created.",
+    "runtime_substitution": true
+  },
+  {
+    "_comment": "=== download_proof tool (3 queries) ==="
+  },
+  {
+    "id": "S1_14",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Download the proof",
+    "user_state": {
+      "logged_in": true,
+      "has_completed_job": true
+    },
+    "expected_tool": "download_proof",
+    "should_contain": [
+      "download",
+      "proof"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S1_15",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Get my proof file",
+    "user_state": {
+      "logged_in": true,
+      "has_completed_job": true
+    },
+    "expected_tool": "download_proof",
+    "should_contain": [
+      "download",
+      "proof"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S1_16",
+    "source": 1,
+    "mode": "isolated",
+    "query": "I want to download my KS proof artifacts",
+    "user_state": {
+      "logged_in": true,
+      "has_completed_job": true
+    },
+    "expected_tool": "download_proof",
+    "expected_params": {
+      "proof_type": "KS"
+    },
+    "should_contain": [
+      "download"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "_comment": "=== check_hash_existence tool (4 queries) ==="
+  },
+  {
+    "id": "S1_17",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Is my hash used in KS?",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "check_my_hash_existence",
+    "expected_params": {
+      "application": "KS"
+    },
+    "should_contain": [
+      "hash",
+      "KS"
+    ],
+    "should_not_contain": [
+      "error"
+    ],
+    "notes": "Also checks C2 — response should contain deterministic next-step guidance"
+  },
+  {
+    "id": "S1_18",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Check if my hash exists in LRT",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "check_my_hash_existence",
+    "expected_params": {
+      "application": "LRT"
+    },
+    "should_contain": [
+      "hash",
+      "LRT"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S1_19",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Is my data in the logistic accuracy application?",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "check_my_hash_existence",
+    "expected_params": {
+      "application": "logistic_accuracy"
+    },
+    "should_contain": [
+      "hash"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S1_20",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Check hash abc123def456 in KS",
+    "user_state": {
+      "logged_in": false
+    },
+    "expected_tool": "check_hash_existence",
+    "expected_params": {
+      "user_hash": "abc123def456",
+      "application": "KS"
+    },
+    "should_contain": [
+      "hash",
+      "KS"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "_comment": "=== get_session_context tool (3 queries) ==="
+  },
+  {
+    "id": "S1_21",
+    "source": 1,
+    "mode": "isolated",
+    "query": "What jobs do I have?",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": true
+    },
+    "expected_tool": "get_session_context",
+    "should_contain": [
+      "job",
+      "session"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S1_22",
+    "source": 1,
+    "mode": "isolated",
+    "query": "Show me my session info",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": true
+    },
+    "expected_tool": "get_session_context",
+    "should_contain": [
+      "session"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S1_23",
+    "source": 1,
+    "mode": "isolated",
+    "query": "What have I submitted so far?",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": true
+    },
+    "expected_tool": "get_session_context",
+    "should_contain": [
+      "job"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "_comment": "=== TYPE 2: GRACEFUL FAILURES (10 queries) ==="
+  },
+  {
+    "id": "S2_01",
+    "source": 2,
+    "mode": "isolated",
+    "query": "Prove my data in KS",
+    "user_state": {
+      "logged_in": false
+    },
+    "expected_tool": "prove_my_data",
+    "expected_outcome": "error_not_logged_in",
+    "should_contain": [
+      "sign in",
+      "log in",
+      "authenticate",
+      "logged in"
+    ],
+    "should_not_contain": [
+      "submitted",
+      "job ID"
+    ],
+    "notes": "User not logged in — should get auth error"
+  },
+  {
+    "id": "S2_02",
+    "source": 2,
+    "mode": "isolated",
+    "query": "Prove my data in KS",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": false
+    },
+    "expected_tool": "prove_my_data",
+    "expected_outcome": "error_no_hash",
+    "should_contain": [
+      "hash",
+      "not found",
+      "no hash",
+      "data"
+    ],
+    "should_not_contain": [
+      "submitted",
+      "job ID"
+    ]
+  },
+  {
+    "id": "S2_03",
+    "source": 2,
+    "mode": "isolated",
+    "query": "Check my status",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": false
+    },
+    "expected_tool": "check_status",
+    "expected_outcome": "error_no_jobs",
+    "should_contain": [
+      "no job",
+      "no proof",
+      "submit",
+      "haven't"
+    ],
+    "should_not_contain": [
+      "completed",
+      "status: done"
+    ]
+  },
+  {
+    "id": "S2_04",
+    "source": 2,
+    "mode": "isolated",
+    "query": "Download the proof",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": true,
+      "has_completed_job": false
+    },
+    "expected_tool": "download_proof",
+    "expected_outcome": "error_not_completed",
+    "should_contain": [
+      "no completed job"
+    ],
+    "should_not_contain": [
+      "downloaded",
+      "file"
+    ],
+    "notes": "Actual error from download_proof is 'job_id is required and no completed job found in session state'. Updated per code verification."
+  },
+  {
+    "id": "S2_05",
+    "source": 2,
+    "mode": "isolated",
+    "query": "Download the proof",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": false
+    },
+    "expected_tool": "download_proof",
+    "expected_outcome": "error_no_jobs",
+    "should_contain": [
+      "no job",
+      "no proof",
+      "submit"
+    ],
+    "should_not_contain": [
+      "downloaded",
+      "file"
+    ]
+  },
+  {
+    "id": "S2_06",
+    "source": 2,
+    "mode": "isolated",
+    "query": "Prove my data in quantum computing",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "prove_my_data",
+    "expected_outcome": "unsupported_proof_type_handled",
+    "notes": "Unsupported proof type — normalization defaults to logistic_accuracy OR tool explains supported types",
+    "should_not_contain": [
+      "submitted successfully",
+      "proof has been submitted"
+    ],
+    "should_contain": [
+      "not supported",
+      "not a supported",
+      "not available",
+      "supported proof types",
+      "KS",
+      "LRT",
+      "logistic"
+    ]
+  },
+  {
+    "id": "S2_07",
+    "source": 2,
+    "mode": "isolated",
+    "query": "Check status of job 9999999999999",
+    "user_state": {
+      "logged_in": true
+    },
+    "expected_tool": "check_status",
+    "expected_outcome": "error_job_not_found",
+    "should_contain": [
+      "not found",
+      "error",
+      "invalid",
+      "no job"
+    ],
+    "should_not_contain": [
+      "completed",
+      "submitted"
+    ]
+  },
+  {
+    "id": "S2_08",
+    "source": 2,
+    "mode": "isolated",
+    "query": "Is my hash used in KS?",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": false
+    },
+    "expected_tool": "check_my_hash_existence",
+    "expected_outcome": "error_no_hash",
+    "should_contain": [
+      "hash",
+      "not found",
+      "no hash"
+    ],
+    "should_not_contain": [
+      "exists",
+      "found in"
+    ]
+  },
+  {
+    "id": "S2_09",
+    "source": 2,
+    "mode": "isolated",
+    "query": "What jobs do I have?",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": false
+    },
+    "expected_tool": "get_session_context",
+    "expected_outcome": "empty_session",
+    "should_contain": [
+      "no job",
+      "empty",
+      "haven't",
+      "no proof"
+    ],
+    "should_not_contain": [
+      "job ID",
+      "completed"
+    ]
+  },
+  {
+    "id": "S2_10",
+    "source": 2,
+    "mode": "isolated",
+    "query": "Prove hash  in KS",
+    "user_state": {
+      "logged_in": false
+    },
+    "expected_tool": "prove_hash",
+    "expected_outcome": "error_empty_hash",
+    "notes": "Empty hash string — should error gracefully",
+    "should_contain": [
+      "hash",
+      "provide",
+      "missing",
+      "invalid"
+    ],
+    "should_not_contain": [
+      "submitted"
+    ]
+  },
+  {
+    "_comment": "=== TYPE 3a: CONTEXT-DEPENDENT AMBIGUOUS (5 queries) ==="
+  },
+  {
+    "_comment": "These live inside sequential scenarios (Source 6, Scenario 5). Listed here for reference."
+  },
+  {
+    "id": "S3a_01",
+    "source": "3a",
+    "mode": "sequential",
+    "query": "Run it again",
+    "scoring": "qualitative",
+    "notes": "Config A (history) should repeat prior action. Configs B/C/D have no context — report how they handle it."
+  },
+  {
+    "id": "S3a_02",
+    "source": "3a",
+    "mode": "sequential",
+    "query": "Do the same thing",
+    "scoring": "qualitative",
+    "notes": "Same as S3a_01"
+  },
+  {
+    "id": "S3a_03",
+    "source": "3a",
+    "mode": "sequential",
+    "query": "Same as last time",
+    "scoring": "qualitative",
+    "notes": "Same as S3a_01"
+  },
+  {
+    "id": "S3a_04",
+    "source": "3a",
+    "mode": "sequential",
+    "query": "Again please",
+    "scoring": "qualitative",
+    "notes": "Same as S3a_01"
+  },
+  {
+    "id": "S3a_05",
+    "source": "3a",
+    "mode": "sequential",
+    "query": "One more time",
+    "scoring": "qualitative",
+    "notes": "Same as S3a_01"
+  },
+  {
+    "_comment": "=== TYPE 3b: CONTEXT-FREE AMBIGUOUS (5 queries) ==="
+  },
+  {
+    "id": "S3b_01",
+    "source": "3b",
+    "mode": "isolated",
+    "query": "Check it",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": true,
+      "has_hash": true
+    },
+    "acceptable_tools": [
+      "check_status",
+      "check_my_hash_existence",
+      "get_session_context"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S3b_02",
+    "source": "3b",
+    "mode": "isolated",
+    "query": "Help me with my proof",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "acceptable_tools": [
+      "prove_my_data",
+      "check_status",
+      "get_session_context"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S3b_03",
+    "source": "3b",
+    "mode": "isolated",
+    "query": "Do something with KS",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "acceptable_tools": [
+      "prove_my_data",
+      "check_my_hash_existence"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S3b_04",
+    "source": "3b",
+    "mode": "isolated",
+    "query": "What about my data?",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "acceptable_tools": [
+      "prove_my_data",
+      "check_my_hash_existence",
+      "get_session_context"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "id": "S3b_05",
+    "source": "3b",
+    "mode": "isolated",
+    "query": "Show me something about LRT",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true,
+      "has_jobs": true
+    },
+    "acceptable_tools": [
+      "check_status",
+      "check_my_hash_existence",
+      "prove_my_data"
+    ],
+    "should_not_contain": [
+      "error"
+    ]
+  },
+  {
+    "_comment": "=== TYPE 4: IMPOSSIBLE REQUESTS (5 queries) ==="
+  },
+  {
+    "id": "S4_01",
+    "source": 4,
+    "mode": "isolated",
+    "query": "Send me a notification when my proof is done",
+    "user_state": {
+      "logged_in": true
+    },
+    "expected_tool": "NONE",
+    "should_not_contain": [
+      "I'll notify",
+      "I will notify",
+      "send you a notification",
+      "alert you"
+    ],
+    "notes": "Tests C3 — should NOT promise notification capability"
+  },
+  {
+    "id": "S4_02",
+    "source": 4,
+    "mode": "isolated",
+    "query": "Email me the results",
+    "user_state": {
+      "logged_in": true
+    },
+    "expected_tool": "NONE",
+    "should_not_contain": [
+      "I'll email",
+      "send you an email",
+      "I will send"
+    ],
+    "notes": "Should not promise email delivery"
+  },
+  {
+    "id": "S4_03",
+    "source": 4,
+    "mode": "isolated",
+    "query": "Schedule a proof for tomorrow at 3pm",
+    "user_state": {
+      "logged_in": true
+    },
+    "expected_tool": "NONE",
+    "should_not_contain": [
+      "scheduled",
+      "I'll schedule",
+      "set up for tomorrow"
+    ],
+    "notes": "Should not promise scheduling"
+  },
+  {
+    "id": "S4_04",
+    "source": 4,
+    "mode": "isolated",
+    "query": "Compare my KS and LRT results side by side",
+    "user_state": {
+      "logged_in": true
+    },
+    "expected_tool": "NONE",
+    "should_not_contain": [
+      "here's the comparison",
+      "comparing"
+    ],
+    "notes": "Comparison feature does not exist"
+  },
+  {
+    "id": "S4_05",
+    "source": 4,
+    "mode": "isolated",
+    "query": "Export my proof results to PDF",
+    "user_state": {
+      "logged_in": true
+    },
+    "expected_tool": "NONE",
+    "should_not_contain": [
+      "here's your PDF",
+      "exported"
+    ],
+    "notes": "PDF export does not exist"
+  },
+  {
+    "_comment": "=== TYPE 5: OUT-OF-SCOPE WITH REDIRECT (5 queries) ==="
+  },
+  {
+    "id": "S5_01",
+    "source": 5,
+    "mode": "isolated",
+    "query": "What is a Kolmogorov-Smirnov test?",
+    "user_state": {
+      "logged_in": true
+    },
+    "expected_tool": "NONE",
+    "should_contain_any_redirect": [
+      "proof",
+      "submit",
+      "prove",
+      "check status",
+      "download",
+      "hash",
+      "COSMeTIC",
+      "help you"
+    ],
+    "notes": "Should answer the question AND redirect to proof operations"
+  },
+  {
+    "id": "S5_02",
+    "source": 5,
+    "mode": "isolated",
+    "query": "How does zero-knowledge proof work?",
+    "user_state": {
+      "logged_in": true
+    },
+    "expected_tool": "NONE",
+    "should_contain_any_redirect": [
+      "proof",
+      "submit",
+      "prove",
+      "check status",
+      "download",
+      "hash",
+      "COSMeTIC",
+      "help you"
+    ]
+  },
+  {
+    "id": "S5_03",
+    "source": 5,
+    "mode": "isolated",
+    "query": "Hello, how are you?",
+    "user_state": {
+      "logged_in": true
+    },
+    "expected_tool": "NONE",
+    "should_contain_any_redirect": [
+      "proof",
+      "submit",
+      "prove",
+      "check status",
+      "download",
+      "hash",
+      "COSMeTIC",
+      "help you",
+      "assist"
+    ]
+  },
+  {
+    "id": "S5_04",
+    "source": 5,
+    "mode": "isolated",
+    "query": "What proof types do you support?",
+    "user_state": {
+      "logged_in": true
+    },
+    "expected_tool": "NONE",
+    "should_contain": [
+      "KS",
+      "LRT",
+      "logistic"
+    ],
+    "should_contain_any_redirect": [
+      "submit",
+      "prove",
+      "help you"
+    ]
+  },
+  {
+    "id": "S5_05",
+    "source": 5,
+    "mode": "isolated",
+    "query": "What can you help me with?",
+    "user_state": {
+      "logged_in": true
+    },
+    "expected_tool": "NONE",
+    "should_contain": [
+      "proof",
+      "status",
+      "download"
+    ],
+    "notes": "Should list capabilities — all COSMeTIC-related"
+  },
+  {
+    "_comment": "=== TYPE 6: MULTI-STEP WORKFLOWS (17 queries across 5 scenarios) ==="
+  },
+  {
+    "_comment": "--- Scenario 1: Proof submission flow (4 steps) ---"
+  },
+  {
+    "id": "S6_SC1_01",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 1,
+    "step": 1,
+    "query": "Prove my data in KS",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "prove_my_data",
+    "expected_params": {
+      "proof_type": "KS"
+    },
+    "should_contain": [
+      "submitted",
+      "job"
+    ],
+    "tests": "Establishes job in Redis"
+  },
+  {
+    "id": "S6_SC1_02",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 1,
+    "step": 2,
+    "query": "Check my status",
+    "expected_tool": "check_status",
+    "should_contain": [
+      "status"
+    ],
+    "tests": "B4 — must find job from step 1 via Redis fallback. B5 — must use stored proof_type KS."
+  },
+  {
+    "id": "S6_SC1_03",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 1,
+    "step": 3,
+    "query": "Check my status",
+    "expected_tool": "check_status",
+    "should_contain": [
+      "status"
+    ],
+    "tests": "Polling again — same job should be found"
+  },
+  {
+    "id": "S6_SC1_04",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 1,
+    "step": 4,
+    "query": "Download the proof",
+    "expected_tool": "download_proof",
+    "should_contain": [
+      "download",
+      "proof"
+    ],
+    "tests": "B6 — must auto-detect correct COSMeTIC endpoint for the KS job"
+  },
+  {
+    "_comment": "--- Scenario 2: Hash existence to proof (3 steps) ---"
+  },
+  {
+    "id": "S6_SC2_01",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 2,
+    "step": 1,
+    "query": "Is my hash used in LRT?",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "check_my_hash_existence",
+    "expected_params": {
+      "application": "LRT"
+    },
+    "should_contain": [
+      "hash",
+      "LRT"
+    ],
+    "tests": "Inquiry step — checks hash existence"
+  },
+  {
+    "id": "S6_SC2_02",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 2,
+    "step": 2,
+    "query": "Prove my data in LRT",
+    "expected_tool": "prove_my_data",
+    "expected_params": {
+      "proof_type": "LRT"
+    },
+    "should_contain": [
+      "submitted",
+      "job"
+    ],
+    "tests": "Transition from inquiry to action"
+  },
+  {
+    "id": "S6_SC2_03",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 2,
+    "step": 3,
+    "query": "Check my status",
+    "expected_tool": "check_status",
+    "should_contain": [
+      "status",
+      "LRT"
+    ],
+    "tests": "Must find the LRT job from step 2, not confused by step 1 inquiry"
+  },
+  {
+    "_comment": "--- Scenario 3: Multiple proofs — latest_job_id tracking (3 steps) ---"
+  },
+  {
+    "id": "S6_SC3_01",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 3,
+    "step": 1,
+    "query": "Prove my data in KS",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "prove_my_data",
+    "expected_params": {
+      "proof_type": "KS"
+    },
+    "should_contain": [
+      "submitted",
+      "job"
+    ],
+    "tests": "Creates job A (KS)"
+  },
+  {
+    "id": "S6_SC3_02",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 3,
+    "step": 2,
+    "query": "Prove my data in LRT",
+    "expected_tool": "prove_my_data",
+    "expected_params": {
+      "proof_type": "LRT"
+    },
+    "should_contain": [
+      "submitted",
+      "job"
+    ],
+    "tests": "Creates job B (LRT) — should become latest_job_id in Redis"
+  },
+  {
+    "id": "S6_SC3_03",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 3,
+    "step": 3,
+    "query": "Check my status",
+    "expected_tool": "check_status",
+    "should_contain": [
+      "status"
+    ],
+    "tests": "CRITICAL: Must find job B (LRT), not job A (KS). Tests latest_job_id tracking in Redis."
+  },
+  {
+    "_comment": "--- Scenario 4: Session context inquiry (3 steps) ---"
+  },
+  {
+    "id": "S6_SC4_01",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 4,
+    "step": 1,
+    "query": "Prove my data in KS",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "prove_my_data",
+    "expected_params": {
+      "proof_type": "KS"
+    },
+    "should_contain": [
+      "submitted",
+      "job"
+    ],
+    "tests": "Establishes session state"
+  },
+  {
+    "id": "S6_SC4_02",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 4,
+    "step": 2,
+    "query": "What jobs do I have?",
+    "expected_tool": "get_session_context",
+    "should_contain": [
+      "job",
+      "KS"
+    ],
+    "tests": "Must show the KS job from step 1 in session context"
+  },
+  {
+    "id": "S6_SC4_03",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 4,
+    "step": 3,
+    "query": "Check my status",
+    "expected_tool": "check_status",
+    "should_contain": [
+      "status"
+    ],
+    "tests": "Must still find the KS job after get_session_context call"
+  },
+  {
+    "_comment": "--- Scenario 5: Context-dependent follow-ups (4 steps) ---"
+  },
+  {
+    "id": "S6_SC5_01",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 5,
+    "step": 1,
+    "query": "Prove my data in KS",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "prove_my_data",
+    "expected_params": {
+      "proof_type": "KS"
+    },
+    "should_contain": [
+      "submitted",
+      "job"
+    ],
+    "tests": "Establishes context for step 2"
+  },
+  {
+    "id": "S6_SC5_02",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 5,
+    "step": 2,
+    "query": "Run it again",
+    "scoring": "qualitative",
+    "tests": "Source 3a query. Config A (history) may repeat prove_my_data. Configs B/C/D (stateless) have no context."
+  },
+  {
+    "id": "S6_SC5_03",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 5,
+    "step": 3,
+    "query": "Check my status",
+    "expected_tool": "check_status",
+    "should_contain": [
+      "status"
+    ],
+    "tests": "Must find a job regardless of what step 2 did"
+  },
+  {
+    "id": "S6_SC5_04",
+    "source": 6,
+    "mode": "sequential",
+    "scenario": 5,
+    "step": 4,
+    "query": "Download the proof",
+    "expected_tool": "download_proof",
+    "should_contain": [
+      "download",
+      "proof"
+    ],
+    "tests": "Must find and download a completed proof"
+  },
+  {
+    "_comment": "=== TYPE 7: TOOL BYPASS TEMPTATION (10 queries) ==="
+  },
+  {
+    "id": "S7_01",
+    "source": 7,
+    "mode": "isolated",
+    "query": "Is my proof done yet?",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": true
+    },
+    "expected_tool": "check_status",
+    "must_call_tool": true,
+    "notes": "LLM might say 'I don't know' or guess — MUST call check_status"
+  },
+  {
+    "id": "S7_02",
+    "source": 7,
+    "mode": "isolated",
+    "query": "What was my last job ID?",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": true
+    },
+    "expected_tool": "get_session_context",
+    "must_call_tool": true,
+    "notes": "LLM might fabricate a job ID — MUST call get_session_context"
+  },
+  {
+    "id": "S7_03",
+    "source": 7,
+    "mode": "isolated",
+    "query": "Did my KS test pass?",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": true
+    },
+    "expected_tool": "check_status",
+    "must_call_tool": true,
+    "notes": "LLM might hallucinate 'yes' or 'no' — MUST call check_status"
+  },
+  {
+    "id": "S7_04",
+    "source": 7,
+    "mode": "isolated",
+    "query": "Is my hash in the system?",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "check_my_hash_existence",
+    "must_call_tool": true,
+    "notes": "LLM might say 'I can't check that' without trying — MUST call check_hash_existence"
+  },
+  {
+    "id": "S7_05",
+    "source": 7,
+    "mode": "isolated",
+    "query": "Can I download my proof now?",
+    "user_state": {
+      "logged_in": true,
+      "has_completed_job": true
+    },
+    "expected_tool": "download_proof",
+    "must_call_tool": true,
+    "notes": "LLM might say 'let me check' but not actually call the tool — MUST call download_proof"
+  },
+  {
+    "id": "S7_06",
+    "source": 7,
+    "mode": "isolated",
+    "query": "What happened with my last submission?",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": true
+    },
+    "expected_tool": "check_status",
+    "must_call_tool": true,
+    "notes": "LLM might summarize from nothing — MUST call check_status"
+  },
+  {
+    "id": "S7_07",
+    "source": 7,
+    "mode": "isolated",
+    "query": "Do I have any completed proofs?",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": true
+    },
+    "expected_tool": "get_session_context",
+    "must_call_tool": true,
+    "notes": "LLM might guess — MUST call get_session_context to check"
+  },
+  {
+    "id": "S7_08",
+    "source": 7,
+    "mode": "isolated",
+    "query": "Is my data being used in any proof application?",
+    "user_state": {
+      "logged_in": true,
+      "has_hash": true
+    },
+    "expected_tool": "check_my_hash_existence",
+    "must_call_tool": true,
+    "notes": "LLM might answer generally — MUST call check_hash_existence"
+  },
+  {
+    "id": "S7_09",
+    "source": 7,
+    "mode": "isolated",
+    "query": "Has my LRT proof finished?",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": true
+    },
+    "expected_tool": "check_status",
+    "must_call_tool": true,
+    "notes": "LLM might guess 'probably still running' — MUST call check_status"
+  },
+  {
+    "id": "S7_10",
+    "source": 7,
+    "mode": "isolated",
+    "query": "What's going on with my proof right now?",
+    "user_state": {
+      "logged_in": true,
+      "has_jobs": true
+    },
+    "expected_tool": "check_status",
+    "must_call_tool": true,
+    "notes": "Casual phrasing — LLM might give generic answer instead of calling tool"
+  }
+]

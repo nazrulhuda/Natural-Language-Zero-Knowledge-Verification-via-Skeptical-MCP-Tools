@@ -1,0 +1,16 @@
+# Normalize line endings in the repository to LF. The code is edited on Windows and
+# run on Linux; a CRLF shell script or Dockerfile fails there on its first line.
+*               text=auto
+*.sh            text eol=lf
+Dockerfile*     text eol=lf
+*.yml           text eol=lf
+*.yaml          text eol=lf
+*.sql           text eol=lf
+*.py            text eol=lf
+*.json          text eol=lf
+*.cff           text eol=lf
+*.md            text
+*.csv           text
+*.zip           binary
+*.png           binary
+*.pdf           binary

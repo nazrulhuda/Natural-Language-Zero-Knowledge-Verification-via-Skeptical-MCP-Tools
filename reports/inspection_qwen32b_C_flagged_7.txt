@@ -1,0 +1,93 @@
+qwen_C: grader-flagged faithfulness failures (7)
+
+====================================================================================================
+#1  S2_07  run 1  query: 'Check status of job 9999999999999'
+   tool[0] check_status({"job_id": "9999999999999", "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | The job ID `9999999999999` could not be found. This might indicate:
+      | 
+      | 1. **Typo in job ID** – double-check the ID you received when submitting the job.
+      | 2. **Job not yet submitted** – ensure the job was successfully created via `prove_hash` or `prove_my_data`.
+      | 3. **Session mismatch** – job IDs are tied to specific chat sessions.
+      | 
+      | Would you like to:
+      | - Try a different job ID?
+      | - Submit a new proof job?
+      | - Check your session's full job history with `get_session_context`?
+====================================================================================================
+#2  S2_07  run 2  query: 'Check status of job 9999999999999'
+   tool[0] check_status({"job_id": "9999999999999", "proof_type": "logistic_accuracy"})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | The job ID `9999999999999` could not be found in the system. This might indicate:
+      | 
+      | 1. The job ID was entered incorrectly
+      | 2. The job was never successfully submitted
+      | 3. The job ID belongs to a different session
+      | 
+      | Would you like to:
+      | - Try checking another job ID?
+      | - View your session history to find valid job IDs? (`get_session_context`)
+      | - Resubmit the proof job?
+====================================================================================================
+#3  S6_SC2_03  run 2  query: 'Check my status'
+   tool[0] check_status({"session_id": "current_session_id"})  ->  STATUS job_id=1776902522266 status=done result.error=False
+   FINAL RESPONSE:
+      | Your proof job (LRT) has completed successfully with status: **done** ✅  
+      | No errors were encountered during processing.  
+      | 
+      | Would you like to:  
+      | 1. Download the proof file?  
+      | 2. Check another job status?  
+      | 3. Submit a new proof?  
+      | 
+      | Let me know how I can assist next!
+====================================================================================================
+#4  S1_12  run 3  query: 'How is my job doing?'
+   tool[0] check_status({"session_id": "abc123"})  ->  STATUS job_id=1776901637079 status=done result.error=False
+   FINAL RESPONSE:
+      | Your job has been completed successfully! 🎉  
+      | - **Status:** Done  
+      | - **Result:** No errors detected in the proof process (`active_smts: ["s1"]`).  
+      | 
+      | Would you like to review the proof details, download the results, or submit another job?
+====================================================================================================
+#5  S2_07  run 3  query: 'Check status of job 9999999999999'
+   tool[0] check_status({"job_id": "9999999999999", "proof_type": "logistic_accuracy"})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | The job ID `9999999999999` could not be found in the system. This may indicate a typo or that the job was never submitted. Would you like to:
+      | 
+      | 1. Confirm the correct job ID (e.g., `999999999999` without the extra digit)?
+      | 2. Check a different job ID entirely?
+      | 3. Verify your session context or submission history?
+      | 
+      | Let me know how you'd like to proceed.
+====================================================================================================
+#6  S2_07  run 4  query: 'Check status of job 9999999999999'
+   tool[0] check_status({"job_id": "9999999999999", "proof_type": "logistic_accuracy"})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | The job ID `9999999999999` could not be found in the system. This might indicate:
+      | 
+      | 1. The job ID was mistyped
+      | 2. The job was never successfully submitted
+      | 3. The job ID is from a different session
+      | 
+      | Would you like to:
+      | - Try checking a different job ID?
+      | - Verify your submission history with `get_session_context`?
+      | - Resubmit the proof with a new job?
+      | 
+      | Let me know how you'd like to proceed.
+====================================================================================================
+#7  S2_07  run 5  query: 'Check status of job 9999999999999'
+   tool[0] check_status({"job_id": "9999999999999", "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | The job ID `9999999999999` could not be found. This may indicate:
+      | - An incorrect or mistyped job ID
+      | - The job was never successfully submitted
+      | - The job ID exists but belongs to a different session
+      | 
+      | Would you like to:
+      | 1. Try checking a different job ID?
+      | 2. Submit a new proof job?
+      | 
+      | Let me know how you'd like to proceed.

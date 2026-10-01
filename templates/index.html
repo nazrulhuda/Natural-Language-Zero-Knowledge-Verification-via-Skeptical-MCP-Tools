@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MCP Chatbot</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+		<style>
+			body, html {
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.chat {
+				height: 100vh;
+				padding: 20px 0;
+			}
+			
+			.card {
+				height: 100%;
+				border-radius: 15px;
+				box-shadow: 0 0 20px rgba(0,0,0,0.1);
+			}
+			
+			.card-header {
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+				border-radius: 15px 15px 0 0 !important;
+				padding: 20px;
+			}
+			
+			.msg_head {
+				border-bottom: none;
+			}
+			
+			.img_cont {
+				position: relative;
+				height: 40px;
+				width: 40px;
+			}
+			
+			.user_img {
+				height: 40px;
+				width: 40px;
+				border: 2px solid #fff;
+			}
+			
+			.online_icon {
+				position: absolute;
+				height: 15px;
+				width: 15px;
+				background-color: #4cd137;
+				border-radius: 50%;
+				bottom: 0.2em;
+				right: 0.4em;
+				border: 1.5px solid white;
+			}
+			
+			.user_info {
+				margin-top: auto;
+				margin-bottom: auto;
+				margin-left: 15px;
+			}
+			
+			.user_info span {
+				font-size: 20px;
+				font-weight: 600;
+			}
+			
+			.user_info p {
+				font-size: 13px;
+				color: rgba(255,255,255,0.8);
+				margin: 0;
+			}
+			
+			.msg_card_body {
+				overflow-y: auto;
+				padding: 20px;
+				background-color: #f8f9fa;
+			}
+			
+			.msg_container {
+				display: flex;
+				align-items: flex-end;
+				margin-bottom: 20px;
+			}
+			
+			.msg_container_send {
+				display: flex;
+				align-items: flex-end;
+				justify-content: flex-end;
+				margin-bottom: 20px;
+			}
+			
+			.msg_cotainer {
+				background: white;
+				padding: 15px;
+				border-radius: 15px;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+				max-width: 70%;
+				position: relative;
+			}
+			
+			.msg_cotainer_send {
+				background: #667eea;
+				color: white;
+				padding: 15px;
+				border-radius: 15px;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+				max-width: 70%;
+				position: relative;
+			}
+			
+			.msg_time {
+				font-size: 11px;
+				color: #999;
+				margin-top: 5px;
+				display: block;
+			}
+			
+			.msg_time_send {
+				font-size: 11px;
+				color: rgba(255,255,255,0.8);
+				margin-top: 5px;
+				display: block;
+			}
+			
+			.img_cont_msg {
+				height: 40px;
+				width: 40px;
+				margin: 0 10px;
+			}
+			
+			.user_img_msg {
+				height: 40px;
+				width: 40px;
+				border: 2px solid #fff;
+			}
+			
+			.card-footer {
+				background: white;
+				border-top: none;
+				padding: 20px;
+				border-radius: 0 0 15px 15px;
+			}
+			
+			.input-group {
+				border-radius: 25px;
+				overflow: hidden;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+			}
+			
+			.type_msg {
+				border: none;
+				padding: 15px 20px;
+				font-size: 14px;
+			}
+			
+			.type_msg:focus {
+				box-shadow: none;
+				outline: none;
+			}
+			
+			.send_btn {
+				background: #667eea;
+				border: none;
+				padding: 15px 20px;
+				color: white;
+				cursor: pointer;
+				transition: all 0.3s ease;
+			}
+			
+			.send_btn:hover {
+				background: #5a6fd8;
+				transform: translateY(-2px);
+			}
+			
+			.send_btn:focus {
+				box-shadow: none;
+				outline: none;
+			}
+			
+			.loading-spinner {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				border: 2px solid #f3f3f3;
+				border-top: 2px solid #667eea;
+				border-radius: 50%;
+				animation: spin 1s linear infinite;
+				margin-left: 10px;
+			}
+			
+			@keyframes spin {
+				0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); }
+			}
+			
+			.download-btn {
+				display: inline-block;
+				margin-top: 10px;
+				padding: 8px 16px;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+				border: none;
+				border-radius: 20px;
+				cursor: pointer;
+				font-size: 14px;
+				transition: all 0.3s ease;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+			}
+			
+			.download-btn:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+				background: linear-gradient(135deg, #5a6fd8 0%, #6a3f8f 100%);
+			}
+			
+			.download-btn:active {
+				transform: translateY(0);
+			}
+			
+			.download-btn i {
+				margin-right: 5px;
+			}
+			
+			.download-container {
+				margin-top: 10px;
+				padding-top: 10px;
+				border-top: 1px solid rgba(0,0,0,0.1);
+			}
+			
+			/* Tab Styles */
+			.nav-tabs {
+				border-bottom: 2px solid #667eea;
+				background: white;
+				padding: 0 20px;
+			}
+			
+			.nav-tabs .nav-item {
+				margin-bottom: -2px;
+			}
+			
+			.nav-tabs .nav-link {
+				border: none;
+				border-bottom: 3px solid transparent;
+				color: #666;
+				padding: 15px 25px;
+				font-weight: 500;
+				transition: all 0.3s ease;
+			}
+			
+			.nav-tabs .nav-link:hover {
+				border-bottom-color: #667eea;
+				color: #667eea;
+			}
+			
+			.nav-tabs .nav-link.active {
+				color: #667eea;
+				border-bottom-color: #667eea;
+				background: transparent;
+			}
+			
+			.tab-content {
+				height: calc(100vh - 200px);
+				overflow: hidden;
+				display: flex;
+				flex-direction: column;
+			}
+			
+			.tab-pane {
+				height: 100%;
+				display: none;
+				flex: 1;
+				overflow: hidden;
+			}
+			
+			.tab-pane.active,
+			.tab-pane.show {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.auth-panel {
+				margin-top: 15px;
+				padding: 12px;
+				background: rgba(255, 255, 255, 0.12);
+				border-radius: 10px;
+			}
+
+			.auth-inline {
+				display: flex;
+				gap: 8px;
+				flex-wrap: wrap;
+				align-items: center;
+			}
+
+			.auth-inline input {
+				max-width: 220px;
+			}
+
+			.auth-note {
+				font-size: 12px;
+				color: rgba(255, 255, 255, 0.9);
+				margin-top: 8px;
+			}
+
+			.auth-status {
+				font-size: 13px;
+				color: #fff;
+				margin-top: 8px;
+				word-break: break-word;
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="container-fluid h-100">
+			<div class="row justify-content-center h-100">		
+				<div class="col-md-10 col-xl-8 chat">
+					<div class="card">
+						<div class="card-header msg_head">
+							<div class="d-flex bd-highlight">
+								<div class="img_cont">
+									<img src="https://cdn-icons-png.flaticon.com/512/387/387569.png" class="rounded-circle user_img">
+									<span class="online_icon"></span>
+								</div>
+								<div class="user_info">
+									<span>MCP Prover Assistant</span>
+									<p>I can help you check proof existence and submit proofs!</p>
+								</div>
+							</div>
+							<div class="auth-panel">
+								<form id="signinForm" class="auth-inline">
+									<input type="text" id="signinUsername" class="form-control form-control-sm" placeholder="Username" required />
+									<input type="password" id="signinPassword" class="form-control form-control-sm" placeholder="Password" required />
+									<button type="submit" class="btn btn-light btn-sm">Sign In</button>
+								</form>
+								<div class="auth-note">
+									Sign in with dataset credentials (e.g. User1, User2). Run admin sync to load users from input-files zip.
+								</div>
+								<div id="signedInPanel" style="display:none;">
+									<div class="auth-inline" style="margin-top:10px;">
+										<span id="signedInLabel" class="badge badge-light"></span>
+										<button type="button" id="logoutBtn" class="btn btn-outline-light btn-sm">Logout</button>
+									</div>
+									<div id="maskedHashText" class="auth-note"></div>
+								</div>
+								<div id="authStatus" class="auth-status"></div>
+							</div>
+						</div>
+						
+						<!-- Tabs Navigation -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active" id="chat-tab" data-toggle="tab" href="#chat" role="tab" aria-controls="chat" aria-selected="true">
+									<i class="fas fa-comments"></i> Chat
+								</a>
+							</li>
+						</ul>
+						
+						<!-- Tab Content -->
+						<div class="tab-content">
+							<!-- Chat Tab -->
+							<div class="tab-pane fade show active" id="chat" role="tabpanel" aria-labelledby="chat-tab">
+								<div id="messageFormeight" class="card-body msg_card_body" style="overflow-y: auto; flex: 1;">
+									<!-- Welcome message -->
+									<div class="d-flex justify-content-start mb-4">
+										<div class="img_cont_msg">
+											<img src="https://cdn-icons-png.flaticon.com/512/387/387569.png" class="rounded-circle user_img_msg">
+										</div>
+										<div class="msg_cotainer">
+											Hello! I'm your MCP-powered Prover Assistant. I can help you check if proofs exist and submit proof jobs. What would you like to do?
+											<span class="msg_time">Just now</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Footer (only show for chat tab) -->
+						<div class="card-footer" id="chatFooter">
+							<form id="messageArea" class="input-group">
+                                <input type="text" id="text" name="msg" placeholder="Type your message..." autocomplete="off" class="form-control type_msg" required/>
+								<div class="input-group-append">
+									<button type="submit" id="send" class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			// Generate session ID
+			var sessionId = 'session_' + Date.now() + '_' + Math.random().toString(36).substring(2, 11);
+			var authUser = null;
+
+			function setAuthStatus(message, isError) {
+				var el = $('#authStatus');
+				el.text(message || '');
+				el.css('color', isError ? '#ffd6d6' : '#eaffea');
+			}
+
+			function renderAuthState() {
+				if (authUser) {
+					$('#signinForm').hide();
+					$('#signedInPanel').show();
+					$('#signedInLabel').text(authUser.username || authUser.email || '');
+				} else {
+					$('#signinForm').show();
+					$('#signedInPanel').hide();
+					$('#signedInLabel').text('');
+					$('#maskedHashText').text('');
+				}
+			}
+
+			function refreshAuthState() {
+				$.ajax({
+					url: '/auth/me',
+					type: 'GET'
+				}).done(function(data) {
+					try {
+						var result = typeof data === 'string' ? JSON.parse(data) : data;
+						authUser = result.logged_in ? result.user : null;
+						renderAuthState();
+						if (authUser) {
+							loadMyHash();
+						}
+					} catch (e) {
+						authUser = null;
+						renderAuthState();
+					}
+				}).fail(function() {
+					authUser = null;
+					renderAuthState();
+				});
+			}
+
+			function loadMyHash() {
+				$.ajax({
+					url: '/api/me/hash',
+					type: 'GET'
+				}).done(function(data) {
+					try {
+						var result = typeof data === 'string' ? JSON.parse(data) : data;
+						if (result.masked_hash) {
+							$('#maskedHashText').text('Saved hash: ' + result.masked_hash);
+						} else {
+							$('#maskedHashText').text('No hash saved yet.');
+						}
+					} catch (e) {
+						$('#maskedHashText').text('');
+					}
+				}).fail(function() {
+					$('#maskedHashText').text('');
+				});
+			}
+			
+			function formatTime(date) {
+				const hour = date.getHours();
+				const minute = date.getMinutes();
+				return hour + ":" + (minute < 10 ? "0" + minute : minute);
+			}
+			
+			function extractJobId(text) {
+				// Try to extract job ID from messages like "job ID 1762747067361" or "1762747067361"
+				// Pattern 1: "job ID: 123" or "jobid: 123" or "job ID is 123"
+				var jobIdMatch = text.match(/(?:job\s+id|jobid)[\s:]*is?[\s:]*(\d+)/i) || 
+				                 text.match(/(?:job\s+id|jobid)[\s:]*(\d+)/i);
+				// Pattern 2: Any 13+ digit number (job IDs are timestamps)
+				if (!jobIdMatch) {
+					jobIdMatch = text.match(/\b(\d{13,})\b/);
+				}
+				return jobIdMatch ? jobIdMatch[1] : null;
+			}
+			
+			function isExplicitDownloadRequest(msg) {
+				// Check if user explicitly asked to download (not just job submission)
+				// Look for explicit download commands
+				var explicitDownloadPatterns = /download\s+(it|the|proof|file)|get\s+(the\s+)?proof|fetch\s+(the\s+)?proof|retrieve\s+(the\s+)?proof/i;
+				return explicitDownloadPatterns.test(msg);
+			}
+			
+			function isJobCompleted(msg) {
+				// Check if message indicates job is completed/done
+				// Look for status indicators in the chatbot response
+				var statusPatterns = /"status"\s*:\s*"done"|status.*done|completed|finished|ready\s+to\s+download|proof.*ready|job.*completed/i;
+				// Also check if message says file was downloaded (means job is done)
+				var downloadSuccess = /downloaded\s+successfully|file\s+has\s+been\s+downloaded|proof\s+file.*downloaded/i.test(msg);
+				return statusPatterns.test(msg) || downloadSuccess;
+			}
+			
+			function downloadProofFile(jobId, buttonElement) {
+				// Disable button and show loading
+				var originalHtml = $(buttonElement).html();
+				$(buttonElement).prop('disabled', true);
+				$(buttonElement).html('<i class="fas fa-spinner fa-spin"></i> Downloading...');
+				
+				// Use AJAX to download and trigger browser download
+				$.ajax({
+					url: '/download_proof',
+					type: 'POST',
+					data: { 
+						job_id: jobId,
+						session_id: sessionId
+					},
+					timeout: 120000, // 2 minutes timeout
+					xhrFields: {
+						responseType: 'blob'
+					},
+					success: function(blob, status, xhr) {
+						console.log('Download success callback triggered');
+						console.log('Blob type:', typeof blob, 'is Blob:', blob instanceof Blob);
+						console.log('Blob size:', blob instanceof Blob ? blob.size : 'N/A');
+						
+						// Check content type - if it's JSON, it's an error
+						var contentType = xhr.getResponseHeader('Content-Type') || '';
+						console.log('Content-Type:', contentType);
+						if (contentType.includes('application/json') || contentType.includes('text/json')) {
+							// Response is JSON error, not a file
+							var reader = new FileReader();
+							reader.onload = function() {
+								var errorMsg = 'Download failed';
+								try {
+									var errorData = JSON.parse(reader.result);
+									if (errorData.error) {
+										errorMsg = errorData.error;
+									}
+								} catch (e) {
+									errorMsg = reader.result.substring(0, 100);
+								}
+								alert('Download failed: ' + errorMsg);
+								$(buttonElement).html('<i class="fas fa-exclamation-triangle"></i> Error');
+								$(buttonElement).css('background', '#e74c3c');
+								setTimeout(function() {
+									$(buttonElement).html(originalHtml);
+									$(buttonElement).prop('disabled', false);
+									$(buttonElement).css('background', '');
+								}, 2000);
+							};
+							reader.readAsText(blob);
+							return;
+						}
+						
+						// Check if response is actually a blob (file) or an error message
+						if (blob instanceof Blob && blob.size > 0) {
+							console.log('Valid blob detected, size:', blob.size);
+							// Get filename from Content-Disposition header if available
+							var filename = 'proofs-' + jobId + '.zip';
+							var contentDisposition = xhr.getResponseHeader('Content-Disposition');
+							console.log('Content-Disposition:', contentDisposition);
+							if (contentDisposition) {
+								var filenameMatch = contentDisposition.match(/filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/);
+								if (filenameMatch && filenameMatch[1]) {
+									filename = filenameMatch[1].replace(/['"]/g, '');
+								}
+							}
+							
+							console.log('Downloading file:', filename);
+							// Create download link
+							var url = window.URL.createObjectURL(blob);
+							var a = document.createElement('a');
+							a.href = url;
+							a.download = filename;
+							a.style.display = 'none';
+							document.body.appendChild(a);
+							a.click();
+							setTimeout(function() {
+								window.URL.revokeObjectURL(url);
+								document.body.removeChild(a);
+							}, 100);
+							
+							// Update button to show success
+							$(buttonElement).html('<i class="fas fa-check"></i> Downloaded!');
+							$(buttonElement).css('background', '#4cd137');
+						} else {
+							// Response might be an error message
+							var reader = new FileReader();
+							reader.onload = function() {
+								var errorMsg = 'Download failed: Invalid file received';
+								try {
+									var errorData = JSON.parse(reader.result);
+									if (errorData.error) {
+										errorMsg = 'Download failed: ' + errorData.error;
+									}
+								} catch (e) {
+									errorMsg = 'Download failed: ' + reader.result.substring(0, 100);
+								}
+								alert(errorMsg);
+								$(buttonElement).html('<i class="fas fa-exclamation-triangle"></i> Error');
+								$(buttonElement).css('background', '#e74c3c');
+							};
+							reader.readAsText(blob);
+						}
+						
+						setTimeout(function() {
+							$(buttonElement).html(originalHtml);
+							$(buttonElement).prop('disabled', false);
+							$(buttonElement).css('background', '');
+						}, 2000);
+					},
+					error: function(xhr, status, error) {
+						// Show error
+						$(buttonElement).html('<i class="fas fa-exclamation-triangle"></i> Error');
+						$(buttonElement).css('background', '#e74c3c');
+						
+						// Try to parse error message
+						var errorMsg = 'Download failed';
+						if (status === 'timeout') {
+							errorMsg = 'Download timed out after 2 minutes. The file may be too large or the server is slow.';
+						} else if (xhr.responseText) {
+							try {
+								var errorData = JSON.parse(xhr.responseText);
+								if (errorData.error) {
+									errorMsg = errorData.error;
+								}
+							} catch (e) {
+								// If response is a blob (file), try to read it as text
+								if (xhr.response instanceof Blob) {
+									var reader = new FileReader();
+									reader.onload = function() {
+										try {
+											var errorData = JSON.parse(reader.result);
+											if (errorData.error) {
+												errorMsg = errorData.error;
+											}
+										} catch (e2) {
+											errorMsg = reader.result.substring(0, 100);
+										}
+										alert('Download failed: ' + errorMsg);
+									};
+									reader.readAsText(xhr.response);
+									return;
+								} else {
+									errorMsg = xhr.responseText.substring(0, 50);
+								}
+							}
+						} else if (error) {
+							errorMsg = error;
+						}
+						
+						alert('Download failed: ' + errorMsg);
+						
+						setTimeout(function() {
+							$(buttonElement).html(originalHtml);
+							$(buttonElement).prop('disabled', false);
+							$(buttonElement).css('background', '');
+						}, 2000);
+					}
+				});
+			}
+			
+			function addBotMessage(msg) {
+				const date = new Date();
+				const str_time = formatTime(date);
+				var msgId = 'msg-' + Date.now();
+				
+				// Try to extract job ID from the message
+				var jobId = extractJobId(msg);
+				
+				// Only show download button if:
+				// 1. User explicitly asked to download (check previous user message)
+				// 2. Job ID is found in the message
+				var showDownloadButton = false;
+				
+				if (jobId) {
+					// Check if user explicitly asked to download
+					var userAskedToDownload = isExplicitDownloadRequest(lastUserMessageText) || 
+					                           /download\s+(it|the|proof|file|job)|get\s+(the\s+)?proof|fetch\s+(the\s+)?proof/i.test(lastUserMessageText);
+					
+					// Show button if user asked to download and we have a job ID
+					// Make it lenient - if user asked to download, show button regardless of bot's response
+					// The backend will handle errors if the job isn't ready
+					// This ensures the button shows even if LLM rephrases the response
+					showDownloadButton = userAskedToDownload;
+				}
+				
+				var botHtml = '<div class="d-flex justify-content-start mb-4" id="' + msgId + '"><div class="img_cont_msg"><img src="https://cdn-icons-png.flaticon.com/512/387/387569.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + msg.replace(/\n/g, '<br>');
+				
+				// Add download button only if conditions are met
+				if (showDownloadButton && jobId) {
+					botHtml += '<div class="download-container"><button class="download-btn" onclick="downloadProofFile(\'' + jobId + '\', this)"><i class="fas fa-download"></i> Download Now</button></div>';
+				}
+				
+				botHtml += '<span class="msg_time">' + str_time + '</span></div></div>';
+				$("#messageFormeight").append($.parseHTML(botHtml));
+				$("#messageFormeight").scrollTop($("#messageFormeight")[0].scrollHeight);
+			}
+			
+			// Store last user message for download detection
+			var lastUserMessageText = '';
+			
+			// Tab switching - show/hide footer when tab changes
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				var targetId = $(e.target).attr('id') || $(e.target).attr('href');
+				
+				// Show footer only for chat tab
+				if (targetId === 'chat-tab' || targetId === '#chat') {
+					$('#chatFooter').show();
+				} else {
+					$('#chatFooter').hide();
+				}
+			});
+			$(document).ready(function() {
+				refreshAuthState();
+
+				$("#signinForm").on("submit", function(event) {
+					event.preventDefault();
+					var username = $("#signinUsername").val();
+					var password = $("#signinPassword").val();
+					setAuthStatus("", false);
+
+					$.ajax({
+						url: '/auth/signin',
+						type: 'POST',
+						contentType: 'application/json',
+						data: JSON.stringify({ username: username, password: password })
+					}).done(function(data) {
+						try {
+							var result = typeof data === 'string' ? JSON.parse(data) : data;
+							if (!result.success) {
+								setAuthStatus(result.error || 'Sign in failed', true);
+								return;
+							}
+							authUser = result.user;
+							renderAuthState();
+							loadMyHash();
+							setAuthStatus(result.created ? 'Account created and signed in.' : 'Signed in.', false);
+							$('#signinPassword').val('');
+						} catch (e) {
+							setAuthStatus('Sign in failed', true);
+						}
+					}).fail(function(xhr) {
+						var msg = 'Sign in failed';
+						try {
+							var err = JSON.parse(xhr.responseText);
+							msg = err.error || err.message || msg;
+						} catch (e) {}
+						setAuthStatus(msg, true);
+					});
+				});
+
+				$("#logoutBtn").on("click", function() {
+					$.ajax({
+						url: '/auth/logout',
+						type: 'POST'
+					}).always(function() {
+						authUser = null;
+						renderAuthState();
+						setAuthStatus('Logged out.', false);
+					});
+				});
+
+				$("#saveHashForm").on("submit", function(event) {
+					event.preventDefault();
+					var rawHash = $("#rawHashInput").val();
+					setAuthStatus("", false);
+
+					$.ajax({
+						url: '/api/me/hash',
+						type: 'POST',
+						contentType: 'application/json',
+						data: JSON.stringify({ raw_hash: rawHash })
+					}).done(function(data) {
+						try {
+							var result = typeof data === 'string' ? JSON.parse(data) : data;
+							if (!result.success) {
+								setAuthStatus(result.error || 'Failed to save hash', true);
+								return;
+							}
+							$("#rawHashInput").val('');
+							var masked = result.hash && result.hash.masked_hash ? result.hash.masked_hash : '';
+							$('#maskedHashText').text(masked ? ('Saved hash: ' + masked) : 'Hash saved.');
+							setAuthStatus('Hash saved successfully.', false);
+						} catch (e) {
+							setAuthStatus('Failed to save hash', true);
+						}
+					}).fail(function(xhr) {
+						var msg = 'Failed to save hash';
+						try {
+							var err = JSON.parse(xhr.responseText);
+							msg = err.error || msg;
+						} catch (e) {}
+						setAuthStatus(msg, true);
+					});
+				});
+
+				$("#messageArea").on("submit", function(event) {
+					const date = new Date();
+					const str_time = formatTime(date);
+					var rawText = $("#text").val();
+
+					if (rawText.trim() === "") {
+						event.preventDefault();
+						return;
+					}
+
+					// Store user message for download detection
+					lastUserMessageText = rawText;
+
+					var userHtml = '<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + rawText + '<span class="msg_time_send">'+ str_time + '</span></div><div class="img_cont_msg"><img src="https://i.ibb.co/d5b84Xw/Untitled-design.png" class="rounded-circle user_img_msg"></div></div>';
+					
+					$("#text").val("");
+					$("#messageFormeight").append(userHtml);
+					$("#messageFormeight").scrollTop($("#messageFormeight")[0].scrollHeight);
+
+					// Show loading indicator
+					var loadingMsgId = 'msg-' + Date.now();
+					var loadingHtml = '<div class="d-flex justify-content-start mb-4" id="' + loadingMsgId + '"><div class="img_cont_msg"><img src="https://cdn-icons-png.flaticon.com/512/387/387569.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer"><span class="loading-spinner"></span> Thinking...<span class="msg_time">' + str_time + '</span></div></div>';
+					$("#messageFormeight").append($.parseHTML(loadingHtml));
+					$("#messageFormeight").scrollTop($("#messageFormeight")[0].scrollHeight);
+
+					$.ajax({
+						data: {
+							msg: rawText,
+							session_id: sessionId
+						},
+						type: "POST",
+						url: "/get",
+					}).done(function(data) {
+						// Remove loading indicator
+						$("#" + loadingMsgId).remove();
+						
+						try {
+							var result = JSON.parse(data);
+							
+							if (result.error) {
+								addBotMessage("Error: " + result.error);
+								return;
+							}
+							
+							var botResponse = result.response || data;
+							addBotMessage(botResponse);
+						} catch (e) {
+							// If response is not JSON, treat as plain text
+							addBotMessage(data);
+						}
+					}).fail(function(xhr) {
+						// Remove loading indicator
+						$("#" + loadingMsgId).remove();
+						
+						var errorMsg = "Sorry, I encountered an error. Please try again.";
+						if (xhr.responseText) {
+							try {
+								var errorData = JSON.parse(xhr.responseText);
+								if (errorData.error) {
+									errorMsg = "Error: " + errorData.error;
+								}
+							} catch (e) {
+								errorMsg = xhr.responseText;
+							}
+						}
+						addBotMessage(errorMsg);
+					});
+					
+					event.preventDefault();
+				});
+			});
+		</script>
+    </body>
+</html>

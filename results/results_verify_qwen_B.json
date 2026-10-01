@@ -1,0 +1,1211 @@
+[
+  {
+    "query_id": "S1_24",
+    "config": "B",
+    "run": 1,
+    "session_id": "test_B_S1_24_run1_1778715327746",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:35:35.268504+00:00",
+    "duration_seconds": 7.52,
+    "response_text": "To verify your proof, please specify the type of proof you want to check. The available options are:\n- **KS** (Kolmogorov-Smirnov)\n- **LRT** (Likelihood Ratio Test)\n- **logistic_accuracy** (Logistic Accuracy)\n\nFor example, you can say:  \n\"Verify my proof for KS\"  \nor  \n\"Check my LRT proof.\"  \n\nLet me know the proof type!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S1_24_run1_1778715327746"
+        },
+        "response": "{\"error\": \"proof_type is required. Please specify KS, LRT, or logistic_accuracy. Auto-detection is not available in this configuration.\"}",
+        "timestamp": "2026-05-13T23:35:32.709609+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "B",
+    "run": 1,
+    "session_id": "test_B_S1_25_run1_1778715340269",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:37:04.244068+00:00",
+    "duration_seconds": 83.97,
+    "response_text": "Your proof for job ID **1778715320869** (KS type) has been cryptographically verified as valid. The verification results show all components passed successfully:\n\n- **Proof type**: KS\n- **User hash**: test\n- **Status**: All 38 proof files (e.g., `test_123.pf`, `test_123_08_1_dc-dc.pf`) were validated with `ok: true`\n\nYou can now trust the cryptographic integrity of this proof. Would you like to download the proof files or check another job?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "proof_type": "auto",
+          "session_id": "test_B_S1_25_run1_1778715340269"
+        },
+        "response": "{\"error\": \"proof_type is required. Please specify KS, LRT, or logistic_accuracy. Auto-detection is not available in this configuration.\"}",
+        "timestamp": "2026-05-13T23:35:42.994887+00:00"
+      },
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "current_session"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S1_25_run1_1778715340269"
+        },
+        "response": "{\n  \"state\": {\n    \"latest_job_id\": \"1778715320869\",\n    \"latest_proof_type\": \"KS\",\n    \"latest_user_hash\": \"test\",\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-13T23:35:40.270994+00:00\",\n    \"latest_completed_job_id\": \"1778715320869\"\n  },\n  \"jobs\": [\n    {\n      \"job_id\": \"1778715320869\",\n      \"proof_type\": \"KS\",\n      \"user_hash\": \"test\",\n      \"nonce\": \"[[0.0, 0.0, 0.0]]\",\n      \"status\": \"done\",\n      \"created_at\": \"2026-05-13T23:35:40.270994+00:00\",\n      \"updated_at\": \"2026-05-13T23:35:40.270994+00:00\"\n    }\n  ],\n  \"summary\": \"Latest job: 1778715320869 (KS, hash test, status done). Latest completed: 1778715320869.\",\n  \"recent_messages\": []\n}",
+        "timestamp": "2026-05-13T23:35:47.756562+00:00"
+      },
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "job_id": "1778715320869",
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "job_id": "1778715320869",
+          "proof_type": "KS",
+          "session_id": "test_B_S1_25_run1_1778715340269"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-13T23:35:49.817556+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_11",
+    "config": "B",
+    "run": 1,
+    "session_id": "test_B_S2_11_run1_1778715429245",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:37:18.244847+00:00",
+    "duration_seconds": 9.0,
+    "response_text": "It seems you don't have any completed proof jobs in your session history. Would you like to:\n1. Submit a new proof job using your saved hash (logistic_accuracy/KS/LRT)?\n2. Check the status of an existing job?\n3. Provide a specific job ID to verify?\n\nLet me know how you'd like to proceed!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S2_11_run1_1778715429245"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:37:14.643961+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "B",
+    "run": 1,
+    "session_id": "test_B_S6_SC6_run1_1778715443246",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:37:29.305415+00:00",
+    "duration_seconds": 6.06,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "Your proof job for KS has been submitted successfully!  \n**Job ID:** 1778715445918  \n\nTo check the status:  \n- Use the `/jobs/1778715445918` endpoint directly  \n- Or run: `check_status job_id=1778715445918 proof_type=KS`  \n\nThe job will process asynchronously. You can check back here or use the `download_proof` command once the status shows \"done\".\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_B_S6_SC6_run1_1778715443246"
+        },
+        "response": "{\n  \"job_id\": \"1778715445918\",\n  \"status_url\": \"/jobs/1778715445918\"\n}",
+        "timestamp": "2026-05-13T23:37:25.837566+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "B",
+    "run": 1,
+    "session_id": "test_B_S6_SC6_run1_1778715443246",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:37:40.983799+00:00",
+    "duration_seconds": 6.68,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "It seems there is no active or completed job to check in your session. Would you like to submit a proof job now using your saved hash? For example, you could request:\n\n- \"Submit a proof for my data in logistic accuracy\"\n- \"Submit a proof for my data in KS\"\n- \"Submit a proof for my data in LRT\"\n\nLet me know which type of proof you'd like to initiate.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_B_S6_SC6_run1_1778715443246"
+        },
+        "response": "Invalid JSON response: <!doctype html>\n<html lang=en>\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>Unknown job id</p>\n",
+        "timestamp": "2026-05-13T23:37:38.255547+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "B",
+    "run": 1,
+    "session_id": "test_B_S6_SC6_run1_1778715443246",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:37:56.151194+00:00",
+    "duration_seconds": 10.17,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "<\uff5cbegin\u2581of\u2581sentence\uff5c>I couldn't find a completed proof job in your session. Would you like me to:\n\n1. Check the status of your current proof jobs (they might still be processing)\n2. Help you submit a new proof job for your data\n3. Look for completed jobs using a specific job ID?\n\nPlease let me know how you'd like to proceed.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "download_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_B_S6_SC6_run1_1778715443246"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:37:51.251035+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "B",
+    "run": 1,
+    "session_id": "test_B_S6_SC6_run1_1778715443246",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:38:11.157664+00:00",
+    "duration_seconds": 10.01,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "It seems there are no completed proof jobs in your current session. To verify a proof, we first need to:\n\n1. Either submit a new proof job using `prove_my_data` (if you have a saved hash)\n2. Or provide a specific job ID from a previously completed job\n\nWould you like to:\n- Submit a new proof job for verification?\n- Check if you have any completed jobs in your history?\n- Provide a specific job ID to verify?\n\nLet me know how you'd like to proceed!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S6_SC6_run1_1778715443246"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:38:06.536122+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_24",
+    "config": "B",
+    "run": 2,
+    "session_id": "test_B_S1_24_run2_1778715496159",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:38:26.201349+00:00",
+    "duration_seconds": 10.04,
+    "response_text": "To verify your proof, please specify the type of proof you want to check. The available options are:\n- **KS** (Kolmogorov-Smirnov)\n- **LRT** (Likelihood Ratio Test)\n- **logistic_accuracy** (Logistic Accuracy)\n\nExample: \"Verify my proof for the KS test.\"\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S1_24_run2_1778715496159"
+        },
+        "response": "{\"error\": \"proof_type is required. Please specify KS, LRT, or logistic_accuracy. Auto-detection is not available in this configuration.\"}",
+        "timestamp": "2026-05-13T23:38:23.403396+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "B",
+    "run": 2,
+    "session_id": "test_B_S1_25_run2_1778715511202",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:39:55.780125+00:00",
+    "duration_seconds": 84.57,
+    "response_text": "Your proof for the **KS** application has been successfully verified! All cryptographic checks passed, and the results confirm validity. Here's a summary:\n\n- **Status**: \u2705 Valid (all components verified)\n- **Job ID**: 1778715320869\n- **Hash used**: test\n- **Proof type**: KS\n\nThe verification results include multiple proof files (e.g., `test_123.pf`, `test_123_08_1_dc-dc.pf`) all of which passed validation. Would you like to download the proof files or check anything else?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_id",
+          "user_id": "current_user_id",
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S1_25_run2_1778715511202",
+          "proof_type": "auto"
+        },
+        "response": "{\"error\": \"proof_type is required. Please specify KS, LRT, or logistic_accuracy. Auto-detection is not available in this configuration.\"}",
+        "timestamp": "2026-05-13T23:38:35.409458+00:00"
+      },
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "current_session_id"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S1_25_run2_1778715511202"
+        },
+        "response": "{\n  \"state\": {\n    \"latest_job_id\": \"1778715320869\",\n    \"latest_proof_type\": \"KS\",\n    \"latest_user_hash\": \"test\",\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-13T23:38:31.204940+00:00\",\n    \"latest_completed_job_id\": \"1778715320869\"\n  },\n  \"jobs\": [\n    {\n      \"job_id\": \"1778715320869\",\n      \"proof_type\": \"KS\",\n      \"user_hash\": \"test\",\n      \"nonce\": \"[[0.0, 0.0, 0.0]]\",\n      \"status\": \"done\",\n      \"created_at\": \"2026-05-13T23:38:31.204940+00:00\",\n      \"updated_at\": \"2026-05-13T23:38:31.204940+00:00\"\n    }\n  ],\n  \"summary\": \"Latest job: 1778715320869 (KS, hash test, status done). Latest completed: 1778715320869.\",\n  \"recent_messages\": []\n}",
+        "timestamp": "2026-05-13T23:38:39.261807+00:00"
+      },
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "job_id": "1778715320869",
+          "proof_type": "KS",
+          "session_id": "current_session_id",
+          "user_id": "current_user_id"
+        },
+        "arguments_after_correction": {
+          "job_id": "1778715320869",
+          "proof_type": "KS",
+          "session_id": "test_B_S1_25_run2_1778715511202"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-13T23:38:41.449066+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_11",
+    "config": "B",
+    "run": 2,
+    "session_id": "test_B_S2_11_run2_1778715600781",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:40:11.076694+00:00",
+    "duration_seconds": 10.29,
+    "response_text": "It looks like we couldn't find a completed proof job to verify. Before verification, we need to:\n\n1. Either check if you have any existing proof jobs:\n   - Would you like me to show you your job history/status?\n\n2. Or submit a new proof job first:\n   - Would you like to submit a new proof for verification?\n\nPlease let me know which action you'd prefer.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_123",
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S2_11_run2_1778715600781",
+          "proof_type": "auto"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:40:07.023490+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "B",
+    "run": 2,
+    "session_id": "test_B_S6_SC6_run2_1778715616079",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:40:22.658038+00:00",
+    "duration_seconds": 6.58,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "Your proof job for **KS** has been submitted successfully!  \n- **Job ID**: 1778715618921  \n- **Status URL**: [Check here](/jobs/1778715618921)  \n\nYou can check the status of this job by asking me or visiting the provided URL. Once the job is complete, you can download the proof file. Let me know if you'd like to proceed with checking the status now!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_B_S6_SC6_run2_1778715616079"
+        },
+        "response": "{\n  \"job_id\": \"1778715618921\",\n  \"status_url\": \"/jobs/1778715618921\"\n}",
+        "timestamp": "2026-05-13T23:40:18.840085+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "B",
+    "run": 2,
+    "session_id": "test_B_S6_SC6_run2_1778715616079",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:40:37.692117+00:00",
+    "duration_seconds": 10.03,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "It seems there is no active or recent job in your session. Would you like to submit a new proof job now? If so, please provide the hash value and specify the proof type (logistic_accuracy, KS, or LRT). Alternatively, I can guide you through the process if you're unsure how to proceed.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_B_S6_SC6_run2_1778715616079"
+        },
+        "response": "Invalid JSON response: <!doctype html>\n<html lang=en>\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>Unknown job id</p>\n",
+        "timestamp": "2026-05-13T23:40:33.290352+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "B",
+    "run": 2,
+    "session_id": "test_B_S6_SC6_run2_1778715616079",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:40:58.461425+00:00",
+    "duration_seconds": 15.77,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "It looks like there's no completed proof job in your session to download. First, you'll need to submit a proof job using your data. Could you please specify which type of proof you'd like to submit? For example:\n\n- Logistic accuracy proof\n- KS (Kolmogorov-Smirnov) test proof\n- LRT (Likelihood Ratio Test) proof\n\nThis will create a new job that you can later download once it's completed.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "download_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_B_S6_SC6_run2_1778715616079"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:40:52.258842+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "B",
+    "run": 2,
+    "session_id": "test_B_S6_SC6_run2_1778715616079",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:41:15.023878+00:00",
+    "duration_seconds": 11.56,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "It seems you don't have any completed proof jobs in your session history. Would you like to:\n1. Submit a new proof job using your saved hash (logistic_accuracy/KS/LRT)?\n2. Check the status of an existing job?\n3. Provide a specific job ID to verify?\n\nLet me know how you'd like to proceed!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S6_SC6_run2_1778715616079"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:41:09.911282+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_24",
+    "config": "B",
+    "run": 3,
+    "session_id": "test_B_S1_24_run3_1778715680025",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:41:30.683009+00:00",
+    "duration_seconds": 10.65,
+    "response_text": "To verify your proof, please specify the type of proof you want to check. The available options are:\n- **KS** (Kolmogorov-Smirnov)\n- **LRT** (Likelihood Ratio Test)\n- **logistic_accuracy** (Logistic Accuracy)\n\nExample: \"Verify my proof for the KS test.\"\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S1_24_run3_1778715680025"
+        },
+        "response": "{\"error\": \"proof_type is required. Please specify KS, LRT, or logistic_accuracy. Auto-detection is not available in this configuration.\"}",
+        "timestamp": "2026-05-13T23:41:27.286966+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "B",
+    "run": 3,
+    "session_id": "test_B_S1_25_run3_1778715695685",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:43:05.410120+00:00",
+    "duration_seconds": 89.72,
+    "response_text": "Your proof is valid! The cryptographic verification for your KS proof job (ID: 1778715320869) was successful. All proof components passed validation, and the results show consistent cryptographic integrity.\n\nWould you like me to:\n1. Show specific verification details?\n2. Help download the proof files?\n3. Check another job?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_id",
+          "user_id": "current_user_id",
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S1_25_run3_1778715695685",
+          "proof_type": "auto"
+        },
+        "response": "{\"error\": \"proof_type is required. Please specify KS, LRT, or logistic_accuracy. Auto-detection is not available in this configuration.\"}",
+        "timestamp": "2026-05-13T23:41:41.592941+00:00"
+      },
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "current_session_id"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S1_25_run3_1778715695685"
+        },
+        "response": "{\n  \"state\": {\n    \"latest_job_id\": \"1778715320869\",\n    \"latest_proof_type\": \"KS\",\n    \"latest_user_hash\": \"test\",\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-13T23:41:35.687020+00:00\",\n    \"latest_completed_job_id\": \"1778715320869\"\n  },\n  \"jobs\": [\n    {\n      \"job_id\": \"1778715320869\",\n      \"proof_type\": \"KS\",\n      \"user_hash\": \"test\",\n      \"nonce\": \"[[0.0, 0.0, 0.0]]\",\n      \"status\": \"done\",\n      \"created_at\": \"2026-05-13T23:41:35.687020+00:00\",\n      \"updated_at\": \"2026-05-13T23:41:35.687020+00:00\"\n    }\n  ],\n  \"summary\": \"Latest job: 1778715320869 (KS, hash test, status done). Latest completed: 1778715320869.\",\n  \"recent_messages\": []\n}",
+        "timestamp": "2026-05-13T23:41:46.451083+00:00"
+      },
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "job_id": "1778715320869",
+          "proof_type": "KS",
+          "session_id": "current_session_id",
+          "user_id": "16a9c12a-65f4-4b29-bea6-d45f1ab085a4"
+        },
+        "arguments_after_correction": {
+          "job_id": "1778715320869",
+          "proof_type": "KS",
+          "session_id": "test_B_S1_25_run3_1778715695685"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-13T23:41:50.122185+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_11",
+    "config": "B",
+    "run": 3,
+    "session_id": "test_B_S2_11_run3_1778715790412",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:43:23.188082+00:00",
+    "duration_seconds": 12.78,
+    "response_text": "It seems you don't have any completed proof jobs in your session history. Would you like to:\n1. Submit a new proof job using your saved hash (logistic_accuracy/KS/LRT)?\n2. Check the status of an existing job?\n3. Provide a specific job ID to verify?\n\nLet me know how you'd like to proceed!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S2_11_run3_1778715790412"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:43:17.807286+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "B",
+    "run": 3,
+    "session_id": "test_B_S6_SC6_run3_1778715808191",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:43:33.895193+00:00",
+    "duration_seconds": 5.7,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "Your proof job for KS has been submitted successfully!  \n**Job ID:** 1778715810890  \nYou can check the status using the `/check_status` tool or by visiting the provided status URL.  \n\nNote: There are no automatic notifications for job completion. You\u2019ll need to manually check the status later. Let me know if you need further assistance!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_B_S6_SC6_run3_1778715808191"
+        },
+        "response": "{\n  \"job_id\": \"1778715810890\",\n  \"status_url\": \"/jobs/1778715810890\"\n}",
+        "timestamp": "2026-05-13T23:43:30.807932+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "B",
+    "run": 3,
+    "session_id": "test_B_S6_SC6_run3_1778715808191",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:43:49.486429+00:00",
+    "duration_seconds": 10.59,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "It looks like there are no proof jobs currently associated with your session. If you haven't submitted a job yet, you can start one by specifying which type of proof you'd like to run (logistic accuracy, KS, or LRT). Would you like to submit a new job now?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_B_S6_SC6_run3_1778715808191"
+        },
+        "response": "Invalid JSON response: <!doctype html>\n<html lang=en>\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>Unknown job id</p>\n",
+        "timestamp": "2026-05-13T23:43:47.057840+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "B",
+    "run": 3,
+    "session_id": "test_B_S6_SC6_run3_1778715808191",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:44:04.822497+00:00",
+    "duration_seconds": 10.34,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "It seems you haven't submitted a proof job yet or the job ID is not available in your session. Would you like to submit a new proof job for your data now? If so, please specify the type of proof you'd like to run (KS, LRT, or logistic_accuracy).\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "download_proof",
+        "arguments": {
+          "job_id": null,
+          "output_filename": null,
+          "proof_type": "auto",
+          "session_id": "<session_id>"
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "output_filename": null,
+          "proof_type": "auto",
+          "session_id": "test_B_S6_SC6_run3_1778715808191"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:43:58.246797+00:00"
+      },
+      {
+        "tool_name": "check_status",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": "<session_id>"
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "logistic_accuracy",
+          "session_id": "test_B_S6_SC6_run3_1778715808191"
+        },
+        "response": "Invalid JSON response: <!doctype html>\n<html lang=en>\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>Unknown job id</p>\n",
+        "timestamp": "2026-05-13T23:44:01.686171+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "B",
+    "run": 3,
+    "session_id": "test_B_S6_SC6_run3_1778715808191",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:44:42.890371+00:00",
+    "duration_seconds": 33.07,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "It seems you don't have any completed proof jobs in your session history. Would you like to:\n1. Submit a new proof job using your saved hash (logistic_accuracy/KS/LRT)?\n2. Check the status of an existing job?\n3. Provide a specific job ID to verify?\n\nLet me know how you'd like to proceed!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "12345",
+          "user_id": "user123"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S6_SC6_run3_1778715808191"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:44:32.270722+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_24",
+    "config": "B",
+    "run": 4,
+    "session_id": "test_B_S1_24_run4_1778715887892",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:44:59.908803+00:00",
+    "duration_seconds": 12.01,
+    "response_text": "To verify your proof, I need to know which type of proof you want to check: **KS**, **LRT**, or **logistic_accuracy**. Could you clarify which one you'd like to verify? \n\nFor example:\n- \"Verify my KS proof\"\n- \"Check the LRT proof\"\n- \"Verify the logistic accuracy job\" \n\nLet me know, and I\u2019ll proceed!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": null,
+          "user_id": null
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": "test_B_S1_24_run4_1778715887892"
+        },
+        "response": "{\"error\": \"proof_type is required. Please specify KS, LRT, or logistic_accuracy. Auto-detection is not available in this configuration.\"}",
+        "timestamp": "2026-05-13T23:44:56.305277+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "B",
+    "run": 4,
+    "session_id": "test_B_S1_25_run4_1778715904911",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:45:11.415377+00:00",
+    "duration_seconds": 6.5,
+    "response_text": "The system requires you to specify which type of proof you want to verify (KS, LRT, or logistic accuracy). Could you clarify which one you'd like to check? For example:\n- \"Verify my KS proof\"\n- \"Check validity of my LRT proof\"\n- \"Is my logistic accuracy proof valid?\"\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_B_S1_25_run4_1778715904911"
+        },
+        "response": "{\"error\": \"proof_type is required. Please specify KS, LRT, or logistic_accuracy. Auto-detection is not available in this configuration.\"}",
+        "timestamp": "2026-05-13T23:45:08.301430+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_11",
+    "config": "B",
+    "run": 4,
+    "session_id": "test_B_S2_11_run4_1778715916418",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:45:24.598028+00:00",
+    "duration_seconds": 8.18,
+    "response_text": "It seems there is no completed proof job currently available in your session to verify. To proceed, you'll need to either:\n\n1. Provide a specific `job_id` for verification (if you have one from a previous submission), or  \n2. First submit a new proof job using `prove_my_data` or `prove_hash`, then check its status with `check_status` until it completes.\n\nWould you like to submit a new job or provide an existing job ID?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_123",
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S2_11_run4_1778715916418",
+          "proof_type": "auto"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:45:20.320128+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "B",
+    "run": 4,
+    "session_id": "test_B_S6_SC6_run4_1778715929603",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:45:33.990709+00:00",
+    "duration_seconds": 4.39,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "Your proof job for KS has been submitted successfully! \n\n**Job ID:** 1778715931833  \n**Status URL:** [/jobs/1778715931833](/jobs/1778715931833)\n\nYou can check the status of your job by visiting the status URL above. Since the system does not support automatic notifications, please manually verify the job status when needed.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_B_S6_SC6_run4_1778715929603"
+        },
+        "response": "{\n  \"job_id\": \"1778715931833\",\n  \"status_url\": \"/jobs/1778715931833\"\n}",
+        "timestamp": "2026-05-13T23:45:31.751006+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "B",
+    "run": 4,
+    "session_id": "test_B_S6_SC6_run4_1778715929603",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:45:44.937152+00:00",
+    "duration_seconds": 5.95,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "It seems there are no existing jobs to check. Would you like to submit a new proof job for your data? If so, please specify which type of proof you'd like to run: logistic accuracy, KS, or LRT.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_B_S6_SC6_run4_1778715929603"
+        },
+        "response": "Invalid JSON response: <!doctype html>\n<html lang=en>\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>Unknown job id</p>\n",
+        "timestamp": "2026-05-13T23:45:42.910171+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "B",
+    "run": 4,
+    "session_id": "test_B_S6_SC6_run4_1778715929603",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:45:55.911787+00:00",
+    "duration_seconds": 5.97,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "It looks like there's no completed proof job in your session history yet. Would you like to:\n\n1. Submit a new proof job for your data (logistic accuracy/KS/LRT)?\n2. Check the status of an existing job (provide job ID)?\n3. Try downloading again after completing a job?\n\nLet me know how you'd like to proceed!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "download_proof",
+        "arguments": {
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "proof_type": "auto",
+          "session_id": "test_B_S6_SC6_run4_1778715929603"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:45:52.239506+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "B",
+    "run": 4,
+    "session_id": "test_B_S6_SC6_run4_1778715929603",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:46:06.341765+00:00",
+    "duration_seconds": 5.43,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "To verify your proof, we first need to ensure the job is completed. Let's check the status of your job. I'll use the `check_status` tool to see if your proof job is done. \n\nWould you like me to check the status of your most recent job?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": "current_session_123",
+          "user_id": "user_456"
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": "test_B_S6_SC6_run4_1778715929603"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:46:04.091907+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_24",
+    "config": "B",
+    "run": 5,
+    "session_id": "test_B_S1_24_run5_1778715971345",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:46:18.721880+00:00",
+    "duration_seconds": 7.37,
+    "response_text": "To verify your proof, you'll need to specify the type of proof you want to check. The available options are:\n\n1. **Logistic Accuracy**\n2. **KS (Kolmogorov-Smirnov)**\n3. **LRT (Likelihood Ratio Test)**\n\nCould you clarify which proof type you'd like to verify? If you're unsure, you can check your job history using the `get_session_context` tool to identify the correct job and proof type.\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_123",
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S1_24_run5_1778715971345",
+          "proof_type": "auto"
+        },
+        "response": "{\"error\": \"proof_type is required. Please specify KS, LRT, or logistic_accuracy. Auto-detection is not available in this configuration.\"}",
+        "timestamp": "2026-05-13T23:46:15.203661+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S1_25",
+    "config": "B",
+    "run": 5,
+    "session_id": "test_B_S1_25_run5_1778715983724",
+    "query_text": "Is my proof valid?",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 1,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:47:46.212207+00:00",
+    "duration_seconds": 82.48,
+    "response_text": "Your proof for the **KS** application has been cryptographically verified and is valid. The verification results show all components passed successfully:\n\n- **Proof type**: KS\n- **Status**: Verified \u2705\n- **Details**: All 40+ proof components (e.g., `test_123.pf`, various `mrp` proofs) are valid under the provided hash `123`.\n\nYou can trust the cryptographic integrity of this proof. Let me know if you need further details or another verification!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "session_id": "current_session_id",
+          "user_id": "current_user_id",
+          "proof_type": "auto"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S1_25_run5_1778715983724",
+          "proof_type": "auto"
+        },
+        "response": "{\"error\": \"proof_type is required. Please specify KS, LRT, or logistic_accuracy. Auto-detection is not available in this configuration.\"}",
+        "timestamp": "2026-05-13T23:46:27.928328+00:00"
+      },
+      {
+        "tool_name": "get_session_context",
+        "arguments": {
+          "session_id": "current_session_id"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S1_25_run5_1778715983724"
+        },
+        "response": "{\n  \"state\": {\n    \"latest_job_id\": \"1778715320869\",\n    \"latest_proof_type\": \"KS\",\n    \"latest_user_hash\": \"test\",\n    \"owner_user_id\": \"16a9c12a-65f4-4b29-bea6-d45f1ab085a4\",\n    \"updated_at\": \"2026-05-13T23:46:23.726725+00:00\",\n    \"latest_completed_job_id\": \"1778715320869\"\n  },\n  \"jobs\": [\n    {\n      \"job_id\": \"1778715320869\",\n      \"proof_type\": \"KS\",\n      \"user_hash\": \"test\",\n      \"nonce\": \"[[0.0, 0.0, 0.0]]\",\n      \"status\": \"done\",\n      \"created_at\": \"2026-05-13T23:46:23.726725+00:00\",\n      \"updated_at\": \"2026-05-13T23:46:23.726725+00:00\"\n    }\n  ],\n  \"summary\": \"Latest job: 1778715320869 (KS, hash test, status done). Latest completed: 1778715320869.\",\n  \"recent_messages\": []\n}",
+        "timestamp": "2026-05-13T23:46:30.178155+00:00"
+      },
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "job_id": "1778715320869",
+          "proof_type": "KS",
+          "session_id": "current_session_id",
+          "user_id": "current_user_id"
+        },
+        "arguments_after_correction": {
+          "job_id": "1778715320869",
+          "proof_type": "KS",
+          "session_id": "test_B_S1_25_run5_1778715983724"
+        },
+        "response": "{\"ok\": true, \"results\": [{\"kind\": \"ltr\", \"ok\": true, \"proof\": \"test_123.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_3_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_2b_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_0_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_1c_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_6_fd-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_7_20-16.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_de_2_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_5_dc-8c.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_08_4_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_a6_1_dc-dc.pf\", \"smt\": \"s1\"}, {\"kind\": \"mrp\", \"ok\": true, \"proof\": \"test_123_40_3_dc-dc.pf\", \"smt\": \"s1\"}], \"user_hash\": \"123\"}",
+        "timestamp": "2026-05-13T23:46:32.838170+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S2_11",
+    "config": "B",
+    "run": 5,
+    "session_id": "test_B_S2_11_run5_1778716071214",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "isolated",
+    "source": 2,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:48:03.430504+00:00",
+    "duration_seconds": 12.22,
+    "response_text": "It looks like you haven't submitted any proof jobs yet, or none of your jobs have completed. To verify a proof:\n\n1. First submit a job using `prove_my_data` (for your saved hash) or `prove_hash` (with an explicit hash)\n2. Wait for the job to complete (check with `check_status`)\n3. Then verification will be possible\n\nWould you like to submit a proof job now? If so, please specify:\n- Which type of proof (logistic_accuracy, KS, or LRT)\n- Whether you want to use your saved hash or a specific hash value\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_B_S2_11_run5_1778716071214"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:47:57.779404+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_01",
+    "config": "B",
+    "run": 5,
+    "session_id": "test_B_S6_SC6_run5_1778716088437",
+    "query_text": "Prove my data in KS",
+    "expected_tool": "prove_my_data",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:48:14.675486+00:00",
+    "duration_seconds": 6.24,
+    "scenario": 6,
+    "step": 1,
+    "response_text": "Your proof job for your data in the **KS** application has been submitted successfully! \ud83c\udf89  \n- **Job ID**: `1778716090688`  \n- **Status**: You can check progress using the `check_status` tool.  \n\nOnce the job is complete (status: \"done\"), you can:  \n1. Download the proof file using `download_proof`  \n2. Verify its cryptographic validity using `verify_proof`  \n\nWould you like to check the current status of this job?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "prove_my_data",
+        "arguments": {
+          "proof_type": "KS"
+        },
+        "arguments_after_correction": {
+          "proof_type": "KS",
+          "session_id": "test_B_S6_SC6_run5_1778716088437"
+        },
+        "response": "{\n  \"job_id\": \"1778716090688\",\n  \"status_url\": \"/jobs/1778716090688\"\n}",
+        "timestamp": "2026-05-13T23:48:10.612947+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_02",
+    "config": "B",
+    "run": 5,
+    "session_id": "test_B_S6_SC6_run5_1778716088437",
+    "query_text": "Check my status",
+    "expected_tool": "check_status",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:48:25.464740+00:00",
+    "duration_seconds": 5.79,
+    "scenario": 6,
+    "step": 2,
+    "response_text": "It seems there is no job ID associated with your current session, or the job might not have been processed yet. Would you like to submit a new proof job, or do you have a specific job ID you'd like to check?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "check_status",
+        "arguments": {},
+        "arguments_after_correction": {
+          "session_id": "test_B_S6_SC6_run5_1778716088437"
+        },
+        "response": "Invalid JSON response: <!doctype html>\n<html lang=en>\n<title>404 Not Found</title>\n<h1>Not Found</h1>\n<p>Unknown job id</p>\n",
+        "timestamp": "2026-05-13T23:48:23.027388+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_03",
+    "config": "B",
+    "run": 5,
+    "session_id": "test_B_S6_SC6_run5_1778716088437",
+    "query_text": "Download my proof",
+    "expected_tool": "download_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:48:37.030990+00:00",
+    "duration_seconds": 6.57,
+    "scenario": 6,
+    "step": 3,
+    "response_text": "It seems there's no completed proof job in your current session. Would you like me to:\n\n1. Check the status of your latest job (if any are in progress)\n2. Help you locate a specific job ID to download\n3. Submit a new proof job for your data\n\nLet me know how you'd like to proceed!\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "download_proof",
+        "arguments": {
+          "session_id": "current_session_id"
+        },
+        "arguments_after_correction": {
+          "session_id": "test_B_S6_SC6_run5_1778716088437"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:48:33.187281+00:00"
+      }
+    ]
+  },
+  {
+    "query_id": "S6_SC6_04",
+    "config": "B",
+    "run": 5,
+    "session_id": "test_B_S6_SC6_run5_1778716088437",
+    "query_text": "Verify my proof",
+    "expected_tool": "verify_proof",
+    "mode": "sequential",
+    "source": 6,
+    "http_status": 200,
+    "error": null,
+    "timestamp": "2026-05-13T23:48:47.864029+00:00",
+    "duration_seconds": 5.83,
+    "scenario": 6,
+    "step": 4,
+    "response_text": "It seems there is no completed proof job in your current session. To verify a proof, you'll need to either:\n\n1. Provide a specific job ID to verify, or  \n2. Submit a new proof job first (e.g., \"Submit a proof for my data in KS\"), then come back to verify it after it completes.\n\nWould you like to proceed with either option?\n\n[Backed by COSMeTIC prover]",
+    "backed_by_cosmetic": true,
+    "tool_calls": [
+      {
+        "tool_name": "verify_proof",
+        "arguments": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": "abc123",
+          "user_id": "user456"
+        },
+        "arguments_after_correction": {
+          "job_id": null,
+          "proof_type": "auto",
+          "session_id": "test_B_S6_SC6_run5_1778716088437"
+        },
+        "response": "{\"error\": \"job_id is required and no completed job found in session state\"}",
+        "timestamp": "2026-05-13T23:48:44.884321+00:00"
+      }
+    ]
+  }
+]

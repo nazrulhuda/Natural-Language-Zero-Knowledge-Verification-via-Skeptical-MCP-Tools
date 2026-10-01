@@ -1,0 +1,42 @@
+Llama-3-8B and Mistral-24B Config B: records with a 404 AND any success-ish word
+
+====================================================================================================
+#1  mistral:S7_01  run 1  source None  query: 'Is my proof done yet?'
+   tool[0] check_status({})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It looks like there is no job ID available to check the status. Could you please provide the job ID or let me know if you have submitted a proof job recently?
+====================================================================================================
+#2  mistral:S7_09  run 1  source None  query: 'Has my LRT proof finished?'
+   tool[0] check_status({"job_id": null, "proof_type": "LRT", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems that there is no job ID available to check the status of your LRT proof. Could you please provide the job ID or let me know if you have submitted a proof recently?
+====================================================================================================
+#3  mistral:S7_10  run 1  source None  query: "What's going on with my proof right now?"
+   tool[0] check_status({})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It looks like there is no job associated with your session. Have you submitted a proof job yet? If not, you can submit one for your data. Would you like to submit a proof job now? If so, please specify the type of proof you want to submit: logistic accuracy, KS, or LRT.
+====================================================================================================
+#4  mistral:S7_09  run 2  source None  query: 'Has my LRT proof finished?'
+   tool[0] check_status({"job_id": null, "proof_type": "LRT", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems that there is no job ID available to check the status of your LRT proof. Could you please provide the job ID or confirm if you have submitted a proof job previously?
+====================================================================================================
+#5  mistral:S6_SC1_02  run 3  source None  query: 'Check my status'
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems there is no job ID available for the current session. Please ensure you have submitted a job before checking the status. If you need to submit a job, let me know the details, and I can help with that.
+====================================================================================================
+#6  mistral:S7_10  run 4  source None  query: "What's going on with my proof right now?"
+   tool[0] check_status({})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It looks like there is no job ID available to check the status. Have you submitted a proof job recently? If you need to check the status of a specific job, please provide the job ID. If you want to submit a new proof job, let me know the type of proof you need (logistic accuracy, KS, or LRT).
+====================================================================================================
+#7  mistral:S1_10  run 5  source None  query: 'Check my status'
+   tool[0] check_status({"job_id": null, "proof_type": "logistic_accuracy", "session_id": null})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems there is no job ID available for the current session. Please ensure you have submitted a job before checking the status. If you need to submit a job, let me know the details, and I can help you with that.
+====================================================================================================
+#8  mistral:S7_09  run 5  source None  query: 'Has my LRT proof finished?'
+   tool[0] check_status({"proof_type": "LRT"})  ->  404 Unknown job id (wrong port)
+   FINAL RESPONSE:
+      | It seems that there is no job ID available for checking the status of your LRT proof. Could you please provide the job ID or let me know if you have submitted a proof job recently?
