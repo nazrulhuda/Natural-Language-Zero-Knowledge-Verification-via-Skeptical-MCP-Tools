@@ -8,7 +8,7 @@ This document describes the complete architecture of the MCP Prover Chatbot as i
 
 The system is a **dockerized proof assistant** that lets users:
 
-- Chat with a DeepInfra-hosted LLM assistant about proof jobs. The default model is Qwen3-32B; the model is env-driven via `LLM_MODEL` and has also been exercised with Llama 3 8B and Mistral-Small-3.2-24B for cross-model evaluation.
+- Chat with an LLM assistant (any OpenAI-compatible endpoint; DeepInfra by default) about proof jobs. The default model is Qwen3-32B; the model is env-driven via `LLM_MODEL` and has also been exercised with Llama 3 8B and Mistral-Small-3.2-24B for cross-model evaluation.
 - Submit proofs against COSMeTIC prover APIs.
 - Check job status.
 - Download proof artifacts.
@@ -204,7 +204,7 @@ Defined in `docker-compose.yml`:
     - Instantiates `MultiServerMCPClient` with the prover server and the interceptor.
     - Ensures `DEEPINFRA_API_KEY` is set.
     - Calls `client.get_tools()` with up to 10 retries.
-    - Creates `ChatOpenAI` with `model=os.getenv("LLM_MODEL", "Qwen/Qwen3-32B")`, `base_url="https://api.deepinfra.com/v1/openai"`, and **`temperature=0.0`** for reproducibility across ablation runs. The model is env-driven; the default and primary research model is Qwen3-32B, but cross-model experiments have used `meta-llama/Meta-Llama-3-8B-Instruct` and `mistralai/Mistral-Small-3.2-24B-Instruct-2506` via this env var.
+    - Creates `ChatOpenAI` with `model=os.getenv("LLM_MODEL", "Qwen/Qwen3-32B")`, `base_url=os.getenv("LLM_BASE_URL", "https://api.deepinfra.com/v1/openai")` (the environment variable was added at release; the evaluated build had the DeepInfra endpoint fixed), and **`temperature=0.0`** for reproducibility across ablation runs. The model is env-driven; the default and primary research model is Qwen3-32B, but cross-model experiments have used `meta-llama/Meta-Llama-3-8B-Instruct` and `mistralai/Mistral-Small-3.2-24B-Instruct-2506` via this env var.
     - **Conditional system prompt for Llama models (`"llama" in model name`):** when the configured model name contains `"llama"` (case-insensitive), `create_react_agent` is constructed with an explicit tool-use system prompt instructing the model to call tools for proof/status/download/hash queries rather than reply in plain text. Llama 3 8B does not reliably engage tool calling against an 8-tool surface without this scaffolding; Qwen models do, and fall through to the no-prompt branch (`create_react_agent(model, tools)`). This is documented as a noted asymmetry in the cross-model evaluation: it does not affect Qwen runs but is required for Llama runs to produce tool calls.
     - Creates a `create_react_agent(model, tools[, prompt=...])` instance and assigns it to `agent`.
   - On failure, logs and retries after 5 seconds.
@@ -265,7 +265,7 @@ Flow:
 
 7. **Config D: replace bot_response with formatted tool output.** If `SYSTEM_CONFIG == "D"` AND a tool was called (`mcp_tracker["touched"]` is true), reads the LAST tool call from `mcp_tracker["tool_calls"]` and replaces `bot_response` with `format_tool_response(tool_name, tool_response)`. The LLM's summary is discarded. If no tool was called, `bot_response` remains the LLM's text. This requires `EVAL_MODE=true` (forced by `SYSTEM_CONFIG == "D"` derivation at module load).
 
-8. Appends a deterministic trust suffix owned by backend logic via `compute_trust_label(mcp_touched, mcp_tracker.get("tool_calls", []))`. The label is **always-on across all configs** (A/B/C/D); it is not gated on `SYSTEM_CONFIG`. There are four tiers, with strongest-wins precedence across all tools called in the turn:
+8. *(The reported evaluation ran an earlier two-tier version of this label; only `[Backed by COSMeTIC prover]` and `[Not backed by COSMeTIC prover]` appear in the logged results.)* Appends a deterministic trust suffix owned by backend logic via `compute_trust_label(mcp_touched, mcp_tracker.get("tool_calls", []))`. The label is **always-on across all configs** (A/B/C/D); it is not gated on `SYSTEM_CONFIG`. There are four tiers, with strongest-wins precedence across all tools called in the turn:
    - `[Cryptographically verified]` — `verify_proof` returned top-level `ok=true` (cryptographic verification was performed and passed). Detection: `json.loads(tool_response).get("ok") is True`.
    - `[Cryptographically provable]` — `check_hash_existence` or `check_my_hash_existence` returned a "found" result (hash is in the SMT; a zkSNARK proof of the claim can be requested). Detection: the Summary substring `"was found in"` appears in the tool response (case-insensitive). The wrapper tool `check_my_hash_existence` delegates to `check_hash_existence` internally so both produce the same response format.
    - `[Backed by COSMeTIC prover]` — any other tool call: prove_hash, prove_my_data, check_status, download_proof, get_session_context, hash-existence with hash-not-found, verify_proof with `ok=false`, verify_proof errored / wrong-port 404, or any error returned by a tool that was nonetheless invoked. Also the fallback whenever a tool was touched but `tool_calls` is empty (EVAL_MODE off).
@@ -979,6 +979,7 @@ Key environment variables (non‑exhaustive):
 
 - **LLM / agent**
   - `DEEPINFRA_API_KEY` – required for DeepInfra access in `app.py` via the OpenAI-compatible endpoint at `https://api.deepinfra.com/v1/openai`.
+  - `LLM_BASE_URL` – OpenAI-compatible endpoint (default `https://api.deepinfra.com/v1/openai`); recorded by the test runner in every result.
   - `LLM_MODEL` – HuggingFace-style model id passed to `ChatOpenAI` (read via `os.getenv("LLM_MODEL", "Qwen/Qwen3-32B")`). Default is `Qwen/Qwen3-32B` — the primary research model. Cross-model evaluation runs have used `meta-llama/Meta-Llama-3-8B-Instruct` and `mistralai/Mistral-Small-3.2-24B-Instruct-2506`. When the value contains `"llama"` (case-insensitive) the backend wires an additional tool-use system prompt into the ReAct agent; otherwise no system prompt is set (see §3.3). The docker-compose backend service declares the default as `LLM_MODEL=${LLM_MODEL:-Qwen/Qwen3-32B}`.
 
 - **Flask / backend**
@@ -1320,6 +1321,7 @@ The `--test-suite` flag overrides the default suite path (`eval/test_suite.json`
 The runner pre-creates one canonical "reference completed job" at startup (`create_reference_completed_job`):
 1. Submits a KS proof via `/get` (consumes DeepInfra token budget).
 2. Polls **COSMeTIC directly** via host-exposed port 5013 (`http://localhost:5013/jobs/{job_id}`) up to ~17 minutes for status=done — this bypasses needing to call `check_status` through the LLM, saving DeepInfra tokens.
+   If the job is not `done` within that window the runner now stops with an error, and it re-checks the job before every run. *(Added after the reported runs: at the time the runner printed a warning and continued, which is how the Mistral, Qwen 2.5 72B and Qwen 3 235B sweeps ran with a job that stayed `queued`; see the README's Deviations and known issues.)*
 3. Once done, writes `latest_completed_job_id` to Redis **manually** (COSMeTIC completion does not automatically update Redis; only `check_status` via the tool would).
 4. Returns the job_id for reuse.
 

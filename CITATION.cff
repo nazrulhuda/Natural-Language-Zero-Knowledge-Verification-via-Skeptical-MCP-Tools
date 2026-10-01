@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software or its evaluation artifacts, please cite the paper listed under preferred-citation."
-title: "MCP Prover Chatbot: a natural-language interface to CoSMeTIC zero-knowledge verifiable computation"
+title: "Natural-Language Zero-Knowledge Verification via Skeptical MCP Tools"
 type: software
 authors:
   - family-names: Shanto

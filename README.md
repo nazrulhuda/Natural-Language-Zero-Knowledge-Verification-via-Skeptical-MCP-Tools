@@ -1,8 +1,8 @@
-# MCP Prover Chatbot
+# Natural-Language Zero-Knowledge Verification via Skeptical MCP Tools
 
 Code and data for the paper *A Natural-Language Interface to Zero-Knowledge Verifiable Computation: Enforcing Correctness at the Tool Boundary* (see [Paper and artifact map](#paper-and-artifact-map)).
 
-The system is a dockerized chat assistant that lets authenticated users interact with the **CoSMeTIC** zero-knowledge proof service through natural language. Queries flow through a LangGraph ReAct agent (default model **Qwen3-32B** through an OpenAI-compatible API, swappable via `LLM_MODEL` and `LLM_BASE_URL`; cross-model runs have also used Llama 3 8B and Mistral-Small 24B) which calls MCP tools exposed by a dedicated prover server. Session state lives in Redis; user accounts in Postgres.
+The system, the **MCP Prover Chatbot**, is a dockerized chat assistant that lets authenticated users interact with the **CoSMeTIC** zero-knowledge proof service through natural language. Queries flow through a LangGraph ReAct agent (default model **Qwen3-32B** through an OpenAI-compatible API, swappable via `LLM_MODEL` and `LLM_BASE_URL`; cross-model runs have also used Llama 3 8B and Mistral-Small 24B) which calls MCP tools exposed by a dedicated prover server. Session state lives in Redis; user accounts in Postgres.
 
 The repository also hosts an **ablation study** — four main configurations (A/B/C/D) plus a supplementary `A_STAR` variant — comparing architectural design choices (identity protection, server-side state, smart Redis fallbacks, LLM summarization). See `ARCHITECTURE.md` for the complete design.
 
