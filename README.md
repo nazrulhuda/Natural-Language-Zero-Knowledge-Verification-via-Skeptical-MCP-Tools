@@ -37,7 +37,7 @@ repository. Code is MIT-licensed (`LICENSE`); the evaluation data is CC BY 4.0 (
             Enforcing Correctness at the Tool Boundary},
   author = {Shanto, Md Nazrul Huda and Ramanan, Paritosh},
   year   = {2026},
-  note   = {Oklahoma State University. Artifact: https://github.com/nazrulhuda/Natural-Language-Zero-Knowledge-Verification-via-Skeptical-MCP-Tools}
+  note   = {Oklahoma State University. Artifact: https://github.com/disys-lab/Skeptical-MCP-For-zkSNARKs}
 }
 ```
 
