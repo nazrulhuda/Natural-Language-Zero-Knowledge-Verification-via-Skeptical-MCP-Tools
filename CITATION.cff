@@ -20,7 +20,7 @@ keywords:
   - tool reliability
 preferred-citation:
   type: article
-  title: "A Natural-Language Interface to Zero-Knowledge Verifiable Computation: Enforcing Correctness at the Tool Boundary"
+  title: "Natural-Language Zero-Knowledge Verification via Skeptical MCP Tools"
   authors:
     - family-names: Shanto
       given-names: Md Nazrul Huda

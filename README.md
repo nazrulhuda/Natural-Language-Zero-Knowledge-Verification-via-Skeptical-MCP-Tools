@@ -1,6 +1,6 @@
 # Natural-Language Zero-Knowledge Verification via Skeptical MCP Tools
 
-Code and data for the paper *A Natural-Language Interface to Zero-Knowledge Verifiable Computation: Enforcing Correctness at the Tool Boundary* (see [Paper and artifact map](#paper-and-artifact-map)).
+Code and data for the paper *Natural-Language Zero-Knowledge Verification via Skeptical MCP Tools* (see [Paper and artifact map](#paper-and-artifact-map)).
 
 The system, the **MCP Prover Chatbot**, is a dockerized chat assistant that lets authenticated users interact with the **CoSMeTIC** zero-knowledge proof service through natural language. Queries flow through a LangGraph ReAct agent (default model **Qwen3-32B** through an OpenAI-compatible API, swappable via `LLM_MODEL` and `LLM_BASE_URL`; cross-model runs have also used Llama 3 8B and Mistral-Small 24B) which calls MCP tools exposed by a dedicated prover server. Session state lives in Redis; user accounts in Postgres.
 
@@ -15,10 +15,9 @@ The repository also hosts an **ablation study** — four main configurations (A/
 
 ## Paper and artifact map
 
-This repository is the artifact for *A Natural-Language Interface to Zero-Knowledge Verifiable
-Computation: Enforcing Correctness at the Tool Boundary* (Shanto and Ramanan, Oklahoma State
-University, 2026). Citation metadata is in `CITATION.cff`. The manuscript itself is not in this
-repository. Code is MIT-licensed (`LICENSE`); the evaluation data is CC BY 4.0 (`LICENSE-DATA`).
+This repository is the artifact for *Natural-Language Zero-Knowledge Verification via Skeptical
+MCP Tools* (Shanto and Ramanan, Oklahoma State University, 2026). Citation metadata is in
+`CITATION.cff`. The manuscript is in `manuscript/`. Code is MIT-licensed (`LICENSE`); the evaluation data is CC BY 4.0 (`LICENSE-DATA`).
 
 | The paper promises | Where it is |
 |---|---|
@@ -33,8 +32,7 @@ repository. Code is MIT-licensed (`LICENSE`); the evaluation data is CC BY 4.0 (
 
 ```bibtex
 @misc{shanto2026nlzk,
-  title  = {A Natural-Language Interface to Zero-Knowledge Verifiable Computation:
-            Enforcing Correctness at the Tool Boundary},
+  title  = {Natural-Language Zero-Knowledge Verification via Skeptical MCP Tools},
   author = {Shanto, Md Nazrul Huda and Ramanan, Paritosh},
   year   = {2026},
   note   = {Oklahoma State University. Artifact: https://github.com/disys-lab/Skeptical-MCP-For-zkSNARKs}
