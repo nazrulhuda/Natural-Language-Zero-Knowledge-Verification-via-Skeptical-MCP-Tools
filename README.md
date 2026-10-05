@@ -66,7 +66,9 @@ repository. Code is MIT-licensed (`LICENSE`); the evaluation data is CC BY 4.0 (
 
 This chatbot is only the front end — it depends on the separate **COSMeTIC** prover stack, which must be set up and running **before** this one:
 
-> **https://github.com/disys-lab/regulatory_hypothesis_tests** (branch `forMCP`); project page https://disys-lab.github.io/cosmetic/
+> **https://github.com/disys-lab/cosmetic/tree/formcp-integration** (branch `formcp-integration` of the official COSMeTIC repository); project page https://disys-lab.github.io/cosmetic/
+>
+> The paper's experiments ran against the earlier repository https://github.com/disys-lab/regulatory_hypothesis_tests, branch `forMCP`. The `formcp-integration` branch carries the same API code on top of the official repository.
 
 **Follow COSMeTIC's own README to set it up and run it** — that is the authoritative source. Its setup is a real pipeline (SMT setup + EZKL zkSNARK generation via `driver.py`, plus a one-time per-API "Setup" step); do not expect a single `up` command to be enough. We deliberately don't reproduce those steps here because they live in (and will change with) that repo.
 
@@ -74,8 +76,8 @@ What this stack additionally needs from COSMeTIC once it's running:
 
 - **Run it with the project name `regulatory_hypothesis_tests`** so its default network is named `regulatory_hypothesis_tests_default` — the network this stack joins as `external`:
   ```bash
-  git clone -b forMCP https://github.com/disys-lab/regulatory_hypothesis_tests
-  cd regulatory_hypothesis_tests
+  git clone -b formcp-integration https://github.com/disys-lab/cosmetic
+  cd cosmetic
   # ... set up / generate proof data per COSMeTIC's README, then:
   docker compose -p regulatory_hypothesis_tests up -d
   ```

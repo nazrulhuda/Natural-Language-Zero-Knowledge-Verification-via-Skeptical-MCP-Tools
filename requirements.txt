@@ -12,3 +12,4 @@ redis
 psycopg2-binary
 bcrypt
 requests
+httpx
